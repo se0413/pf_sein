@@ -1,0 +1,38 @@
+html, body{
+    font-family: "Noto Serif KR", serif;
+    font-weight:300; 
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: #1d1d1d;
+    word-break: keep-all; 
+    word-wrap: break-word; 
+}
+#wrap{ 
+    min-width: 1260px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0px auto; 
+}
+
+@media screen and (max-width: 1300px){
+    #wrap { 
+        min-width: 100%;
+    }
+    .wrapper {
+        margin: 0 20px; 
+        width: auto;
+    }
+}
+@media screen and (max-width: 1024px){
+    html, body{
+        font-size: 13px;
+    } 
+}
+@media screen and (max-width: 768px){
+    html, body{
+        font-size: 13px;
+    } 
+}
