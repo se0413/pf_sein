@@ -2,3 +2,67 @@
 @import url(fonts.css);
 @import url(common.css);
 @import url(layout.css);
+
+
+
+/* visual */
+
+.visual {
+    position: relative;
+}
+.visual h2 {
+    font-size: 0;
+    line-height: 0;
+}
+.visual .swiper ul li{
+    height: 1000px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.visual .swiper ul .bg1 {
+    background-image: url(../image/visual_1.jpg);
+}
+.visual .swiper ul .bg2 {
+    background-image: url(../image/visual_1.jpg);
+}
+.visual .swiper ul .bg3 {
+    background-image: url(../image/visual_1.jpg);
+}
+.visual .swiper ul h3 {
+    margin-top: 300px;
+    font-size: 70px;
+    font-weight: 700;
+}
+.visual .swiper ul li p {
+    margin-top: 20px;
+    font-size: var(--txt-size-tit4);
+}
+.visual .btn_wrap {
+    padding: ;
+}
+.visual .btn_wrap .paging {
+    width: auto; /*swiper가 준 100% 크기를 빼줌*/
+    display: flex;
+}
+.visual .btn_wrap .paging .swiper-pagination-bullet { /*현재 선택되지 않은 블릿*/
+    width: 190px;
+    height: 5px;
+    border-radius: 0;
+    background-color: rgba(157, 157, 157, 0.6);
+    opacity: 1;
+    position: relative;
+}
+.visual .btn_wrap .paging .swiper-pagination-bullet-active::before { /*현재 선택된 블릿*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #fff;
+    content: "";
+    animation-name: visual_count;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}

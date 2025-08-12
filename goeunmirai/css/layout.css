@@ -200,27 +200,3 @@ header .gnb .gnb_wrap .depth1 li a {
         display: none;
     }
 }
-
-
-/* visual */
-
-.visual {
-    height: 1000px;
-    background-image: url(../image/visual_1.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.visual h2 {
-    font-size: 0;
-    line-height: 0;
-}
-.visual .swiper ul li h3 {
-    margin-top: 300px;
-    font-size: 70px;
-    font-weight: 700;
-}
-.visual .swiper ul li p {
-    margin-top: 20px;
-    font-size: var(--txt-size-tit4);
-}
