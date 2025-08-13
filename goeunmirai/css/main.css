@@ -19,6 +19,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 .visual .swiper ul .bg1 {
     background-image: url(../image/visual_1.jpg);
@@ -39,7 +40,12 @@
     font-size: var(--txt-size-tit4);
 }
 .visual .btn_wrap {
-    padding: ;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
 }
 .visual .btn_wrap .paging {
     width: auto; /*swiper가 준 100% 크기를 빼줌*/
@@ -52,6 +58,7 @@
     background-color: rgba(157, 157, 157, 0.6);
     opacity: 1;
     position: relative;
+    margin-top: 625px;
 }
 .visual .btn_wrap .paging .swiper-pagination-bullet-active::before { /*현재 선택된 블릿*/
     position: absolute;
@@ -65,4 +72,33 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
+}
+.visual .swiper > .wrapper {
+    position: absolute;
+    left: 50%;
+    top: 625px;
+    transform: translate(-50%, 0);
+    z-index: 100;
+}
+.visual-progress-wrap {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: var(--txt-size-tit4);
+    width: 200px;
+    z-index: 100;
+    left: 0;
+    gap: 10px;
+}
+.progress {
+    flex: 1;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+.progress-bar {
+    display: block;
+    height: 100%;
+    background-color: white;
+    width: 0%;
 }
