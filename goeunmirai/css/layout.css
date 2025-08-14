@@ -265,3 +265,9 @@ header .gnb .gnb_wrap .depth1 li a {
     background-size: contain;
     content: "";
 }
+
+@media screen and (max-width: 1600px){
+    .quick_menu {
+        display: none;
+    }
+}
