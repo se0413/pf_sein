@@ -50,26 +50,24 @@ $(document).ready(function(){
             find는 하위요소를 검색하는 기능
             선택자가 tabpanel을 직접 선택하는게 아니라 그 부모요소를 선택해서 하위요소를 검색하게 해야함
     */
-    let tab_btn = $('.signature .tap_area .tap_btn ul li') /*변수 이름을 정해줌*/
-    let tab_name
-    let tab_cnt = $('.signature .tap_area .tap_cnt div[role="tabpanel"]')
-    let tab_cnt_prant = $('.signature .tap_area .tap_cnt')
+   
+    $('.team, .signature').each(function(){
+        let $group = $(this);
+        let $tab_btn = $group.find('.tap_area .tap_btn ul li');
+        let $tab_cnt = $group.find('.tap_area .tap_cnt div[role="tabpanel"]');
+        let $tab_cnt_prant = $group.find('.tap_area .tap_cnt');
 
-    tab_btn.on('click', function(){
-        tab_btn.removeClass('active')
-        $(this).addClass('active')
+        $tab_btn.on('click', function(){
+            let $this = $(this);
+            let tab_name = '#' + $this.attr('aria-controls');
 
-        tab_btn.attr('aria-selected', 'false')
-        $(this).attr('aria-selected', 'true')
+            $tab_btn.removeClass('active').attr('aria-selected', 'false');
+            $this.addClass('active').attr('aria-selected', 'true');
 
-        tab_name = $(this).attr('aria-controls')
-        tab_name = '#'+ tab_name /*id 클래스를 추가로 삽입*/
-        console.log(tab_name)
-
-        tab_cnt.removeClass('active')
-        tab_cnt_prant.find(tab_name).addClass('active')
-        
-     })
+            $tab_cnt.removeClass('active');
+            $tab_cnt_prant.find(tab_name).addClass('active');
+        });
+    });
 
      
 

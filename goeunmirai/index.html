@@ -133,21 +133,21 @@
                     </ul>
                 </div>
             </section>
-            <section class="signature tab-group">
+            <section class="signature">
                 <div class="wrapper">
                     <h2>GOEUNMIRAI SIGNATURE</h2>
                     <p>고은미래의 철학을 담은<br>대표 솔루션</p>
                     <div class="tap_area">
                         <div class="tap_btn">
                             <ul role="tablist">
-                                <li id="tab_01" aria-selected="true" aria-controls="panel_01" role="tab" class="active"><button><span>레이저<br>제모</span></button></li>
-                                <li id="tab_02" aria-selected="false" aria-controls="panel_02" role="tab"><button><span>카복시<br>테라피</span></button></li>
-                                <li id="tab_03" aria-selected="false" aria-controls="panel_03" role="tab"><button><span>트라이앵글<br>v라인</span></button></li>
-                                <li id="tab_04" aria-selected="false" aria-controls="panel_04" role="tab"><button><span>메디컬<br>스킨케어</span></button></li>
+                                <li id="sig_tab_01" aria-selected="true" aria-controls="sig_panel_01" role="tab" class="active"><button><span>레이저<br>제모</span></button></li>
+                                <li id="sig_tab_02" aria-selected="false" aria-controls="sig_panel_02" role="tab"><button><span>카복시<br>테라피</span></button></li>
+                                <li id="sig_tab_03" aria-selected="false" aria-controls="sig_panel_03" role="tab"><button><span>트라이앵글<br>v라인</span></button></li>
+                                <li id="sig_tab_04" aria-selected="false" aria-controls="sig_panel_04" role="tab"><button><span>메디컬<br>스킨케어</span></button></li>
                             </ul>
                         </div>
                         <div class="tap_cnt">
-                            <div id="panel_01" role="tabpanel" aria-labelledby="tab_01" class="active">
+                            <div id="sig_panel_01" role="tabpanel" aria-labelledby="sig_tab_01" class="active">
                                 <div class="signature_cnt">
                                     <div class="photo">
                                         <img src="../goeunmirai/image/signature_photo1.png" alt="레이저제모 사진">
@@ -161,7 +161,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="panel_02" role="tabpanel" aria-labelledby="tab_02">
+                            <div id="sig_panel_02" role="tabpanel" aria-labelledby="sig_tab_02">
                                 <div class="signature_cnt">
                                     <div class="photo">
                                         <img src="../goeunmirai/image/signature_photo2.png" alt="카복시테라피 사진">
@@ -175,7 +175,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="panel_03" role="tabpanel" aria-labelledby="tab_03">
+                            <div id="sig_panel_03" role="tabpanel" aria-labelledby="sig_tab_03">
                                 <div class="signature_cnt">
                                     <div class="photo">
                                         <img src="../goeunmirai/image/signature_photo3.png" alt="트라이앵글V라인 사진">
@@ -189,7 +189,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="panel_04" role="tabpanel" aria-labelledby="tab_04">
+                            <div id="sig_panel_04" role="tabpanel" aria-labelledby="sig_tab_04">
                                 <div class="signature_cnt">
                                     <div class="photo">
                                         <img src="../goeunmirai/image/signature_photo4.png" alt="메디컬스킨케어 사진">
@@ -207,14 +207,14 @@
                     </div>
                 </div>
             </section>
-            <section class="team tab-group">
+            <section class="team">
                 <div class="wrapper">
                     <h2>MEDICAL TEAM</h2>
                     <p>분야별 맞춤<br>대표 의료진 소개</p>
                     <div class="tap_area">
                         <div class="tap_cnt">
-                            <div id="panel_01" role="tabpanel" aria-labelledby="tab_01" class="active">
-                                <div class="signature_cnt">
+                            <div id="team_panel_01" role="tabpanel" aria-labelledby="team_tab_01" class="active">
+                                <div class="team_cnt">
                                     <div class="photo">
                                         <img src="../goeunmirai/image/team1.png" alt="이서연 대표원장 사진">
                                     </div>
@@ -231,8 +231,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="panel_02" role="tabpanel" aria-labelledby="tab_02">
-                                <div class="signature_cnt">
+                            <div id="team_panel_02" role="tabpanel" aria-labelledby="team_tab_02">
+                                <div class="team_cnt">
                                     <div class="photo">
                                         <img src="../goeunmirai/image/team2.png" alt="김도현 원장 사진">
                                     </div>
@@ -249,8 +249,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="panel_03" role="tabpanel" aria-labelledby="tab_03">
-                                <div class="signature_cnt">
+                            <div id="team_panel_03" role="tabpanel" aria-labelledby="team_tab_03">
+                                <div class="team_cnt">
                                     <div class="photo">
                                         <img src="../goeunmirai/image/team3.png" alt="정하윤 원장 사진">
                                     </div>
@@ -270,16 +270,42 @@
                         </div>
                         <div class="tap_btn">
                             <ul role="tablist">
-                                <li id="tab_01" aria-selected="true" aria-controls="panel_01" role="tab" class="active"><button><span>이서연 대표원장</span></button></li>
-                                <li id="tab_02" aria-selected="false" aria-controls="panel_02" role="tab"><button><span>김도현 원장</span></button></li>
-                                <li id="tab_03" aria-selected="false" aria-controls="panel_03" role="tab"><button><span>정하윤 원장</span></button></li>
+                                <li id="team_tab_01" aria-selected="true" aria-controls="team_panel_01" role="tab" class="active"><button><span>이서연 대표원장</span></button></li>
+                                <li id="team_tab_02" aria-selected="false" aria-controls="team_panel_02" role="tab"><button><span>김도현 원장</span></button></li>
+                                <li id="team_tab_03" aria-selected="false" aria-controls="team_panel_03" role="tab"><button><span>정하윤 원장</span></button></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="numbers"></section>
-            <section class="b.a"></section>
+            <section class="numbers">
+                <div class="wrapper">
+                    <h2>GOEUNMIRAI IN NUMBERS</h2>
+                    <p>숫자로 보는<br>고은미래의원</p>
+                    <ul>
+                        <li class="hn_1">
+                            <span class="counter" data-start="0" data-end="36">0</span><em>년</em>
+                            <strong>의료진 경력</strong>
+                        </li>
+                        <li class="hn_2">
+                            <span class="counter" data-start="0" data-end="95">0</span><em>%</em>
+                            <strong>재방문률</strong>
+                        </li>
+                        <li class="hn_3">
+                            <span class="counter" data-start="0" data-end="1994">0</span><em>년</em>
+                            <strong>개원 년도</strong>
+                        </li>
+                        <li class="hn_4">
+                            <span class="counter" data-start="0" data-end="98">0</span><em>%</em>
+                            <strong>고객 만족도</strong>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="b.a">
+                <h2>BEFORE&AFTER</h2>
+                <p>피부고민의 끝<br>고은미래의 시작</p>
+            </section>
             <section class="place"></section>
         </main>
     </div>

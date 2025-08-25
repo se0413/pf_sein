@@ -441,6 +441,9 @@
 .signature .tap_area .tap_cnt div[role="tabpanel"].active {
     display: block; /*보임*/
 }
+
+/* team */
+
 .team {
     background-image: url(../image/team_bg.png);
     background-position: center center;
@@ -500,27 +503,39 @@
     border-radius: 50%;
 }
 .team .tap_area .tap_btn > ul > li:nth-child(1):before {
-    background-image: url(../image/team_t1.png);
+    background-image: url(../image/team_t1_b.png);
 }
 .team .tap_area .tap_btn > ul > li:nth-child(2):before {
-    background-image: url(../image/team_t2.png);
+    background-image: url(../image/team_t2_b.png);
 }
 .team .tap_area .tap_btn > ul > li:nth-child(3):before {
-    background-image: url(../image/team_t3.png);
+    background-image: url(../image/team_t3_b.png);
 }
-.team .tap_area .tap_cnt .signature_cnt {
+.team .tap_area .tap_btn > ul > li.active:nth-child(1):before,
+.team .tap_area .tap_btn > ul > li:hover:nth-child(1):before {
+    background-image: url(../image/team_t1_w.png);
+}
+.team .tap_area .tap_btn > ul > li.active:nth-child(2):before,
+.team .tap_area .tap_btn > ul > li:hover:nth-child(2):before {
+    background-image: url(../image/team_t2_w.png);
+}
+.team .tap_area .tap_btn > ul > li.active:nth-child(3):before,
+.team .tap_area .tap_btn > ul > li:hover:nth-child(3):before {
+    background-image: url(../image/team_t3_w.png);
+}
+.team .tap_area .tap_cnt .team_cnt {
     display: flex;
     justify-content: space-between;
     position: relative;
 }
-.team .tap_area .tap_cnt .signature_cnt .photo img {
+.team .tap_area .tap_cnt .team_cnt .photo img {
     border-radius: 50%;
 }
-.team .tap_area .tap_cnt .signature_cnt .txt > ul {
+.team .tap_area .tap_cnt .team_cnt .txt > ul {
     display: flex;
     margin-top: 90px;
 }
-.team .tap_area .tap_cnt .signature_cnt .txt > ul > li {
+.team .tap_area .tap_cnt .team_cnt .txt > ul > li {
     width: 240px;
     height: 320px;
     border-radius: 100px;
@@ -528,14 +543,10 @@
     color: var(--txt-color-cnt);
     text-align: center;
 }
-.team .tap_area .tap_btn > ul > li.active,
-.team .tap_area .tap_btn > ul > li:hover {
-
-}
-.team .tap_area .tap_cnt .signature_cnt .txt > ul > li:nth-child(1) {
+.team .tap_area .tap_cnt .team_cnt .txt > ul > li:nth-child(1) {
     background-color: var(--txt-color-main);
 }
-.team .tap_area .tap_cnt .signature_cnt .txt > ul > li:nth-child(2) > span {
+.team .tap_area .tap_cnt .team_cnt .txt > ul > li:nth-child(2) > span {
     display: block;
     background-color: #331D12;
     font-size: var(--txt-size-tit2);
@@ -546,15 +557,86 @@
     padding-top: 90px;
     line-height: 40px;
 }
-.team .tap_area .tap_cnt .signature_cnt .txt > ul > li > strong {
+.team .tap_area .tap_cnt .team_cnt .txt > ul > li > strong {
     display: block;
     font-size: var(--txt-size-tit2);
     margin: 70px 0 10px 0;
     line-height: 40px;
 }
-.team .tap_area .tap_cnt .signature_cnt .txt > ul > li:nth-child(1) > span {
+.team .tap_area .tap_cnt .team_cnt .txt > ul > li:nth-child(1) > span {
     display: block;
     font-size: var(--txt-size-tit3);
     color: var(--txt-color-sub);
     line-height: 35px;
+}
+
+/* numbers */
+
+.numbers {
+    background-image: url(../image/numbers_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.numbers h2 {
+    font-size: var(--txt-size-tit2);
+    font-weight: 700;
+    padding-top: 190px;
+    color: var(--txt-color-sub);
+    text-align: center;
+    margin-bottom: 50px;
+}
+.numbers p {
+    font-size: var(--txt-size-tit1);
+    font-weight: 700;
+    color: var(--txt-color-cnt);
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+.numbers .wrapper ul {
+    display: flex;
+    justify-content: space-between;
+    color: var(--txt-color-cnt);
+    padding-bottom: 180px;
+}
+.numbers .wrapper ul li {
+    width: 320px;
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+.numbers .wrapper ul li:last-child {
+    border-right: 0;
+}
+.numbers .wrapper ul li span {
+    display: block;
+    font-size: 100px;
+    font-weight: 700;
+    text-align: center;
+}
+.numbers .wrapper ul li span em {
+    font-size: var(--txt-size-tit4);
+}
+.numbers .wrapper ul li strong {
+    display: block;
+    font-size: var(--txt-size-tit3);
+    text-align: center;
+}
+
+/* b.a */
+
+.b.a h2 {
+    font-size: var(--txt-size-tit2);
+    font-weight: 700;
+    padding-top: 190px;
+    color: var(--txt-color-sub);
+    text-align: center;
+    margin-bottom: 50px;
+}
+.b.a p {
+    font-size: var(--txt-size-tit1);
+    font-weight: 700;
+    color: var(--txt-color-cnt);
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 50px;
 }
