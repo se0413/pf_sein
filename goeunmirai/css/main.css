@@ -472,7 +472,8 @@
 .team .tap_area .tap_btn {
     position: absolute;
     right: 0;
-    bottom: 80px;
+    bottom: 260px;
+    z-index: 2;
 }
 .team .tap_area .tap_btn > ul {
     display: flex;
@@ -527,13 +528,14 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    padding-bottom: 210px;
 }
 .team .tap_area .tap_cnt .team_cnt .photo img {
     border-radius: 50%;
 }
 .team .tap_area .tap_cnt .team_cnt .txt > ul {
     display: flex;
-    margin-top: 90px;
+    margin-top: 140px;
 }
 .team .tap_area .tap_cnt .team_cnt .txt > ul > li {
     width: 240px;
@@ -568,6 +570,12 @@
     font-size: var(--txt-size-tit3);
     color: var(--txt-color-sub);
     line-height: 35px;
+}
+.team .tap_area .tap_cnt div[role="tabpanel"] {
+    display: none; /*숨김*/
+}
+.team .tap_area .tap_cnt div[role="tabpanel"].active {
+    display: block; /*보임*/
 }
 
 /* numbers */
@@ -622,9 +630,9 @@
     text-align: center;
 }
 
-/* b.a */
+/* ba */
 
-.b.a h2 {
+.ba h2 {
     font-size: var(--txt-size-tit2);
     font-weight: 700;
     padding-top: 190px;
@@ -632,11 +640,22 @@
     text-align: center;
     margin-bottom: 50px;
 }
-.b.a p {
+.ba p {
     font-size: var(--txt-size-tit1);
     font-weight: 700;
-    color: var(--txt-color-cnt);
+    color: var(--txt-color-main);
     text-align: center;
     margin-top: 5px;
     margin-bottom: 50px;
+}
+.ba .ba_cnt ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ba .swiper{
+    width: 590px;
+}
+.ba .ba_cnt ul .center {
+    
 }
