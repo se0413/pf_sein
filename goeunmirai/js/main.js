@@ -84,7 +84,7 @@ $(document).ready(function(){
 
         loop: true,  
 
-        pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
+        pagination: {  
             el: '.paging',
             clickable: true,
             type: 'bullets',
@@ -92,5 +92,32 @@ $(document).ready(function(){
 
     });
 
+    const place_swiper = new Swiper('.place .swiper', { 
+        slidesPerView: 1, 
+        spaceBetween: 16, 
+        breakpoints: {
+            1900: {    
+                slidesPerView: 3,    
+                spaceBetween: 24,
+            },
+            1024: {    
+                slidesPerView: 2,    
+                spaceBetween: 24,
+            },
+        },
+
+        loop: true,  
+
+        pagination: {  
+            el: '.swiper-pagination', 
+            clickable: true,  
+            type: 'fraction',  
+        },
+        scrollbar: {
+            el: ".place .swiper-scrollbar",
+            hide: false,
+            draggable: true,
+        },
+    });
 
 })
