@@ -58,26 +58,39 @@ $(document).ready(function(){
         });
     });
 
-    const ba_swiper = new Swiper(".ba .swiper", {
-        loop: true,
-        effect: "fade",
+    new Swiper('.ba_cnt .swiper', {
         autoplay: {
             delay: 5000,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
         },
-        on: {
-            init: function () {
-            document.querySelector(".total").textContent = formatNumber(this.slides.length - this.loopedSlides * 2);
-            updateNumber(this.realIndex + 1);
-            resetProgress();
-            },
-            slideChangeTransitionStart: function () {
-            updateNumber(this.realIndex + 1);
-            resetProgress();
-            },
+        effect: "fade",
+        loop: true,
+        pagination: {
+            el: '.paging',
+            clickable: true,
+            type: 'bullets',
         },
-    });     
+    });
 
+
+    const ba_swiper = new Swiper('.ba .swiper', { /* 팝업을 감싼는 요소의 class명 */
+
+        autoplay: { 
+            delay: 5000,
+            disableOnInteraction: true,
+        },
+
+        effect: "fade", 
+
+        loop: true,  
+
+        pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
+            el: '.paging',
+            clickable: true,
+            type: 'bullets',
+        },
+
+    });
 
 
 })
