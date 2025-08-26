@@ -62,7 +62,7 @@ $(document).ready(function(){
         loop: true,
         effect: "fade",
         autoplay: {
-            delay: autoplay,
+            delay: 5000,
             disableOnInteraction: false,
         },
         on: {
@@ -76,10 +76,8 @@ $(document).ready(function(){
             resetProgress();
             },
         },
-        
     });     
 
-     
 
 
 })
