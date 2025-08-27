@@ -270,6 +270,94 @@
     content: "";
 }
 
+@media screen and (max-width: 1300px){
+    .speciality .speciality_cnt ul {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .speciality .speciality_cnt ul li {
+        flex: 0 0 auto; /* 크기 고정 */
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .speciality h2 {
+        font-size: var(--txt-size-tit5);
+        padding-top: 60px;
+    }
+    .speciality p {
+        font-size: var(--txt-size-tit4);
+        margin-bottom: 50px;
+    }
+    .speciality .speciality_cnt {
+        padding-bottom: 0;
+    }
+    .speciality .speciality_cnt ul {
+        transform: scale(0.8); 
+        transform-origin: center top; 
+    }
+    .speciality .speciality_cnt ul li {
+        margin: 0;
+    }
+    .speciality .speciality_cnt ul li:hover span{
+        font-size: 11px;
+        line-height: 15px;
+    }
+    .speciality .speciality_cnt ul li strong {
+        font-size: 13px;
+        border-radius: 10px;
+        width: 120px;
+        padding: 7px 15px;
+    }
+    .speciality .speciality_cnt ul li:hover strong::before {
+        bottom: -30px;
+        height: 30px;
+    }
+    .speciality .speciality_cnt ul li:hover strong::after {
+        bottom: -35px;
+        width: 6px;
+        height: 6px;
+    }
+    .speciality .speciality_cnt ul li .photo1,
+    .speciality .speciality_cnt ul li .photo2,
+    .speciality .speciality_cnt ul li .photo3 {
+        width: 300px;
+        margin-top: 30px;
+        padding: 20px;
+    }
+    .speciality .speciality_cnt ul li:hover img {
+        transform: scale(1.15);
+    }
+}
+@media screen and (max-width: 630px){
+    .speciality .speciality_cnt ul li strong {
+        width: 120px;
+        padding: 7px 15px;
+    }
+    .speciality .speciality_cnt ul li .photo1,
+    .speciality .speciality_cnt ul li .photo2,
+    .speciality .speciality_cnt ul li .photo3 {
+        width: 250px;
+        margin-top: 30px;
+        padding: 15px;
+    }
+    .speciality .speciality_cnt ul li:hover img {
+        transform: scale(1.15);
+    }
+}
+@media screen and (max-width: 530px){
+    .speciality .speciality_cnt ul li .photo1,
+    .speciality .speciality_cnt ul li .photo2,
+    .speciality .speciality_cnt ul li .photo3 {
+        width: 160px;
+        margin-top: 30px;
+        padding: 15px;
+    }
+    .speciality .speciality_cnt ul li:hover img {
+        transform: scale(1.2);
+    }
+}
+
 /* signature */
 
 .signature h2 {
@@ -916,6 +1004,21 @@ footer .f_u > .f_l > ul > li:nth-child(1) > span {
     font-weight: 700;
     line-height: 15px;
     padding-bottom: 15px;
+}
+footer .f_u > .f_r {
+    width: 100%;
+}
+footer .f_u > .f_r > .map {
+    width: 100%;
+    height: 320px;
+    margin-top: 170px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+footer .f_u > .f_r > .map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 footer .f_s {
     display: flex;
