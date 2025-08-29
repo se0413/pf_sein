@@ -546,7 +546,15 @@
         font-size: var(--txt-size-tit4);
         margin-bottom: 50px;
     }
-    
+    .signature .tap_area .tap_btn > ul {
+        display: none;
+    }
+    .signature .tap_cnt .signature_cnt .photo {
+        display: none;
+    }
+        .tap_area .tap_cnt div[role="tabpanel"] {
+        display: block !important;
+    }
 }
 
 /* team */
