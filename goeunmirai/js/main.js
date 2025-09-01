@@ -58,6 +58,42 @@ $(document).ready(function(){
         });
     });
 
+    $('.team, .signature').each(function(){
+    let $group = $(this);
+    let $tab_btn = $group.find('.tap_area .tap_btn ul li');
+    let $tab_cnt = $group.find('.tap_area .tap_cnt div[role="tabpanel"]');
+    let $tab_cnt_prant = $group.find('.tap_area .tap_cnt');
+
+    function applyTabBehavior() {
+        if ($(window).width() <= 1024) {
+            // 모바일: 탭버튼/사진 숨기고, 컨텐츠 전부 보이게
+            $tab_btn.hide(); 
+            $tab_cnt.show(); 
+        } else {
+            // PC: 기존 탭 동작
+            $tab_btn.show();
+            $tab_cnt.hide().removeClass('active');
+            $tab_cnt.first().show().addClass('active');
+
+            $tab_btn.off('click').on('click', function(){
+                let $this = $(this);
+                let tab_name = '#' + $this.attr('aria-controls');
+
+                $tab_btn.removeClass('active').attr('aria-selected', 'false');
+                $this.addClass('active').attr('aria-selected', 'true');
+
+                $tab_cnt.hide().removeClass('active');
+                $tab_cnt_prant.find(tab_name).show().addClass('active');
+            });
+        }
+    }
+
+        // 최초 실행
+        applyTabBehavior();
+        // 리사이즈 시 실행
+        $(window).on('resize', applyTabBehavior);
+    });
+
     new Swiper('.ba_cnt .swiper', {
         autoplay: {
             delay: 5000,
@@ -119,5 +155,7 @@ $(document).ready(function(){
             draggable: true,
         },
     });
+
+    
 
 })
