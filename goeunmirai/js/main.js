@@ -64,34 +64,39 @@ $(document).ready(function(){
     let $tab_cnt = $group.find('.tap_area .tap_cnt div[role="tabpanel"]');
     let $tab_cnt_prant = $group.find('.tap_area .tap_cnt');
 
-    function applyTabBehavior() {
-        if ($(window).width() <= 1024) {
-            // 모바일: 탭버튼/사진 숨기고, 컨텐츠 전부 보이게
-            $tab_btn.hide(); 
-            $tab_cnt.show(); 
-        } else {
-            // PC: 기존 탭 동작
-            $tab_btn.show();
+    if ($(window).width() <= 1024) {
+        // 모바일: 탭버튼/사진 숨기고, 컨텐츠 전부 보이게
+        $tab_btn.hide(); 
+        $tab_cnt.show(); 
+
+        // 여기서 부모에 클래스 주기
+        $tab_cnt.parent().addClass('mobile-grid');
+    } else {
+        // PC: 기존 탭 동작
+        $tab_btn.show();
+        $tab_cnt.hide().removeClass('active');
+        $tab_cnt.first().show().addClass('active');
+
+        // PC에서는 그리드 제거
+        $tab_cnt.parent().removeClass('mobile-grid');
+
+        $tab_btn.off('click').on('click', function(){
+            let $this = $(this);
+            let tab_name = '#' + $this.attr('aria-controls');
+
+            $tab_btn.removeClass('active').attr('aria-selected', 'false');
+            $this.addClass('active').attr('aria-selected', 'true');
+
             $tab_cnt.hide().removeClass('active');
-            $tab_cnt.first().show().addClass('active');
-
-            $tab_btn.off('click').on('click', function(){
-                let $this = $(this);
-                let tab_name = '#' + $this.attr('aria-controls');
-
-                $tab_btn.removeClass('active').attr('aria-selected', 'false');
-                $this.addClass('active').attr('aria-selected', 'true');
-
-                $tab_cnt.hide().removeClass('active');
-                $tab_cnt_prant.find(tab_name).show().addClass('active');
-            });
-        }
+            $tab_cnt.parent().find(tab_name).show().addClass('active');
+        });
     }
 
         // 최초 실행
         applyTabBehavior();
         // 리사이즈 시 실행
         $(window).on('resize', applyTabBehavior);
+
     });
 
     new Swiper('.ba_cnt .swiper', {
