@@ -1,5 +1,4 @@
-$(document).ready(function(){
-
+$(document).ready(function () {
     const visual_swiper = new Swiper(".visual .swiper", {
         loop: true,
         effect: "fade",
@@ -9,13 +8,14 @@ $(document).ready(function(){
         },
         on: {
             init: function () {
-            document.querySelector(".total").textContent = formatNumber(this.slides.length - this.loopedSlides * 2);
-            updateNumber(this.realIndex + 1);
-            resetProgress();
+                document.querySelector(".total").textContent =
+                    formatNumber(this.slides.length - this.loopedSlides * 2);
+                updateNumber(this.realIndex + 1);
+                resetProgress();
             },
             slideChangeTransitionStart: function () {
-            updateNumber(this.realIndex + 1);
-            resetProgress();
+                updateNumber(this.realIndex + 1);
+                resetProgress();
             },
         },
     });
@@ -39,128 +39,72 @@ $(document).ready(function(){
         }, 50);
     }
 
+    function applyTabBehavior() {
+        $('.team, .signature').each(function () {
+            let $group = $(this);
+            let $tab_btn = $group.find('.tap_area .tap_btn ul li');
+            let $tab_cnt = $group.find('.tap_area .tap_cnt div[role="tabpanel"]');
+            let $tab_cnt_prant = $group.find('.tap_area .tap_cnt');
 
-    $('.team, .signature').each(function(){
-        let $group = $(this);
-        let $tab_btn = $group.find('.tap_area .tap_btn ul li');
-        let $tab_cnt = $group.find('.tap_area .tap_cnt div[role="tabpanel"]');
-        let $tab_cnt_prant = $group.find('.tap_area .tap_cnt');
+            if ($(window).width() <= 1024) {
+                // 모바일: 탭버튼/사진 숨기고, 컨텐츠 전부 보이게
+                $tab_btn.hide();
+                $tab_cnt.show();
 
-        $tab_btn.on('click', function(){
-            let $this = $(this);
-            let tab_name = '#' + $this.attr('aria-controls');
+                // 부모에 grid 적용
+                $tab_cnt_prant.addClass('mobile-grid');
+            } else {
+                // PC: 기존 탭 동작
+                $tab_btn.show();
+                $tab_cnt.hide().removeClass('active');
+                $tab_cnt.first().show().addClass('active');
 
-            $tab_btn.removeClass('active').attr('aria-selected', 'false');
-            $this.addClass('active').attr('aria-selected', 'true');
+                // PC에서는 grid 제거
+                $tab_cnt_prant.removeClass('mobile-grid');
 
-            $tab_cnt.removeClass('active');
-            $tab_cnt_prant.find(tab_name).addClass('active');
-        });
-    });
+                $tab_btn.off('click').on('click', function () {
+                    let $this = $(this);
+                    let tab_name = '#' + $this.attr('aria-controls');
 
-    $('.team, .signature').each(function(){
-    let $group = $(this);
-    let $tab_btn = $group.find('.tap_area .tap_btn ul li');
-    let $tab_cnt = $group.find('.tap_area .tap_cnt div[role="tabpanel"]');
-    let $tab_cnt_prant = $group.find('.tap_area .tap_cnt');
+                    $tab_btn.removeClass('active').attr('aria-selected', 'false');
+                    $this.addClass('active').attr('aria-selected', 'true');
 
-    if ($(window).width() <= 1024) {
-        // 모바일: 탭버튼/사진 숨기고, 컨텐츠 전부 보이게
-        $tab_btn.hide(); 
-        $tab_cnt.show(); 
-
-        // 여기서 부모에 클래스 주기
-        $tab_cnt.parent().addClass('mobile-grid');
-    } else {
-        // PC: 기존 탭 동작
-        $tab_btn.show();
-        $tab_cnt.hide().removeClass('active');
-        $tab_cnt.first().show().addClass('active');
-
-        // PC에서는 그리드 제거
-        $tab_cnt.parent().removeClass('mobile-grid');
-
-        $tab_btn.off('click').on('click', function(){
-            let $this = $(this);
-            let tab_name = '#' + $this.attr('aria-controls');
-
-            $tab_btn.removeClass('active').attr('aria-selected', 'false');
-            $this.addClass('active').attr('aria-selected', 'true');
-
-            $tab_cnt.hide().removeClass('active');
-            $tab_cnt.parent().find(tab_name).show().addClass('active');
+                    $tab_cnt.hide().removeClass('active');
+                    $tab_cnt_prant.find(tab_name).show().addClass('active');
+                });
+            }
         });
     }
 
-        // 최초 실행
-        applyTabBehavior();
-        // 리사이즈 시 실행
-        $(window).on('resize', applyTabBehavior);
+    // 최초 실행
+    applyTabBehavior();
+    // 리사이즈 시 실행
+    $(window).on('resize', applyTabBehavior);
 
-    });
-
+    // 다른 Swiper 설정들 ...
     new Swiper('.ba_cnt .swiper', {
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: true,
-        },
+        autoplay: { delay: 5000, disableOnInteraction: true },
         effect: "fade",
         loop: true,
-        pagination: {
-            el: '.paging',
-            clickable: true,
-            type: 'bullets',
-        },
+        pagination: { el: '.paging', clickable: true, type: 'bullets' },
     });
 
-
-    const ba_swiper = new Swiper('.ba .swiper', { /* 팝업을 감싼는 요소의 class명 */
-
-        autoplay: { 
-            delay: 5000,
-            disableOnInteraction: true,
-        },
-
-        effect: "fade", 
-
-        loop: true,  
-
-        pagination: {  
-            el: '.paging',
-            clickable: true,
-            type: 'bullets',
-        },
-
+    const ba_swiper = new Swiper('.ba .swiper', {
+        autoplay: { delay: 5000, disableOnInteraction: true },
+        effect: "fade",
+        loop: true,
+        pagination: { el: '.paging', clickable: true, type: 'bullets' },
     });
 
-    const place_swiper = new Swiper('.place .swiper', { 
-        slidesPerView: 1, 
-        spaceBetween: 16, 
+    const place_swiper = new Swiper('.place .swiper', {
+        slidesPerView: 1,
+        spaceBetween: 16,
         breakpoints: {
-            1900: {    
-                slidesPerView: 3,    
-                spaceBetween: 24,
-            },
-            1024: {    
-                slidesPerView: 2,    
-                spaceBetween: 24,
-            },
+            1900: { slidesPerView: 3, spaceBetween: 24 },
+            1024: { slidesPerView: 2, spaceBetween: 24 },
         },
-
-        loop: true,  
-
-        pagination: {  
-            el: '.swiper-pagination', 
-            clickable: true,  
-            type: 'fraction',  
-        },
-        scrollbar: {
-            el: ".place .swiper-scrollbar",
-            hide: false,
-            draggable: true,
-        },
+        loop: true,
+        pagination: { el: '.swiper-pagination', clickable: true, type: 'fraction' },
+        scrollbar: { el: ".place .swiper-scrollbar", hide: false, draggable: true },
     });
-
-    
-
-})
+});
