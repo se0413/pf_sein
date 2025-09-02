@@ -46,20 +46,18 @@ $(document).ready(function () {
             let $tab_cnt = $group.find('.tap_area .tap_cnt div[role="tabpanel"]');
             let $tab_cnt_prant = $group.find('.tap_area .tap_cnt');
 
-            if ($(window).width() <= 1024) {
-                // 모바일: 탭버튼/사진 숨기고, 컨텐츠 전부 보이게
-                $tab_btn.hide();
-                $tab_cnt.show();
-
-                // 부모에 grid 적용
-                $tab_cnt_prant.addClass('mobile-grid');
+            if ($(window).width() <= 1024 && $group.hasClass('signature')) {
+                // 모바일 + signature일 때만: 탭버튼/사진 숨기고, 컨텐츠 전부 보이게
+                $tab_btn.hide().off('click');       // 클릭 이벤트 제거
+                $tab_cnt.show().addClass('active'); // 모든 컨텐츠 노출
+                $tab_cnt_prant.addClass('mobile-grid'); // grid 적용
             } else {
-                // PC: 기존 탭 동작
+                // PC 전체 + 모바일 team: 기존 탭 동작
                 $tab_btn.show();
                 $tab_cnt.hide().removeClass('active');
                 $tab_cnt.first().show().addClass('active');
 
-                // PC에서는 grid 제거
+                // grid 제거
                 $tab_cnt_prant.removeClass('mobile-grid');
 
                 $tab_btn.off('click').on('click', function () {

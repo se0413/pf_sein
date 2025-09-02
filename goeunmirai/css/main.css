@@ -718,7 +718,8 @@
 }
 .team .tap_area .tap_cnt .team_cnt .txt > ul {
     display: flex;
-    margin-top: 140px;
+    margin-top: 110px;
+    gap: 24px;
 }
 .team .tap_area .tap_cnt .team_cnt .txt > ul > li {
     width: 240px;
@@ -735,7 +736,6 @@
     display: block;
     background-color: #331D12;
     font-size: var(--txt-size-tit2);
-    margin-left: 24px;
     width: 240px;
     height: 320px;
     border-radius: 100px;
@@ -759,6 +759,59 @@
 }
 .team .tap_area .tap_cnt div[role="tabpanel"].active {
     display: block; /*보임*/
+}
+
+@media screen and (max-width: 1300px){
+    .team .tap_area .tap_btn {
+        position: relative;
+        right: 0;
+        bottom: 0;
+    }
+    .team .tap_area .tap_cnt .team_cnt {
+        padding-bottom: 25px;
+    }
+    .team .tap_area .tap_cnt .team_cnt .photo {
+        width: 50%;
+        height: 560px;
+    }
+    .team .tap_area .tap_cnt .team_cnt .photo img {
+        height: auto;
+    }
+    .team .tap_area .tap_cnt .team_cnt .txt {
+        width: 50%;
+        height: auto;
+        border-radius: 20px;
+        background-color: var(--txt-color-main);
+    }
+    .team .tap_area .tap_cnt .team_cnt .txt > ul  {
+        margin: 0;
+    }
+    .team .tap_area .tap_cnt .team_cnt .txt > ul > li:first-child {
+        width: 100%;
+        height: 560px;
+        background-color: transparent;
+    }
+    .team .tap_area .tap_cnt .team_cnt .txt > ul > li:last-child {
+        display: none;
+    }
+    .team .tap_area .tap_btn > ul {
+        padding-bottom: 150px;
+    }
+    .team .tap_area .tap_btn > ul > li {
+        width: 20px;
+        height: 10px;
+        border: 2px solid var(--txt-color-main);
+        border-radius: 50px;
+    }
+    .team .tap_area .tap_btn > ul > li.active {
+        width: 30px;
+        height: 10px;
+        background-color: var(--txt-color-main);
+        border-radius: 50px;
+    }
+    .team .tap_area .tap_btn > ul > li::before {
+        display: none;
+    }
 }
 
 /* numbers */
