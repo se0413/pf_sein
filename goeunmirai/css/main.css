@@ -782,6 +782,7 @@
         height: auto;
         border-radius: 20px;
         background-color: var(--txt-color-main);
+        margin-left: 24px;
     }
     .team .tap_area .tap_cnt .team_cnt .txt > ul  {
         margin: 0;
