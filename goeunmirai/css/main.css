@@ -287,7 +287,7 @@
     }
     .speciality p {
         font-size: var(--txt-size-tit4);
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
     .speciality .speciality_cnt {
         padding-bottom: 0;
@@ -544,7 +544,7 @@
     }
     .signature p {
         font-size: var(--txt-size-tit4);
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
     .tap_area .tap_btn {
         display: none 
@@ -760,6 +760,9 @@
 .team .tap_area .tap_cnt div[role="tabpanel"].active {
     display: block; /*보임*/
 }
+.team_box .img_area {
+    flex: 1 1 50%; /* 왼쪽 이미지 비율 */
+}
 
 @media screen and (max-width: 1300px){
     .team .tap_area .tap_btn {
@@ -768,14 +771,14 @@
         bottom: 0;
     }
     .team .tap_area .tap_cnt .team_cnt {
-        padding-bottom: 25px;
+        padding-bottom: 45px;
     }
     .team .tap_area .tap_cnt .team_cnt .photo {
         width: 50%;
         height: 560px;
     }
     .team .tap_area .tap_cnt .team_cnt .photo img {
-        height: auto;
+        border-radius: 20px;
     }
     .team .tap_area .tap_cnt .team_cnt .txt {
         width: 50%;
@@ -804,6 +807,9 @@
         border: 2px solid var(--txt-color-main);
         border-radius: 50px;
     }
+    .team .tap_area .tap_cnt .team_cnt .txt > ul > li > strong {
+        margin: 190px 0 10px 0;
+    }
     .team .tap_area .tap_btn > ul > li.active {
         width: 30px;
         height: 10px;
@@ -811,9 +817,46 @@
         border-radius: 50px;
     }
     .team .tap_area .tap_btn > ul > li::before {
-        display: none;
+        display: block;
     }
 }
+@media screen and (max-width: 1024px){
+    .team h2 {
+        font-size: var(--txt-size-tit5);
+        padding-top: 60px;
+    }
+    .team p {
+        font-size: var(--txt-size-tit4);
+        margin-bottom: 30px;
+    }
+    .team .tap_area .tap_cnt .team_cnt .photo {
+        height: 290px;
+    }
+    .team .tap_area .tap_cnt .team_cnt .txt > ul > li:first-child {
+        height: 290px;
+    }
+    .team .tap_area .tap_cnt .team_cnt .txt > ul > li > strong {
+        font-size: 18px;
+        line-height: 25px;
+        margin: 100px 0 5px 0;
+    }
+    .team .tap_area .tap_cnt .team_cnt .txt > ul > li:nth-child(1) > span {
+        font-size: var(--txt-size-tit6);
+        line-height: 15px;
+    }
+}
+@media screen and (max-width: 768px){
+    .team .tap_area .tap_cnt .team_cnt .photo {
+        height: 150px;
+    }
+    .team .tap_area .tap_cnt .team_cnt .txt > ul > li:first-child {
+        height: 150px;
+    }
+    .team .tap_area .tap_cnt .team_cnt .txt > ul > li > strong {
+        margin: 35px 0 5px 0;
+    }
+}
+
 
 /* numbers */
 

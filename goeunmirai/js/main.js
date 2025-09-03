@@ -44,40 +44,55 @@ $(document).ready(function () {
             let $group = $(this);
             let $tab_btn = $group.find('.tap_area .tap_btn ul li');
             let $tab_cnt = $group.find('.tap_area .tap_cnt div[role="tabpanel"]');
-            let $tab_cnt_prant = $group.find('.tap_area .tap_cnt');
+            let $tab_cnt_parent = $group.find('.tap_area .tap_cnt');
 
-            if ($(window).width() <= 1024 && $group.hasClass('signature')) {
-                // 모바일 + signature일 때만: 탭버튼/사진 숨기고, 컨텐츠 전부 보이게
-                $tab_btn.hide().off('click');       // 클릭 이벤트 제거
-                $tab_cnt.show().addClass('active'); // 모든 컨텐츠 노출
-                $tab_cnt_prant.addClass('mobile-grid'); // grid 적용
+            let isMobile = $(window).width() <= 1024;
+
+            if (isMobile && $group.hasClass('signature')) {
+                // 모바일 + signature일 때: 탭 버튼 숨기고, 모든 컨텐츠 보이기
+                $tab_btn.hide().off('click');
+                $tab_cnt.show().addClass('active');
+                $tab_cnt_parent.addClass('mobile-grid');
             } else {
-                // PC 전체 + 모바일 team: 기존 탭 동작
-                $tab_btn.show();
+                // PC 전체 + 모바일 team: 탭 버튼 표시
+                $tab_btn.show().css({
+                    'display': 'inline-block',   // 강제 표시
+                    'visibility': 'visible',
+                    'opacity': 1
+                });
+
+                // 부모 요소 display 강제
+                $tab_btn.parent().css('display', 'block');
+
+                // 탭 컨텐츠 초기화
                 $tab_cnt.hide().removeClass('active');
                 $tab_cnt.first().show().addClass('active');
+                $tab_cnt_parent.removeClass('mobile-grid');
 
-                // grid 제거
-                $tab_cnt_prant.removeClass('mobile-grid');
+                // 클릭 이벤트 한 번만 등록
+                if (!$tab_btn.data('click-bound')) {
+                    $tab_btn.on('click', function () {
+                        let $this = $(this);
+                        let tab_name = '#' + $this.attr('aria-controls');
 
-                $tab_btn.off('click').on('click', function () {
-                    let $this = $(this);
-                    let tab_name = '#' + $this.attr('aria-controls');
+                        $tab_btn.removeClass('active').attr('aria-selected', 'false');
+                        $this.addClass('active').attr('aria-selected', 'true');
 
-                    $tab_btn.removeClass('active').attr('aria-selected', 'false');
-                    $this.addClass('active').attr('aria-selected', 'true');
-
-                    $tab_cnt.hide().removeClass('active');
-                    $tab_cnt_prant.find(tab_name).show().addClass('active');
-                });
+                        $tab_cnt.hide().removeClass('active');
+                        $tab_cnt_parent.find(tab_name).show().addClass('active');
+                    });
+                    $tab_btn.data('click-bound', true);
+                }
             }
         });
     }
 
     // 최초 실행
     applyTabBehavior();
+
     // 리사이즈 시 실행
     $(window).on('resize', applyTabBehavior);
+
 
     // 다른 Swiper 설정들 ...
     new Swiper('.ba_cnt .swiper', {
