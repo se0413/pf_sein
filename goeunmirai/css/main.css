@@ -165,9 +165,6 @@
     margin-top: 5px;
     margin-bottom: 90px;
 }
-.speciality .speciality_cnt {
-    padding-bottom: 190px;
-}
 .speciality .speciality_cnt ul {
     display: flex;
     justify-content: center;
@@ -288,9 +285,6 @@
     .speciality p {
         font-size: var(--txt-size-tit4);
         margin-bottom: 30px;
-    }
-    .speciality .speciality_cnt {
-        padding-bottom: 0;
     }
     .speciality .speciality_cnt ul {
         transform: scale(0.8); 
@@ -546,7 +540,7 @@
         font-size: var(--txt-size-tit4);
         margin-bottom: 30px;
     }
-    .tap_area .tap_btn {
+    .signature .tap_area .tap_btn {
         display: none 
     }
     .signature .tap_cnt .signature_cnt {
@@ -817,7 +811,7 @@
         border-radius: 50px;
     }
     .team .tap_area .tap_btn > ul > li::before {
-        display: block;
+        display: none;
     }
 }
 @media screen and (max-width: 1024px){
@@ -828,6 +822,9 @@
     .team p {
         font-size: var(--txt-size-tit4);
         margin-bottom: 30px;
+    }
+    .team .tap_area .tap_cnt .team_cnt {
+        padding-bottom: 25px;
     }
     .team .tap_area .tap_cnt .team_cnt .photo {
         height: 290px;
@@ -844,8 +841,22 @@
         font-size: var(--txt-size-tit6);
         line-height: 15px;
     }
+    .team .tap_area .tap_btn > ul {
+        padding-bottom: 50px;
+    }
+    .team .tap_area .tap_btn > ul > li {
+        height: 5px;
+        border: 1px solid var(--txt-color-main);
+    }
+    .team .tap_area .tap_btn > ul > li:nth-child(2) {
+        margin: 0 5px;
+    }
+    .team .tap_area .tap_btn > ul > li.active {
+        width: 20px;
+        height: 5px;
+    }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 520px){
     .team .tap_area .tap_cnt .team_cnt .photo {
         height: 150px;
     }
@@ -887,6 +898,12 @@
     color: var(--txt-color-cnt);
     padding-bottom: 180px;
 }
+.numbers .wrapper ul .c_f {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
+}
 .numbers .wrapper ul li {
     position: relative;
     width: 320px;
@@ -902,21 +919,71 @@
     text-align: center;
 }
 .numbers .wrapper ul li em {
-    position: absolute;
-    bottom: 60px;
-    right: 85px;
     display: block;
     font-size: var(--txt-size-tit4);
-}
-.numbers .wrapper ul li:nth-child(3) em {
-    right: 15px;
+    margin: 0 0 15px 10px;
 }
 .numbers .wrapper ul li strong {
     display: block;
     font-size: var(--txt-size-tit3);
+    font-weight: 300;
     text-align: center;
-    margin-top: 15px;
 }
+
+@media screen and (max-width: 1300px){
+    .numbers .wrapper ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .numbers .wrapper ul li {
+        width: calc(50% - 14px);
+        height: 260px;
+    }
+    .numbers .wrapper ul li:nth-child(2) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+        border-right: 0;
+    }
+    .numbers .wrapper ul li:nth-child(1) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    .numbers .wrapper ul li span {
+
+    }
+    .numbers .wrapper ul li strong {
+        margin-top: 5px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .numbers h2 {
+        font-size: var(--txt-size-tit5);
+        padding-top: 60px;
+    }
+    .numbers p {
+        font-size: var(--txt-size-tit4);
+        margin-bottom: 30px;
+    }
+    .numbers .wrapper ul {
+        padding-bottom: 60px;
+    }
+    .numbers .wrapper ul li {
+        height: 120px;
+    }
+    .numbers .wrapper ul li strong {
+        margin-top: 5px;
+        font-size: var(--txt-size-tit5);
+    }
+    .numbers .wrapper ul li span {
+        font-size: 40px;
+    }
+    .numbers .wrapper ul li em {
+        font-size: var(--txt-size-tit6);
+        margin: 0 0 7px 5px;
+    }
+    .numbers .wrapper ul li:nth-child(3) em {
+
+    }
+}
+
 
 /* ba */
 
