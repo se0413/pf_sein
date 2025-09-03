@@ -46,32 +46,20 @@ $(document).ready(function () {
             let $tab_cnt = $group.find('.tap_area .tap_cnt div[role="tabpanel"]');
             let $tab_cnt_prant = $group.find('.tap_area .tap_cnt');
 
-            let isMobile = $(window).width() <= 1024;
-
-            // ===== signature 그룹 처리 =====
-            if (isMobile && $group.hasClass('signature')) {
-                $tab_btn.hide().off('click');
-                $tab_cnt.show().addClass('active');
-                $tab_cnt_prant.addClass('mobile-grid');
-                return; // signature 처리 끝, team 쪽 코드 실행 안 됨
-            }
-
-            // ===== team 그룹 처리 =====
-            if ($group.hasClass('team')) {
-                // 버튼은 항상 보이도록
-                $tab_btn.css({
-                    'display': 'inline-block',
-                    'visibility': 'visible',
-                    'opacity': 1,
-                    'position': 'relative',
-                    'z-index': 10
-                });
-
+            if ($(window).width() <= 1024 && $group.hasClass('signature')) {
+                // 모바일 + signature일 때만: 탭버튼/사진 숨기고, 컨텐츠 전부 보이게
+                $tab_btn.hide().off('click');       // 클릭 이벤트 제거
+                $tab_cnt.show().addClass('active'); // 모든 컨텐츠 노출
+                $tab_cnt_prant.addClass('mobile-grid'); // grid 적용
+            } else {
+                // PC 전체 + 모바일 team: 기존 탭 동작
+                $tab_btn.show();
                 $tab_cnt.hide().removeClass('active');
                 $tab_cnt.first().show().addClass('active');
+
+                // grid 제거
                 $tab_cnt_prant.removeClass('mobile-grid');
 
-                // 클릭 이벤트
                 $tab_btn.off('click').on('click', function () {
                     let $this = $(this);
                     let tab_name = '#' + $this.attr('aria-controls');
@@ -88,28 +76,25 @@ $(document).ready(function () {
 
     // 최초 실행
     applyTabBehavior();
+    // 리사이즈 시 실행
+    $(window).on('resize', applyTabBehavior);
 
-    // 리사이즈 시 실행 (디바운스 적용)
-    let resizeTimeout;
-    $(window).on('resize', function () {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(applyTabBehavior, 50);
-    });
+    const ba_swiper = new Swiper('.ba_cnt .swiper', {
 
+        breakpoints: {
+            359: { slidesPerView: 3, spaceBetween: 24 },
+            1900: { slidesPerView: 1, spaceBetween: 0 },
+        },
+        pagination: { el: '.ba_cnt .btn_wrap .paging', clickable: true, type: 'bullets' },
 
-    // 다른 Swiper 설정들 ...
-    new Swiper('.ba_cnt .swiper', {
-        autoplay: { delay: 5000, disableOnInteraction: true },
-        effect: "fade",
-        loop: true,
-        pagination: { el: '.paging', clickable: true, type: 'bullets' },
-    });
-
-    const ba_swiper = new Swiper('.ba .swiper', {
-        autoplay: { delay: 5000, disableOnInteraction: true },
-        effect: "fade",
-        loop: true,
-        pagination: { el: '.paging', clickable: true, type: 'bullets' },
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 0,             // 회전 각도
+            stretch: 0,
+            depth: 100,            // 입체감
+            modifier: 1,
+            slideShadows: false,   // 그림자
+        },
     });
 
     const place_swiper = new Swiper('.place .swiper', {
