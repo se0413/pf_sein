@@ -80,25 +80,25 @@ $(document).ready(function () {
     $(window).on('resize', applyTabBehavior);
 
     const ba_swiper = new Swiper('.ba_cnt .swiper', {
-
+        slidesPerView: 1.5,       // 1장 + 양옆이 잘린 형태
+        centeredSlides: true,     // 가운데 정렬
+        loop: true,
+        spaceBetween: 24,
+        pagination: { 
+            el: '.ba_cnt .btn_wrap .paging', 
+            clickable: true, 
+            type: 'bullets' 
+        },
         breakpoints: {
-            359: { slidesPerView: 3, spaceBetween: 24 },
-            1900: { slidesPerView: 1, spaceBetween: 0 },
-        },
-        pagination: { el: '.ba_cnt .btn_wrap .paging', clickable: true, type: 'bullets' },
-
-        effect: 'coverflow',
-        coverflowEffect: {
-            rotate: 0,             // 회전 각도
-            stretch: 0,
-            depth: 100,            // 입체감
-            modifier: 1,
-            slideShadows: false,   // 그림자
-        },
+            1900: { slidesPerView: 3 },  
+            1901: { slidesPerView: 1 }
+        }
     });
 
+
+
     const place_swiper = new Swiper('.place .swiper', {
-        slidesPerView: 1,
+        slidesPerView: 'auto',
         spaceBetween: 16,
         breakpoints: {
             1900: { slidesPerView: 3, spaceBetween: 24 },
