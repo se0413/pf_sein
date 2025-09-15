@@ -108,4 +108,10 @@ $(document).ready(function () {
         pagination: { el: '.swiper-pagination', clickable: true, type: 'fraction' },
         scrollbar: { el: ".place .swiper-scrollbar", hide: false, draggable: true },
     });
+
+    $('.quick_menu .top').on('click', function(){
+        $('html, body').animate({
+            scrollTop:0
+        },500)
+    })
 });

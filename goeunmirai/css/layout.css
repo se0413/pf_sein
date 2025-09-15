@@ -252,6 +252,7 @@ header .gnb .gnb_wrap .depth1 li a {
     border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.6);
     position: relative;
+    cursor: pointer;
 }
 .quick_menu .top span::before {
     position: absolute;
@@ -264,6 +265,10 @@ header .gnb .gnb_wrap .depth1 li a {
     background-repeat: no-repeat;
     background-size: contain;
     content: "";
+}
+.quick_menu .top span:hover,
+.quick_menu .top span:hover {
+
 }
 
 @media screen and (max-width: 1600px){
