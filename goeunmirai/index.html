@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/common.js"></script>
     <script src="js/counter.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" type="image/x-icon" href="../goeunmirai/favicon.ico">
     <title>고은미래의원</title>
 </head>
@@ -18,7 +20,7 @@
         <a href="#skip_nav">대메뉴 바로가기</a>
     </div>
     <div id="wrap">
-        <header class="">
+        <header>
             <h1 class="logo"><a href="index.html">고은미래의원</a></h1>
             <nav class="gnb">
                 <button class="gnb_open">메뉴열기</button>
@@ -96,7 +98,7 @@
                 <p>고은미래만의<br>특별함</p>
                 <div class="speciality_cnt">
                     <ul>
-                        <li>
+                        <li data-aos="fade-up" data-aos-delay="500">
                             <strong>전문 의료진</strong>
                             <div class="photo1">
                                 <span>10년 이상 경력의 의료진이<br>직접 진료합니다.</span>
@@ -109,7 +111,7 @@
                                     </svg>
                             </div>
                         </li>
-                        <li>
+                        <li data-aos="fade-up" data-aos-delay="1000">
                             <strong>1:1 맞춤 진료</strong>
                             <div class="photo2">
                                 <span>내 피부에 꼭 맞는<br>솔루션을 제안합니다.</span>
@@ -121,7 +123,7 @@
                                     </svg>
                             </div>
                         </li>
-                        <li>
+                        <li data-aos="fade-up" data-aos-delay="1500">
                             <strong>프라이빗 케어</strong>
                             <div class="photo3">
                                 <span>진료부터 시술까지 오직 한 분만을<br>위한 공간을 준비합니다.</span>
@@ -140,7 +142,7 @@
                 <div class="wrapper">
                     <h2>GOEUNMIRAI SIGNATURE</h2>
                     <p>고은미래의 철학을 담은<br>대표 솔루션</p>
-                    <div class="tap_area">
+                    <div class="tap_area" data-aos="fade-up" data-aos-delay="500">
                         <div class="tap_btn">
                             <ul role="tablist">
                                 <li id="sig_tab_01" aria-selected="true" aria-controls="sig_panel_01" role="tab" class="active"><button><span>레이저<br>제모</span></button></li>
@@ -214,7 +216,7 @@
                 <div class="wrapper">
                     <h2>MEDICAL TEAM</h2>
                     <p>분야별 맞춤<br>대표 의료진 소개</p>
-                    <div class="tap_area">
+                    <div class="tap_area" data-aos="fade-up" data-aos-delay="500">
                         <div class="tap_cnt">
                             <div id="team_panel_01" role="tabpanel" aria-labelledby="team_tab_01" class="active">
                                 <div class="team_cnt">
@@ -285,7 +287,7 @@
                 <div class="wrapper">
                     <h2>GOEUNMIRAI IN NUMBERS</h2>
                     <p>숫자로 보는<br>고은미래의원</p>
-                    <ul>
+                    <ul data-aos="fade-up" data-aos-delay="500">
                         <li class="hn_1">
                             <div class="c_f">
                                 <span class="counter" data-start="0" data-end="36">0</span><em>년</em>
@@ -320,10 +322,10 @@
                 </div>
                 <div class="ba_cnt">
                     <ul>
-                        <li class="before">
+                        <li class="before" data-aos="fade-up" data-aos-delay="500">
                             <strong>Before</strong>
                         </li>
-                        <li class="center">
+                        <li class="center" data-aos="fade-up" data-aos-delay="1500">
                             <div class="swiper"> 
                                 <ul class="swiper-wrapper">
                                     <li class="swiper-slide">
@@ -347,7 +349,7 @@
                                 </div> 
                             </div>
                         </li>
-                        <li class="after">
+                        <li class="after" data-aos="fade-up" data-aos-delay="1000">
                             <strong>After</strong>
                             <em>
                                 <a href="#n">More Veiw</a>
@@ -361,7 +363,7 @@
                     <h2>GOEUNMIRAI PLACE</h2>
                     <p>방문하기 전<br>고은미래 둘러보기</p>
                 </div>
-                <div class="p_list">
+                <div class="p_list" data-aos="fade-up" data-aos-delay="500">
                     <div class="swiper"> 
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
@@ -442,5 +444,12 @@
             </footer>
         </main>
     </div>
+    <script>
+        AOS.init({
+            offset: 100,
+            duration: 500, 
+            easing: 'ease', 
+    });
+    </script>
 </body>
 </html>

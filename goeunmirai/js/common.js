@@ -52,13 +52,4 @@ $(document).ready(function(){
         $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
     })
 
-    //footer famillysite
-    $('footer .famillysite button.btn_open').on('click', function(){
-        $('footer .famillysite').addClass('open')
-        $('footer .famillysite ul').slideDown()
-    })
-    $('footer .famillysite button.btn_close').on('click', function(){
-        $('footer .famillysite').removeClass('open')
-        $('footer .famillysite ul').slideUp()
-    })
 })

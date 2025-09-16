@@ -39,6 +39,7 @@
 .visual .swiper ul li p {
     margin-top: 20px;
     font-size: var(--txt-size-tit4);
+    font-weight: 300;
 }
 .visual .btn_wrap {
     position: absolute;
@@ -152,14 +153,14 @@
 }
 .speciality h2 {
     font-size: var(--txt-size-tit2);
-    font-weight: 700;
+    font-weight: 600;
     padding-top: 190px;
     color: var(--txt-color-sub);
     text-align: center;
 }
 .speciality p {
     font-size: var(--txt-size-tit1);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--txt-color-cnt);
     text-align: center;
     margin-top: 5px;
@@ -195,7 +196,7 @@
     display: block;
     font-size: var(--txt-size-tit2);
     color: var(--txt-color-cnt);
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
     border-radius: 20px;
     border: 1px solid var(--txt-color-cnt);
@@ -358,14 +359,14 @@
 
 .signature h2 {
     font-size: var(--txt-size-tit2);
-    font-weight: 700;
+    font-weight: 600;
     padding-top: 190px;
     color: var(--txt-color-sub);
     text-align: center;
 }
 .signature p {
     font-size: var(--txt-size-tit1);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--txt-color-main);
     text-align: center;
     margin-top: 5px;
@@ -416,7 +417,7 @@
 }
 .signature .tap_area .tap_btn > ul > li.active,
 .signature .tap_area .tap_btn > ul > li:hover {
-    font-weight: 700;
+    font-weight: 600;
     color: var(--txt-color-main);
 }
 .signature .tap_cnt .signature_cnt {
@@ -621,14 +622,14 @@
 }
 .team h2 {
     font-size: var(--txt-size-tit2);
-    font-weight: 700;
+    font-weight: 600;
     padding-top: 190px;
     color: var(--txt-color-sub);
     text-align: center;
 }
 .team p {
     font-size: var(--txt-size-tit1);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--txt-color-main);
     text-align: center;
     margin-top: 5px;
@@ -721,7 +722,7 @@
     width: 240px;
     height: 320px;
     border-radius: 100px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--txt-color-cnt);
     text-align: center;
 }
@@ -881,14 +882,14 @@
 }
 .numbers h2 {
     font-size: var(--txt-size-tit2);
-    font-weight: 700;
+    font-weight: 600;
     padding-top: 190px;
     color: var(--txt-color-sub);
     text-align: center;
 }
 .numbers p {
     font-size: var(--txt-size-tit1);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--txt-color-cnt);
     text-align: center;
     margin-top: 5px;
@@ -985,14 +986,14 @@
 
 .ba h2 {
     font-size: var(--txt-size-tit2);
-    font-weight: 700;
+    font-weight: 600;
     padding-top: 190px;
     color: var(--txt-color-sub);
     text-align: center;
 }
 .ba p {
     font-size: var(--txt-size-tit1);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--txt-color-main);
     text-align: center;
     margin-top: 5px;
@@ -1205,14 +1206,14 @@
 }
 .place h2 {
     font-size: var(--txt-size-tit2);
-    font-weight: 700;
+    font-weight: 600;
     padding-top: 190px;
     color: var(--txt-color-sub);
     text-align: center;
 }
 .place p {
     font-size: var(--txt-size-tit1);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--txt-color-main);
     text-align: center;
     margin-top: 5px;
@@ -1308,7 +1309,7 @@ footer .f_u > .f_l > strong {
     display: block;
     padding: 150px 0 40px 0;
     font-size: 45px;
-    font-weight: 700;
+    font-weight: 600;
     white-space: nowrap;
 }
 footer .f_u > .f_l > ul {
@@ -1339,7 +1340,7 @@ footer .f_u > .f_l > ul > li:nth-child(2) .f_k strong,
 footer .f_u > .f_l > ul > li:nth-child(2) .f_c strong {
     display: block;
     font-size: var(--txt-size-tit4);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 25px;
     padding: 105px 0 0 0;
     position: relative;
@@ -1390,13 +1391,13 @@ footer .f_u > .f_l > ul > li > span {
 }
 footer .f_u > .f_l > ul > li:nth-child(1) > strong {
     font-size: var(--txt-size-tit4);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 20px;
     padding: 40px 0 15px 0;
 }
 footer .f_u > .f_l > ul > li:nth-child(1) > span {
     font-size: var(--txt-size-tit5);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 15px;
     padding-bottom: 15px;
 }
@@ -1422,6 +1423,7 @@ footer .f_s strong {
     display: block;
     font-size: var(--txt-size-tit5);
     color: rgba(255, 255, 255, 0.4);
+    margin-right: 24px;
 }
 footer .f_s ul {
     display: flex;
@@ -1506,7 +1508,7 @@ footer .f_s ul li:last-child {
         padding: 20px 0 120px 0;
     }
     footer .f_s strong {
-        position: static; /* 흐름대로 내려가게 */
-        margin-top: 40px;
+        position: static; 
+        margin: 40px 0 0 0;
     }
 }
