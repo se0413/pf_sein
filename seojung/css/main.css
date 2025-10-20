@@ -10,6 +10,8 @@
 .visual {
     position: relative;
     color: var(--txt-color-cnt);
+    background-color: #331D12;
+    height: 1000px;
 }
 .visual h2 {
     font-size: 0;
