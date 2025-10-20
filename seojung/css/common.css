@@ -1,12 +1,13 @@
 html, body{
-    font-family: "Noto Serif KR", serif;
-    font-weight:300; 
+    font-family: "Pretendard";
+    font-weight:400; 
     font-size: 15px;
     line-height: 1.2;
     letter-spacing: 0;
-    color: var(--txt-color-cts);
+    color: #3E3E3E;
     word-break: keep-all; 
     word-wrap: break-word; 
+    overflow-x: hidden;
 }
 #wrap{ 
     min-width: 1620px;
