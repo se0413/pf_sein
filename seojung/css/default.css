@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+li {
+    list-style: none; 
+}
+h1, h2, h3, h4, h5, h6, strong { 
+    font-size: inherit; 
+    font-weight: inherit;
+}
+a {
+    color: inherit; 
+    text-decoration: none; 
+}
+img { 
+    border: 0px;
+}
+em, span, strong, address {
+    font-style: inherit;
+}
+button {
+    background-color: transparent;
+    border: 0; 
+    cursor: pointer; 
+}
+input, select, textarea, button {
+    font-style: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+}
+legend {
+    display: none;
+}
+fieldset {
+    border: 0;
+}
