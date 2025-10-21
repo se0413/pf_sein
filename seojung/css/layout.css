@@ -125,6 +125,7 @@ header .gnb .gnb_wrap{
     display: none;
     position: absolute;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100vh;
 }
@@ -164,7 +165,7 @@ header.menu_open .gnb::after {
 }
 header .gnb .gnb_wrap .depth1 {
     width: 30%;
-    padding: 8% 0 0 8%;
+    padding: 8vw 0 0 8vw;
 }
 header .gnb .gnb_wrap > .depth1 > li {
     display: flex;
@@ -194,14 +195,14 @@ header .gnb .gnb_wrap > .depth1 > li::before {
 header .gnb .gnb_wrap > .depth1 > li.active::before {
     display: block;
 }
-header .gnb .gnb_wrap .depth1 > li.active {
+header .gnb .gnb_wrap > .depth1 > li.active {
     color: #fff;
 }
-header .gnb .gnb_wrap .depth1 li > a {
+header .gnb .gnb_wrap > .depth1 li > a {
     display: block;
     line-height: 70px;
 }
-header .gnb .gnb_wrap .depth2 {
+header .gnb .gnb_wrap > .depth1 > li > .depth2 {
     display: none;
     position: absolute;
     left: 140%;
@@ -209,11 +210,14 @@ header .gnb .gnb_wrap .depth2 {
     transform: translate(0, -50%);
     transition: 0.5s;
 }
-header .gnb .gnb_wrap .depth1 > li.active > .depth2 {
+header .gnb .gnb_wrap > .depth1 > li:nth-child(3) > .depth2 {
+    top: -145%;
+}
+header .gnb .gnb_wrap > .depth1 > li.active > .depth2 {
     display: block;
     text-align: left;
 }
-header .gnb .gnb_wrap .depth2 li {
+header .gnb .gnb_wrap > .depth1 > li > .depth2 > li {
     display: block;
     font-family: 'Pretendard';
     font-size: 25px;
@@ -221,7 +225,7 @@ header .gnb .gnb_wrap .depth2 li {
     transition: 0.5s;
     position: relative;
 }
-header .gnb .gnb_wrap .depth2 > li::before {
+header .gnb .gnb_wrap > .depth1 > li > .depth2 > li::before {
     position: absolute;
     left: 0;
     top: 50%;
@@ -233,21 +237,84 @@ header .gnb .gnb_wrap .depth2 > li::before {
     content: "";
     display: none;
 }
-header .gnb .gnb_wrap .depth2 > li:hover::before {
+header .gnb .gnb_wrap > .depth1 > li > .depth2 > li:hover::before {
     display: block;
 }
-header .gnb .gnb_wrap .depth2 > li:hover {
+header .gnb .gnb_wrap  > .depth1 > li > .depth2 > li:hover {
     padding-left: 20px
 }
-header .gnb .gnb_wrap .depth2 li a {
+header .gnb .gnb_wrap > .depth1 > li > .depth2 li a {
     display: block;
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1600px){
+    header .gnb .gnb_wrap .depth1 {
+        padding: 5vw 0 0 5vw;
+    }
 }
-
+@media screen and (max-width: 1400px){
+    header .gnb .gnb_wrap .depth1 {
+        padding: 5vw 0 0 5vw;
+    }
+    header .gnb .gnb_wrap > .depth1 > li {
+        font-size: 50px;
+    }
+}
 @media screen and (max-width: 1024px){
-
+    header {
+        height: 50px;
+    }
+    header .gnb .gnb_close {
+        width: 60px;
+        height: 50px;
+    }
+    header .gnb .gnb_close::before {
+        width: 40px;
+        height: 35px;
+    }
+    header.menu_open .gnb::after {
+        left: auto;
+        right: 0;
+    }
+    header .gnb .gnb_wrap .depth1 {
+        width: 50%;
+        padding: 50px 0 0 3vw;
+    }
+    header .gnb .gnb_wrap > .depth1 > li {
+        font-size: 20px;
+        padding: 0;
+    }
+    header .gnb .gnb_wrap > .depth1 > li > a,
+    header .gnb .gnb_wrap  > .depth1 > li > .depth2 li a {
+        line-height: 40px;
+    }
+    header .gnb .gnb_wrap > .depth1 > li::before {
+        right: -10px;
+        width: 24px;
+        height: 24px;
+    }
+    header .gnb .gnb_wrap > .depth1 > li > .depth2 li {
+        font-size: 13px;
+    }
+    header .gnb .gnb_wrap > .depth1 > li:nth-child(1) > .depth2 {
+        left: 120%;
+        top: 160%;
+    }
+    header .gnb .gnb_wrap > .depth1 > li:nth-child(2) > .depth2 {
+        left: 120%;
+        top: 270%;
+    }
+    header .gnb .gnb_wrap > .depth1 > li:nth-child(3) > .depth2 {
+        left: 120%;
+        top: -90%;
+    }
+    header .gnb .gnb_wrap > .depth1 > li > .depth2 > li::before {
+        width: 4px;
+        height: 4px;
+    }
+    header .gnb .gnb_wrap  > .depth1 > li > .depth2 > li:hover {
+        padding-left: 10px
+    }
 }
 
 /*quick_menu*/
@@ -260,7 +327,9 @@ header .gnb .gnb_wrap .depth2 li a {
 }
 .quick_menu .quick_open,
 .quick_menu .quick_close {
-    position: relative;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
     width: 100px;
     height: 100px;
     background-color: rgba(110, 79, 163, 1);
@@ -273,24 +342,32 @@ header .gnb .gnb_wrap .depth2 li a {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) ;
 }
 .quick_menu .quick_close {
-    display: none;
-    pointer-events: auto;
-    z-index: 999999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
 }
 .quick_menu.menu_open .quick_close {
     display: block;
+    opacity: 1;
+    visibility: visible;
 }
 .quick_menu.menu_open .quick_open {
     display: none;
 }
 .quick_menu > ul {
     position: absolute;
-    display: none;
+    right: 50px;
+    bottom: 10%;
     height: 100px;
     height: 100px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
 }
 .quick_menu.menu_open > ul {
     display: block;
+    opacity: 1;
+    visibility: visible;
 }
 .quick_menu > ul > li {
     width: 54px;
@@ -369,6 +446,7 @@ header .gnb .gnb_wrap .depth2 li a {
 .quick_menu ul li:nth-child(4) {
     transform: translate(-35px, -75px);
 }
+
 
 @media screen and (max-width: 1600px){
     .quick_menu {

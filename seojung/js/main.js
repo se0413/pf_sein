@@ -53,11 +53,6 @@ $(document).ready(function () {
         $('.quick_menu').removeClass('menu_open')
     })
 
-    $('.quick_menu .quick_close').on('click', function(){
-        console.log('닫기 버튼 클릭됨!');
-    $('.quick_menu').removeClass('menu_open');
-    });
-
     $('.quick_menu .top').on('click', function(){
         $('html, body').animate({
             scrollTop:0

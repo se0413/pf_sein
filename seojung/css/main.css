@@ -49,16 +49,18 @@
 }
 .visual .scroll::before {
     position: absolute;
-    left: 50%;
     bottom: 60px;
     width: 45px;
     height: 45px;
-    transform: translate(-50%, 0);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg width='45' height='45' viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_139_121' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='45' height='45'%3E%3Crect x='45' y='1.96701e-06' width='45' height='45' transform='rotate(90 45 1.96701e-06)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_139_121)'%3E%3Cpath d='M22.5 22.0169L33.2128 14.3547C33.5253 14.1335 33.8492 14.1088 34.1845 14.2807C34.5198 14.4526 34.6875 14.7271 34.6875 15.1043C34.6875 15.2552 34.6522 15.3987 34.5816 15.5346C34.5109 15.6702 34.4128 15.7757 34.2872 15.851L22.5 24.303L10.7128 15.851C10.5872 15.7751 10.4891 15.6685 10.4184 15.5313C10.3478 15.3944 10.3125 15.2499 10.3125 15.0977C10.3125 14.7321 10.4802 14.4616 10.8155 14.2863C11.1508 14.1107 11.4747 14.1335 11.7872 14.3547L22.5 22.0169ZM22.5 32.8849L33.2128 25.2227C33.5253 25.0015 33.8492 24.9768 34.1845 25.1487C34.5198 25.3205 34.6875 25.5951 34.6875 25.9722C34.6875 26.1232 34.6522 26.2665 34.5816 26.4021C34.5109 26.538 34.4128 26.6437 34.2872 26.719L22.5 35.171L10.7128 26.719C10.5872 26.6427 10.4891 26.5362 10.4184 26.3993C10.3478 26.2621 10.3125 26.1174 10.3125 25.9652C10.3125 25.5999 10.4801 25.3296 10.8155 25.1543C11.1508 24.9787 11.4747 25.0015 11.7872 25.2227L22.5 32.8849Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
     content: "";
+    animation-name:animate_m; 
+    animation-duration:1.5s; 
+    animation-iteration-count:infinite; 
+    animation-timing-function:linear
 }
 .swiper-pagination-lock {
     display: block;
@@ -100,4 +102,9 @@
     height: 100%;
     background-color: #fff;
     width: 0%;
+}
+@keyframes animate_m {
+    0% { transform:translate(0, 0) }
+    50% { transform:translate(0, 15px) }
+    100% { transform:translate(0, 0) }
 }
