@@ -39,40 +39,6 @@ $(document).ready(function () {
         }, 50);
     }
 
-    function applyTabBehavior() {
-        $('.team, .signature').each(function () {
-            let $group = $(this);
-            let $tab_btn = $group.find('.tap_area .tap_btn ul li');
-            let $tab_cnt = $group.find('.tap_area .tap_cnt div[role="tabpanel"]');
-            let $tab_cnt_prant = $group.find('.tap_area .tap_cnt');
-
-            if ($(window).width() <= 1024 && $group.hasClass('signature')) {
-                // 모바일 + signature일 때만: 탭버튼/사진 숨기고, 컨텐츠 전부 보이게
-                $tab_btn.hide().off('click');       // 클릭 이벤트 제거
-                $tab_cnt.show().addClass('active'); // 모든 컨텐츠 노출
-                $tab_cnt_prant.addClass('mobile-grid'); // grid 적용
-            } else {
-                // PC 전체 + 모바일 team: 기존 탭 동작
-                $tab_btn.show();
-                $tab_cnt.hide().removeClass('active');
-                $tab_cnt.first().show().addClass('active');
-
-                // grid 제거
-                $tab_cnt_prant.removeClass('mobile-grid');
-
-                $tab_btn.off('click').on('click', function () {
-                    let $this = $(this);
-                    let tab_name = '#' + $this.attr('aria-controls');
-
-                    $tab_btn.removeClass('active').attr('aria-selected', 'false');
-                    $this.addClass('active').attr('aria-selected', 'true');
-
-                    $tab_cnt.hide().removeClass('active');
-                    $tab_cnt_prant.find(tab_name).show().addClass('active');
-                });
-            }
-        });
-    }
 
     // 최초 실행
     applyTabBehavior();
@@ -94,7 +60,6 @@ $(document).ready(function () {
             1901: { slidesPerView: 1 }
         }
     });
-
 
 
     const place_swiper = new Swiper('.place .swiper', {

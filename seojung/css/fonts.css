@@ -12,8 +12,13 @@
     font-display: swap;
     src: local('Pretendard SemiBold'), url(../fonts/Pretendard-Medium.woff2) format('woff2'), url(../fonts/Pretendard-Medium.woff) format('woff');
 }
-
-.bodoni-moda {
+.bodoni-moda-regular {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.bodoni-moda-bold {
   font-family: "Bodoni Moda", serif;
   font-optical-sizing: auto;
   font-weight: 700;

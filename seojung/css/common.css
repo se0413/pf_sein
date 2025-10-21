@@ -2,7 +2,7 @@ html, body{
     font-family: "Pretendard";
     font-weight:400; 
     font-size: 15px;
-    line-height: 1.2;
+    line-height: 1.4;
     letter-spacing: 0;
     color: #3E3E3E;
     word-break: keep-all; 
@@ -10,7 +10,7 @@ html, body{
     overflow-x: hidden;
 }
 #wrap{ 
-    min-width: 1620px;
+
     overflow: hidden;
 }
 .wrapper {
