@@ -10,7 +10,7 @@ html, body{
     overflow-x: hidden;
 }
 #wrap{ 
-
+    min-width: 1620px;
     overflow: hidden;
 }
 .wrapper {
@@ -20,7 +20,7 @@ html, body{
 
 @media screen and (max-width: 1300px){
     #wrap { 
-        min-width: 1620px;
+        min-width: 100%;
     }
     .wrapper {
         margin: 0 20px; 

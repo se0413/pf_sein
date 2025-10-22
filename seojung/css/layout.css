@@ -30,17 +30,12 @@ header {
     height: 80px;
     padding: 0 20px;
     color: #fff;
-    font-size: var(--txt-size-tit3);
     font-weight: 600;
     position: fixed;
     top: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
     z-index: 100;
 }
-/* header.fixed,
-header.menu_open {
-    background-color: var(--txt-color-main);
-} */
 header .logo a {
     display: block;
     font-size: 0;
@@ -248,6 +243,125 @@ header .gnb .gnb_wrap > .depth1 > li > .depth2 li a {
 }
 
 @media screen and (max-width: 1600px){
+    header {
+        height: 50px;
+    }
+    header .logo a {
+        width: 130px;
+        height: 21px;
+    }
+    header .gnb .gnb_open {
+        width: 60px;
+        height: 50px;
+    }
+    header .gnb .gnb_open::before,
+    header .gnb .gnb_close::before {
+        width: 36px;
+        height: 50px;
+    }
+    header .gnb .gnb_close {
+        width: 60px;
+        height: 50px;
+    }
+    header .gnb .gnb_close::before {
+        width: 40px;
+        height: 50px;
+    }
+    header.menu_open .gnb::after {
+        left: 30%;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.4);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: "";
+        z-index: -1;
+    }
+    header .gnb .gnb_wrap .depth1 {
+        width: 30%;
+        padding: 8vw 0 0 8vw;
+    }
+    header .gnb .gnb_wrap > .depth1 > li {
+        display: flex;
+        font-family: "Bodoni Moda", serif;
+        font-weight: 700;
+        font-size: 70px;
+        padding: 30px 0;
+        white-space: nowrap;
+        color: rgba(255, 255, 255, 0.4);
+        transition: 0.5s;
+        position: relative;
+    }
+    header .gnb .gnb_wrap > .depth1 > li::before {
+        position: absolute;
+        right: -27px;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 54px;
+        height: 54px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(../image/arrow_1.png);
+        content: "";
+        display: none;
+    }
+    header .gnb .gnb_wrap > .depth1 > li.active::before {
+        display: block;
+    }
+    header .gnb .gnb_wrap > .depth1 > li.active {
+        color: #fff;
+    }
+    header .gnb .gnb_wrap > .depth1 li > a {
+        display: block;
+        line-height: 70px;
+    }
+    header .gnb .gnb_wrap > .depth1 > li > .depth2 {
+        display: none;
+        position: absolute;
+        left: 140%;
+        top: 80%;
+        transform: translate(0, -50%);
+        transition: 0.5s;
+    }
+    header .gnb .gnb_wrap > .depth1 > li:nth-child(3) > .depth2 {
+        top: -145%;
+    }
+    header .gnb .gnb_wrap > .depth1 > li.active > .depth2 {
+        display: block;
+        text-align: left;
+    }
+    header .gnb .gnb_wrap > .depth1 > li > .depth2 > li {
+        display: block;
+        font-family: 'Pretendard';
+        font-size: 25px;
+        font-weight: 500;
+        transition: 0.5s;
+        position: relative;
+    }
+    header .gnb .gnb_wrap > .depth1 > li > .depth2 > li::before {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 7px;
+        height: 7px;
+        background-color: #fff;
+        border-radius: 50%;
+        content: "";
+        display: none;
+    }
+    header .gnb .gnb_wrap > .depth1 > li > .depth2 > li:hover::before {
+        display: block;
+    }
+    header .gnb .gnb_wrap  > .depth1 > li > .depth2 > li:hover {
+        padding-left: 20px
+    }
+    header .gnb .gnb_wrap > .depth1 > li > .depth2 li a {
+        display: block;
+    }
     header .gnb .gnb_wrap .depth1 {
         padding: 5vw 0 0 5vw;
     }
