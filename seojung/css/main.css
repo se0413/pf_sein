@@ -3,6 +3,25 @@
 @import url(common.css);
 @import url(layout.css);
 
+/*스크롤바*/
+
+::-webkit-scrollbar {
+    width: 8px; /* 스크롤바 두께 */
+}
+::-webkit-scrollbar-thumb {
+    background: #6E4FA3; /* 포인트 컬러 (보라색) */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* hover 시 효과 */
+::-webkit-scrollbar-thumb:hover {
+    background: #4E2F83;
+}
+
 /* visual */
 
 .visual {
@@ -39,6 +58,9 @@
     font-weight: 700;
     color: #fff;
     margin: 400px 0 10px 0;
+}
+.visual .swiper ul li h2 br {
+    display: none;
 }
 .visual .swiper ul li p {
     font-size: 20px;
@@ -114,8 +136,8 @@
         border-radius: 0 0 70px 70px;
     }
     .visual .swiper > .wrapper {
-        left: 50%;
-        top: 625px;
+        left: 77px;
+        top: 465px;
         transform: translate(-50%, 0);
     }
     .visual .swiper ul li{
@@ -123,69 +145,229 @@
     }
     .visual .swiper ul li h2 {
         font-size: 30px;
-        margin: 400px 0 10px 0;
+        margin: 320px 0 10px 0;
+    }
+    .visual .swiper ul li h2 br {
+        display: block;
     }
     .visual .swiper ul li p {
-        font-size: 20px;
-        color: #fff;
+        font-size: 13px;
     }
     .visual .scroll {
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translate(-50%, 0);
-        font-size: 20px;
-        color: #fff;
-        padding-bottom: 110px;
-        z-index: 10;
+        font-size: 15px;
+        padding-bottom: 80px;
     }
     .visual .scroll::before {
-        position: absolute;
+        left: 5px;
         bottom: 60px;
-        width: 45px;
-        height: 45px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url("data:image/svg+xml,%3Csvg width='45' height='45' viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_139_121' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='45' height='45'%3E%3Crect x='45' y='1.96701e-06' width='45' height='45' transform='rotate(90 45 1.96701e-06)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_139_121)'%3E%3Cpath d='M22.5 22.0169L33.2128 14.3547C33.5253 14.1335 33.8492 14.1088 34.1845 14.2807C34.5198 14.4526 34.6875 14.7271 34.6875 15.1043C34.6875 15.2552 34.6522 15.3987 34.5816 15.5346C34.5109 15.6702 34.4128 15.7757 34.2872 15.851L22.5 24.303L10.7128 15.851C10.5872 15.7751 10.4891 15.6685 10.4184 15.5313C10.3478 15.3944 10.3125 15.2499 10.3125 15.0977C10.3125 14.7321 10.4802 14.4616 10.8155 14.2863C11.1508 14.1107 11.4747 14.1335 11.7872 14.3547L22.5 22.0169ZM22.5 32.8849L33.2128 25.2227C33.5253 25.0015 33.8492 24.9768 34.1845 25.1487C34.5198 25.3205 34.6875 25.5951 34.6875 25.9722C34.6875 26.1232 34.6522 26.2665 34.5816 26.4021C34.5109 26.538 34.4128 26.6437 34.2872 26.719L22.5 35.171L10.7128 26.719C10.5872 26.6427 10.4891 26.5362 10.4184 26.3993C10.3478 26.2621 10.3125 26.1174 10.3125 25.9652C10.3125 25.5999 10.4801 25.3296 10.8155 25.1543C11.1508 24.9787 11.4747 25.0015 11.7872 25.2227L22.5 32.8849Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
-        content: "";
-        animation-name:animate_m; 
-        animation-duration:1.5s; 
-        animation-iteration-count:infinite; 
-        animation-timing-function:linear
+        width: 25px;
+        height: 25px;
     }
     .swiper-pagination-lock {
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: 150px;
-        font-family: "Bodoni Moda", serif;
-        font-size: 25px;
-        color: #fff;
-        z-index: 10;
-        margin: 0px auto;
+        font-size: 13px;
     }
     .progress {
-        flex: 1;
-        height: 2px;
-        background-color: rgba(255, 255, 255, 0.3);
-        overflow: hidden;
-        margin-bottom: 8px;
+        height: 1px;
+        margin-bottom: 5px;
     }
     .visual-progress-wrap {
-        display: flex;
-        align-items: flex-end;
-        color: #fff;
-        width: 170px;
+        width: 150px;
         gap: 10px;
-        font-family: "Bodoni Moda", serif;
-        font-size: 25px;
-        font-weight: 400;
+        font-size: 13px;
     }
-    .progress-bar {
-        display: block;
-        height: 100%;
-        background-color: #fff;
-        width: 0%;
+}
+@media screen and (max-width: 1024px){
+    .visual .swiper > .wrapper {
+        left: 65px;
+        top: 295px;
     }
+    .visual .swiper ul li{
+        height: 500px;
+    }
+    .visual .swiper ul li h2 {
+        margin: 150px 0 10px 0;
+    }
+    .visual .scroll {
+        padding-bottom: 60px;
+    }
+    .visual .scroll::before {
+        bottom: 30px;
+    }
+    .visual-progress-wrap {
+        width: 130px;
+        gap: 5px;
+    }
+}
+
+/*about_us*/
+
+.about_us > h2 {
+    font-size: 0;
+    line-height: 0;
+}
+.about_us .since {
+    padding: 270px 0 0 0;
+}
+.about_us .since .wrapper > .n_s {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about_us .since .wrapper > .n_s > .n_l strong {
+    font-family: "Bodoni Moda", serif;
+    font-size: 130px;
+    font-weight: 700;
+    color: #6E4FA3;
+}
+.about_us .since .wrapper > .n_s > .n_l {
+    position: relative;
+}
+.about_us .since .wrapper > .n_s > .n_l > strong > span {
+    display: block;
+    position: relative;
+}
+.about_us .since .wrapper > .n_s > .n_l > strong > span::before {
+    position: absolute;
+    left: -60px;
+    top: 33px;
+    width: 36px;
+    height: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='36' height='30' viewBox='0 0 36 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.2604 30C26.7692 30 25.4675 29.7404 24.355 29.2213C23.2663 28.6774 22.3669 27.9604 21.6568 27.0705C20.9467 26.1805 20.4142 25.1422 20.0592 23.9555C19.7041 22.7689 19.5266 21.508 19.5266 20.1731C19.5266 17.5031 19.9053 15.0927 20.6627 12.9419C21.4438 10.7664 22.4497 8.85043 23.6805 7.19407C24.9112 5.51298 26.2722 4.07911 27.7633 2.89246C29.2781 1.68109 30.7692 0.716934 32.2367 0L33.2663 1.44623C31.1834 3.49815 29.5266 5.32756 28.2959 6.93449C27.0651 8.51669 26.4497 9.83931 26.4497 10.9023C26.4497 11.5451 26.7101 12.0643 27.2308 12.4598C27.7515 12.8554 28.3905 13.2138 29.1479 13.5352C29.8817 13.8319 30.6509 14.1656 31.4556 14.5365C32.2604 14.9073 32.9941 15.4017 33.6568 16.0198C34.3432 16.6131 34.8994 17.3671 35.3254 18.2818C35.7752 19.1965 36 20.3585 36 21.7676C36 22.6082 35.8343 23.5105 35.503 24.4747C35.1953 25.4388 34.7101 26.3288 34.0473 27.1446C33.4083 27.9604 32.6035 28.6403 31.6331 29.1842C30.6627 29.7281 29.5385 30 28.2604 30ZM8.73373 30C7.2426 30 5.94083 29.7404 4.8284 29.2213C3.73965 28.6774 2.84024 27.9604 2.13018 27.0705C1.42012 26.1805 0.887574 25.1422 0.532544 23.9555C0.177515 22.7689 0 21.508 0 20.1731C0 17.5031 0.378698 15.0927 1.13609 12.9419C1.91716 10.7664 2.92308 8.85043 4.15385 7.19407C5.38462 5.51298 6.74556 4.07911 8.23669 2.89246C9.75148 1.68109 11.2426 0.716934 12.7101 0L13.7396 1.44623C11.6568 3.49815 10 5.32756 8.76923 6.93449C7.53846 8.51669 6.92308 9.83931 6.92308 10.9023C6.92308 11.5451 7.18343 12.0643 7.70414 12.4598C8.22485 12.8554 8.86391 13.2138 9.6213 13.5352C10.355 13.8319 11.1243 14.1656 11.929 14.5365C12.7337 14.9073 13.4675 15.4017 14.1302 16.0198C14.8166 16.6131 15.3728 17.3671 15.7988 18.2818C16.2485 19.1965 16.4734 20.3585 16.4734 21.7676C16.4734 22.6082 16.3077 23.5105 15.9763 24.4747C15.6686 25.4388 15.1834 26.3288 14.5207 27.1446C13.8817 27.9604 13.0769 28.6403 12.1065 29.1842C11.1361 29.7281 10.0118 30 8.73373 30Z' fill='%236E4FA3'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.about_us .since .wrapper > .n_s > .n_l > em {
+    display: block;
+    font-family: "Bodoni Moda", serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #6E4FA3;
+    position: absolute;
+    left: 20px;
+    top: -25px;
+}
+.about_us .since .wrapper > .n_s > .s_bar {
+    width: 30%;
+    height: 1px;
+    background-color: #6E4FA3;
+    margin: 0 60px;
+    position: relative;
+}
+.about_us .since .wrapper > .n_s > .s_bar::before {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 34px;
+    height: 26px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='34' height='27' viewBox='0 0 34 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.73145 0.703125C12.3291 0.295635 16.3222 0.425651 19.8184 1.78516C21.3428 2.3976 25.3902 5.32322 28.5479 12.0332V12.0342C29.296 13.6135 30.4436 16.1079 31.4531 18.4551C31.9579 19.6288 32.4271 20.7624 32.7939 21.7246C32.8105 21.7681 32.8257 21.8119 32.8418 21.8545C30.9934 19.9133 28.6146 17.5175 26.251 15.3398C24.7097 13.9199 23.1686 12.5865 21.7822 11.5303C20.4097 10.4846 19.1431 9.67399 18.1582 9.3457L17.6523 10.1797C20.3159 12.76 24.2849 16.7047 27.5361 20.1514C29.1627 21.8757 30.6032 23.468 31.6094 24.7002C32.0336 25.2197 32.3714 25.6687 32.6143 26.0293C30.8084 25.5721 27.7232 25.1684 24.4131 25.8281C23.068 26.0655 20.9111 26.065 18.8643 25.29C16.8997 24.5461 15.0391 23.0924 14.0654 20.4238L13.9746 20.1621C13.3855 18.3118 12.3041 15.3458 10.9668 12.4365C9.64276 9.55613 8.03843 6.66683 6.37988 4.99414C5.84857 4.29181 4.91543 3.31145 3.79297 2.59766C3.40591 2.35153 2.98484 2.1312 2.54199 1.96582C4.25194 1.45565 6.39926 0.967297 8.73145 0.703125Z' fill='%236E4FA3' stroke='%236E4FA3'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.about_us .since .wrapper > .n_s > .s_bar.active::before {
+    animation-name:animate_a; 
+    animation-duration:1.5s; 
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+}
+.about_us .since .wrapper > .n_s > .n_r {
+    position: relative;
+}
+.about_us .since .wrapper > .n_s > .n_r > strong {
+    font-family: "Bodoni Moda", serif;
+    font-size: 130px;
+    font-weight: 700;
+    color: rgba(61, 61, 61, 0.3);
+    transition: 2.6s;
+}
+.about_us .since .wrapper > .n_s > .n_r.active > strong {
+    color: #6E4FA3;
+}
+.about_us .since .wrapper > .n_s > .n_r > strong > span {
+    display: block;
+    position: relative;
+}
+.about_us .since .wrapper > .n_s > .n_r > strong > span::before {
+    position: absolute;
+    right: -60px;
+    top: 33px;
+    width: 36px;
+    height: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='36' height='30' viewBox='0 0 36 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.73965 -2.4706e-06C9.23077 -2.34024e-06 10.5325 0.259578 11.645 0.778738C12.7337 1.32262 13.6331 2.03955 14.3432 2.92954C15.0533 3.81953 15.5858 4.85785 15.9408 6.0445C16.2959 7.23115 16.4734 8.49196 16.4734 9.82694C16.4734 12.4969 16.0947 14.9073 15.3373 17.0581C14.5562 19.2336 13.5503 21.1496 12.3195 22.8059C11.0888 24.487 9.72781 25.9209 8.23669 27.1075C6.72189 28.3189 5.23077 29.2831 3.76331 30L2.73373 28.5538C4.81657 26.5019 6.47337 24.6724 7.70414 23.0655C8.93491 21.4833 9.5503 20.1607 9.5503 19.0976C9.5503 18.4549 9.28994 17.9357 8.76923 17.5402C8.24852 17.1446 7.60947 16.7862 6.85207 16.4648C6.11834 16.1681 5.34911 15.8344 4.54438 15.4635C3.73964 15.0927 3.00592 14.5983 2.34319 13.9802C1.6568 13.3869 1.10059 12.6329 0.674558 11.7182C0.224851 10.8035 1.77979e-06 9.64153 1.90299e-06 8.23238C1.97647e-06 7.39184 0.165682 6.48949 0.497042 5.52534C0.804736 4.56118 1.28994 3.6712 1.95267 2.85537C2.59172 2.03955 3.39645 1.3597 4.36687 0.81582C5.33728 0.271938 6.46154 -2.58233e-06 7.73965 -2.4706e-06ZM27.2663 -7.63527e-07C28.7574 -6.33169e-07 30.0592 0.25958 31.1716 0.77874C32.2604 1.32262 33.1598 2.03955 33.8698 2.92954C34.5799 3.81953 35.1124 4.85785 35.4675 6.0445C35.8225 7.23115 36 8.49197 36 9.82695C36 12.4969 35.6213 14.9073 34.8639 17.0581C34.0828 19.2336 33.0769 21.1496 31.8462 22.8059C30.6154 24.487 29.2544 25.9209 27.7633 27.1075C26.2485 28.3189 24.7574 29.2831 23.2899 30L22.2604 28.5538C24.3432 26.5019 26 24.6724 27.2308 23.0655C28.4615 21.4833 29.0769 20.1607 29.0769 19.0977C29.0769 18.4549 28.8166 17.9357 28.2959 17.5402C27.7751 17.1446 27.1361 16.7862 26.3787 16.4648C25.645 16.1681 24.8757 15.8344 24.071 15.4635C23.2663 15.0927 22.5325 14.5983 21.8698 13.9802C21.1834 13.3869 20.6272 12.6329 20.2012 11.7182C19.7515 10.8035 19.5266 9.64153 19.5266 8.23238C19.5266 7.39184 19.6923 6.48949 20.0237 5.52534C20.3314 4.56119 20.8166 3.6712 21.4793 2.85538C22.1183 2.03955 22.9231 1.3597 23.8935 0.815822C24.8639 0.271939 25.9882 -8.75262e-07 27.2663 -7.63527e-07Z' fill='%236E4FA3'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.about_us .since .wrapper > .n_t > strong {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+}
+.about_us .since .wrapper > .n_t > em {
+    display: flex;
+    justify-content: center;
+}
+.about_us .since .wrapper > .n_t > em > a {
+    display: inline-block;
+    text-align: center;
+}
+.about_us .since .wrapper > .n_t > em > a > span {
+    display: inline-block;
+    font-size: 20px;
+    padding: 8px 30px;
+    border-radius: 30px;
+    border: 1px solid #6E4FA3;
+    color: #6E4FA3;
+    transition: 0.5s;
+}
+.about_us .since .wrapper > .n_t > em > a > span:hover {
+    color: #fff;
+    background-color: #6E4FA3;
+}
+.about_us .keyworld {
+    position: relative;
+    padding-bottom: 160px;
+}
+.about_us .keyworld::before {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    height: 1px;
+    background-color: #6E4FA3;
+    content: "";
+    z-index: -1;
+}
+.about_us .keyworld .wrapper > ul {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin-top: 160px;
+}
+.about_us .keyworld .wrapper > ul > li > strong {
+    display: block;
+    font-family: "Bodoni Moda", serif;
+    font-size: 45px;
+    font-weight: 700;
+    color: #6E4FA3;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 0 30px;
+    background-color: #fff;
+}
+.about_us .keyworld .wrapper > ul > li > span {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+@keyframes animate_a {
+    0% { left: 0; }
+    100% { left: 450px; }
 }

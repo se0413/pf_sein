@@ -18,7 +18,7 @@ html, body{
     margin: 0px auto; 
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1600px){
     #wrap { 
         min-width: 100%;
     }
@@ -28,20 +28,8 @@ html, body{
     }
 }
 @media screen and (max-width: 1024px){
-    html, body{
-        font-size: var(--txt-size-tit6);
-    } 
+
 }
 @media screen and (max-width: 768px){
 
-}
-
-:root {
-    --txt-size-tit1 : 3.333rem; /*50px*/
-    --txt-size-tit2 : 2rem; /*30px*/
-    --txt-size-tit3 : 1.667rem; /*25px*/
-    --txt-size-tit4 : 1.25rem; /*20px*/
-    --txt-size-tit5 : 0.938rem; /*15px*/
-    --txt-size-tit6 : 0.813rem; /*13px*/
-    --txt-color-main : #6E4FA3;
 }

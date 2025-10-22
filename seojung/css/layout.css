@@ -561,7 +561,6 @@ header .gnb .gnb_wrap > .depth1 > li > .depth2 li a {
     transform: translate(-35px, -75px);
 }
 
-
 @media screen and (max-width: 1600px){
     .quick_menu {
         display: none;

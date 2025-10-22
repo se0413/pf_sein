@@ -42,8 +42,6 @@ $(document).ready(function () {
         }, 50);
     }
 
-
-
     /*quick_menu*/
 
     $('.quick_menu .quick_open').on('click', function(){
@@ -58,4 +56,18 @@ $(document).ready(function () {
             scrollTop:0
         },500)
     })
+
+    $(window).on('scroll', function () {
+    let scrollTop = $(this).scrollTop();
+    let sectionOffset = $('.about_us .since').offset().top;
+    let windowHeight = $(window).height();
+
+        if (scrollTop + windowHeight * 0.7 > sectionOffset) {
+            $('.about_us .since .wrapper > .n_s > .s_bar').addClass('active');
+            $('.about_us .since .wrapper > .n_s > .n_r').addClass('active');
+        } else {
+            $('.about_us .since .wrapper > .n_s > .s_bar').removeClass('active');
+            $('.about_us .since .wrapper > .n_s > .n_r').removeClass('active');
+        }
+    });
 });
