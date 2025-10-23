@@ -117,18 +117,23 @@ header.menu_open .gnb .gnb_close {
     display: block;
 }
 header .gnb .gnb_wrap{
-    display: none;
+    opacity: 0;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    transition: 0.5s;
+}
+header.menu_open .gnb .gnb_wrap {
+    opacity: 1;
 }
 header.menu_open .gnb .gnb_wrap {
     display: flex;
 }
-header .gnb::before {
-    display: none;
+header .gnb::before,
+header .gnb::after {
+    opacity: 0;
 }
 header.menu_open .gnb::before {
     display: block;
@@ -143,6 +148,7 @@ header.menu_open .gnb::before {
     background-size: cover;
     content: "";
     z-index: -1;
+    opacity: 1;
 }
 header.menu_open .gnb::after {
     display: block;
@@ -157,6 +163,7 @@ header.menu_open .gnb::after {
     background-size: cover;
     content: "";
     z-index: -1;
+    opacity: 1;
 }
 header .gnb .gnb_wrap .depth1 {
     width: 30%;

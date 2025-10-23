@@ -369,7 +369,7 @@
 }
 @keyframes animate_a {
     0% { left: 0; }
-    100% { left: calc(100% - 36px); } /* 부모 끝까지 이동 */
+    100% { left: calc(100% - 36px); } 
 }
 
 @media screen and (max-width: 1600px){
@@ -492,5 +492,137 @@
 }
 @keyframes animate_a2 {
     0% { left: 0; }
-    100% { left: calc(100% - 15px); } /* 부모 끝까지 이동 */
+    100% { left: calc(100% - 15px); } 
+}
+
+/*doctor*/
+
+.doctor {
+    background-color: #F8F5F2;
+}
+.doctor > .wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 200px 0;
+}
+.doctor > .wrapper > .d_l {
+    padding-right: 95px;
+}
+.doctor > .wrapper > .d_l > .t_e {
+    position: relative;
+}
+.doctor > .wrapper > .d_l > .t_e > strong {
+    display: block;
+    font-family: "Bodoni Moda", serif;
+    font-size: 130px;
+    font-weight: 700;
+    color: rgba(62, 62, 62, 0.1);
+    text-align: right;
+}
+.doctor > .wrapper > .d_l > .t_e > .t_k {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    left: 0;
+    bottom: 120px;
+}
+.doctor > .wrapper > .d_l > .t_e > .t_k > strong {
+    display: block;
+    font-family: "Gowun Batang", serif;
+    font-weight: 700;
+    font-size: 45px;
+    margin-right: 15px;
+}
+.doctor > .wrapper > .d_l > .t_e > .t_k > span {
+    display: block;
+    font-size: 20px;
+    letter-spacing: 7px;
+}
+.doctor > .wrapper > .d_r {
+    position: relative;
+}
+.doctor > .wrapper > .d_r > .d_career {
+    border-radius: 250px;
+    transition: 0.5s;
+}
+.doctor > .wrapper > .d_r > .d_career {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+}
+.doctor > .wrapper > .d_r.active > .d_career {
+    background-color: #6E4FA3;
+}
+.doctor > .wrapper > .d_r .d_career > strong,
+.doctor > .wrapper > .d_r .d_career > ul,
+.doctor > .wrapper > .d_r .d_career > .c_close {
+    opacity: 0;
+    transition: 0.5s;
+}
+.doctor > .wrapper > .d_r.active .d_career > .c_open {
+    display: none;
+}
+.doctor > .wrapper > .d_r.active .d_career > strong,
+.doctor > .wrapper > .d_r.active .d_career > ul,
+.doctor > .wrapper > .d_r.active .d_career > .c_close {
+    opacity: 1;
+}
+.doctor > .wrapper > .d_r .d_career > strong {
+    display: block;
+    font-family: "Bodoni Moda", serif;
+    font-weight: 700;
+    font-size: 45px;
+    padding: 70px 0 20px 0;
+}
+.doctor > .wrapper > .d_r .d_career > ul > li {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.9;
+}
+.doctor > .wrapper > .d_r > .d_career > .c_open {
+    display: block;
+    position: absolute;
+    right: 55px;
+    top: 35px;
+    width: 54px;
+    height: 54px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../image/plus_1.png);
+    content: "";
+    font-size: 0;
+    line-height: 0;
+    opacity: 1;
+    z-index: 10;
+}
+.doctor > .wrapper > .d_r.active > .d_career > .c_close {
+    position: absolute;
+    right: 55px;
+    top: 35px;
+    width: 54px;
+    height: 54px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../image/close_1.png);
+    content: "";
+    font-size: 0;
+    line-height: 0;
+}
+.doctor > .wrapper > .d_r > .photo {
+    border-radius: 250px;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.doctor > .wrapper > .d_r > .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

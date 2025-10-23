@@ -70,4 +70,13 @@ $(document).ready(function () {
             $('.about_us .since .wrapper > .n_s > .n_r').removeClass('active');
         }
     });
+
+    /*doctor*/
+
+    $('.doctor > .wrapper > .d_r > .d_career > .c_open').on('click', function(){
+        $('.doctor > .wrapper > .d_r').addClass('active')
+    })
+    $('.doctor > .wrapper > .d_r > .d_career > .c_close').on('click', function(){
+        $('.doctor > .wrapper > .d_r').removeClass('active')
+    })
 });
