@@ -504,6 +504,7 @@
     display: flex;
     justify-content: center;
     padding: 200px 0;
+    align-items: flex-end;
 }
 .doctor > .wrapper > .d_l {
     padding-right: 95px;
@@ -625,4 +626,77 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+@media screen and (max-width: 1600px){
+    .doctor > .wrapper {
+        padding: 100px 0;
+    }
+    .doctor > .wrapper > .d_l {
+        padding-right: 45px;
+    }
+    .doctor > .wrapper > .d_l > .t_e > strong {
+        font-size: 70px;
+    }
+    .doctor > .wrapper > .d_l > .t_e > .t_k {
+        bottom: 65px;
+    }
+    .doctor > .wrapper > .d_l > .t_e > .t_k > strong {
+        font-size: 25px;
+        margin-right: 15px;
+    }
+    .doctor > .wrapper > .d_l > .t_e > .t_k > span {
+        font-size: 15px;
+        letter-spacing: 7px;
+    }
+    .doctor > .wrapper > .d_r > .photo {
+        height: 400px;
+        border-radius: 150px;
+    }
+    .doctor > .wrapper > .d_r > .d_career > .c_open {
+        right: 40px;
+        top: 25px;
+        width: 24px;
+        height: 24px;
+    }
+    .doctor > .wrapper > .d_r.active > .d_career > .c_close {
+        right: 40px;
+        top: 25px;
+        width: 24px;
+        height: 24px;
+    }
+    .doctor > .wrapper > .d_r > .d_career {
+        border-radius: 150px;
+    }
+    .doctor > .wrapper > .d_r .d_career > strong {
+        font-size: 25px;
+        padding: 45px 0 10px 0;
+    }
+    .doctor > .wrapper > .d_r .d_career > ul > li {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
+@media screen and (max-width: 1024px){
+    .doctor > .wrapper {
+        display: block;
+    }
+    .doctor > .wrapper > .d_l {
+        padding: 0 0 30px 0;
+    }
+    .doctor > .wrapper > .d_l > .t_e {
+        display: flex;
+        justify-content: center;
+    }
+    .doctor > .wrapper > .d_l > .t_e > .t_k {
+        left: auto;
+        bottom: 65px;
+        margin-right: 50px;
+    }
+    .doctor > .wrapper > .d_l > .t_e > .t_k > span {
+        font-size: 13px;
+    }
+    .doctor > .wrapper > .d_r .d_career > ul > li {
+        font-size: 13px;
+        line-height: 1.9;
+    }
 }
