@@ -371,7 +371,26 @@ header .gnb .gnb_wrap > .depth1 > li > .depth2 li a {
         padding: 5vw 0 0 5vw;
     }
     header .gnb .gnb_wrap > .depth1 > li {
-        font-size: 50px;
+        font-size: 30px;
+        padding: 5px 0;
+    }
+    header .gnb .gnb_wrap > .depth1 > li::before {
+        right: -10px;
+        width: 24px;
+        height: 24px;
+    }
+    header .gnb .gnb_wrap > .depth1 > li > .depth2 > li {
+        font-size: 15px;
+    }
+    header .gnb .gnb_wrap > .depth1 > li > .depth2 > li::before {
+        width: 4px;
+        height: 4px;
+    }
+    header .gnb .gnb_wrap  > .depth1 > li > .depth2 > li:hover {
+        padding-left: 10px
+    }
+    header .gnb .gnb_wrap > .depth1 > li > .depth2 li a {
+        line-height: 40px;
     }
 }
 @media screen and (max-width: 1024px){
@@ -402,11 +421,6 @@ header .gnb .gnb_wrap > .depth1 > li > .depth2 li a {
     header .gnb .gnb_wrap  > .depth1 > li > .depth2 li a {
         line-height: 40px;
     }
-    header .gnb .gnb_wrap > .depth1 > li::before {
-        right: -10px;
-        width: 24px;
-        height: 24px;
-    }
     header .gnb .gnb_wrap > .depth1 > li > .depth2 li {
         font-size: 13px;
     }
@@ -421,13 +435,6 @@ header .gnb .gnb_wrap > .depth1 > li > .depth2 li a {
     header .gnb .gnb_wrap > .depth1 > li:nth-child(3) > .depth2 {
         left: 120%;
         top: -90%;
-    }
-    header .gnb .gnb_wrap > .depth1 > li > .depth2 > li::before {
-        width: 4px;
-        height: 4px;
-    }
-    header .gnb .gnb_wrap  > .depth1 > li > .depth2 > li:hover {
-        padding-left: 10px
     }
 }
 

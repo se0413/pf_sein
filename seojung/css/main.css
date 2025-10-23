@@ -387,126 +387,110 @@
     }
     .about_us .since .wrapper > .n_s > .n_l > em {
         font-size: 20px;
-        left: 20px;
-        top: -25px;
+        left: 10px;
+        top: -15px;
     }
     .about_us .since .wrapper > .n_s > .s_bar {
-        width: 100%;
+        width: 30%;
         height: 1px;
-        background-color: #6E4FA3;
         margin: 0 60px;
         position: relative;
     }
     .about_us .since .wrapper > .n_s > .s_bar::before {
-        position: absolute;
-        left: 0;
-        top: -40px;
-        width: 34px;
-        height: 26px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url("data:image/svg+xml,%3Csvg width='34' height='27' viewBox='0 0 34 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.73145 0.703125C12.3291 0.295635 16.3222 0.425651 19.8184 1.78516C21.3428 2.3976 25.3902 5.32322 28.5479 12.0332V12.0342C29.296 13.6135 30.4436 16.1079 31.4531 18.4551C31.9579 19.6288 32.4271 20.7624 32.7939 21.7246C32.8105 21.7681 32.8257 21.8119 32.8418 21.8545C30.9934 19.9133 28.6146 17.5175 26.251 15.3398C24.7097 13.9199 23.1686 12.5865 21.7822 11.5303C20.4097 10.4846 19.1431 9.67399 18.1582 9.3457L17.6523 10.1797C20.3159 12.76 24.2849 16.7047 27.5361 20.1514C29.1627 21.8757 30.6032 23.468 31.6094 24.7002C32.0336 25.2197 32.3714 25.6687 32.6143 26.0293C30.8084 25.5721 27.7232 25.1684 24.4131 25.8281C23.068 26.0655 20.9111 26.065 18.8643 25.29C16.8997 24.5461 15.0391 23.0924 14.0654 20.4238L13.9746 20.1621C13.3855 18.3118 12.3041 15.3458 10.9668 12.4365C9.64276 9.55613 8.03843 6.66683 6.37988 4.99414C5.84857 4.29181 4.91543 3.31145 3.79297 2.59766C3.40591 2.35153 2.98484 2.1312 2.54199 1.96582C4.25194 1.45565 6.39926 0.967297 8.73145 0.703125Z' fill='%236E4FA3' stroke='%236E4FA3'/%3E%3C/svg%3E%0A");
-        content: "";
+        top: -30px;
+        width: 30px;
     }
     .about_us .since .wrapper > .n_s > .s_bar.active::before {
-        animation-name:animate_a; 
+        animation-name:animate_a2; 
         animation-duration:1.5s; 
         animation-timing-function: ease-in-out;
         animation-iteration-count: 1;
         animation-fill-mode: forwards
     }
-    .about_us .since .wrapper > .n_s > .n_r {
-        position: relative;
-    }
     .about_us .since .wrapper > .n_s > .n_r > strong {
-        font-family: "Bodoni Moda", serif;
-        font-size: 130px;
-        font-weight: 700;
-        color: rgba(61, 61, 61, 0.3);
-        transition: 2.6s;
-    }
-    .about_us .since .wrapper > .n_s > .n_r.active > strong {
-        color: #6E4FA3;
-    }
-    .about_us .since .wrapper > .n_s > .n_r > strong > span {
-        display: block;
-        position: relative;
+        font-size: 70px;
     }
     .about_us .since .wrapper > .n_s > .n_r > strong > span::before {
-        position: absolute;
-        right: -60px;
-        top: 33px;
-        width: 36px;
-        height: 30px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url("data:image/svg+xml,%3Csvg width='36' height='30' viewBox='0 0 36 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.73965 -2.4706e-06C9.23077 -2.34024e-06 10.5325 0.259578 11.645 0.778738C12.7337 1.32262 13.6331 2.03955 14.3432 2.92954C15.0533 3.81953 15.5858 4.85785 15.9408 6.0445C16.2959 7.23115 16.4734 8.49196 16.4734 9.82694C16.4734 12.4969 16.0947 14.9073 15.3373 17.0581C14.5562 19.2336 13.5503 21.1496 12.3195 22.8059C11.0888 24.487 9.72781 25.9209 8.23669 27.1075C6.72189 28.3189 5.23077 29.2831 3.76331 30L2.73373 28.5538C4.81657 26.5019 6.47337 24.6724 7.70414 23.0655C8.93491 21.4833 9.5503 20.1607 9.5503 19.0976C9.5503 18.4549 9.28994 17.9357 8.76923 17.5402C8.24852 17.1446 7.60947 16.7862 6.85207 16.4648C6.11834 16.1681 5.34911 15.8344 4.54438 15.4635C3.73964 15.0927 3.00592 14.5983 2.34319 13.9802C1.6568 13.3869 1.10059 12.6329 0.674558 11.7182C0.224851 10.8035 1.77979e-06 9.64153 1.90299e-06 8.23238C1.97647e-06 7.39184 0.165682 6.48949 0.497042 5.52534C0.804736 4.56118 1.28994 3.6712 1.95267 2.85537C2.59172 2.03955 3.39645 1.3597 4.36687 0.81582C5.33728 0.271938 6.46154 -2.58233e-06 7.73965 -2.4706e-06ZM27.2663 -7.63527e-07C28.7574 -6.33169e-07 30.0592 0.25958 31.1716 0.77874C32.2604 1.32262 33.1598 2.03955 33.8698 2.92954C34.5799 3.81953 35.1124 4.85785 35.4675 6.0445C35.8225 7.23115 36 8.49197 36 9.82695C36 12.4969 35.6213 14.9073 34.8639 17.0581C34.0828 19.2336 33.0769 21.1496 31.8462 22.8059C30.6154 24.487 29.2544 25.9209 27.7633 27.1075C26.2485 28.3189 24.7574 29.2831 23.2899 30L22.2604 28.5538C24.3432 26.5019 26 24.6724 27.2308 23.0655C28.4615 21.4833 29.0769 20.1607 29.0769 19.0977C29.0769 18.4549 28.8166 17.9357 28.2959 17.5402C27.7751 17.1446 27.1361 16.7862 26.3787 16.4648C25.645 16.1681 24.8757 15.8344 24.071 15.4635C23.2663 15.0927 22.5325 14.5983 21.8698 13.9802C21.1834 13.3869 20.6272 12.6329 20.2012 11.7182C19.7515 10.8035 19.5266 9.64153 19.5266 8.23238C19.5266 7.39184 19.6923 6.48949 20.0237 5.52534C20.3314 4.56119 20.8166 3.6712 21.4793 2.85538C22.1183 2.03955 22.9231 1.3597 23.8935 0.815822C24.8639 0.271939 25.9882 -8.75262e-07 27.2663 -7.63527e-07Z' fill='%236E4FA3'/%3E%3C/svg%3E%0A");
-        content: "";
+        right: -17px;
+        top: 20px;
+        width: 16px;
+        height: 10px;
     }
     .about_us .since .wrapper > .n_t > strong {
-        display: block;
-        text-align: center;
-        font-size: 20px;
-        margin: 20px 0 30px 0;
-    }
-    .about_us .since .wrapper > .n_t > em {
-        display: flex;
-        justify-content: center;
-    }
-    .about_us .since .wrapper > .n_t > em > a {
-        display: inline-block;
-        text-align: center;
+        font-size: 13px;
     }
     .about_us .since .wrapper > .n_t > em > a > span {
-        display: inline-block;
-        font-size: 20px;
-        padding: 8px 30px;
-        border-radius: 30px;
-        border: 1px solid #6E4FA3;
-        color: #6E4FA3;
-        transition: 0.5s;
-    }
-    .about_us .since .wrapper > .n_t > em > a > span:hover {
-        color: #fff;
-        background-color: #6E4FA3;
+        font-size: 13px;
+        padding: 4px 15px;
     }
     .about_us .keyworld {
-        position: relative;
-        padding-bottom: 160px;
+        padding-bottom: 100px;
     }
     .about_us .keyworld::before {
-        position: absolute;
-        left: 0;
-        top: 30px;
-        width: 100%;
-        height: 1px;
-        background-color: #6E4FA3;
-        content: "";
-        z-index: -1;
+        top: 16px;
     }
     .about_us .keyworld .wrapper > ul {
-        display: flex;
-        align-content: center;
-        justify-content: space-between;
-        margin-top: 160px;
+        margin-top: 100px;
     }
     .about_us .keyworld .wrapper > ul > li > strong {
-        display: block;
-        font-family: "Bodoni Moda", serif;
-        font-size: 45px;
-        font-weight: 700;
-        color: #6E4FA3;
-        text-align: center;
-        margin-bottom: 10px;
-        padding: 0 30px;
-        background-color: #fff;
+        font-size: 25px;
+        margin-bottom: 5px;
+        padding: 0 10px;
     }
     .about_us .keyworld .wrapper > ul > li > span {
-        display: block;
-        font-size: 20px;
-        font-weight: 500;
-        text-align: center;
+        font-size: 13px;
     }
+}
+@media screen and (max-width: 1024px){
+    .about_us .since .wrapper > .n_s {
+        display: block;
+    }
+    .about_us .since .wrapper > .n_s > .n_l strong {
+        font-size: 25px;
+    }
+    .about_us .since .wrapper > .n_s > .n_l > strong > span::before {
+        left: -13px;
+        top: 7px;
+        width: 10px;
+    }
+    .about_us .since .wrapper > .n_s > .n_l > em {
+        font-size: 13px;
+        left: 2px;
+    }
+    .about_us .since .wrapper > .n_s > .s_bar {
+        display: block;
+        width: auto;
+        height: 1px;
+        margin: 60px;
+    }
+    .about_us .since .wrapper > .n_s > .s_bar::before {
+        top: -25px;
+        width: 15px;
+    }
+    .about_us .since .wrapper > .n_s > .n_r > strong {
+        font-size: 25px;
+        text-align: right;
+    }
+    .about_us .since .wrapper > .n_s > .n_r > strong > span::before {
+        right: -13px;
+        top: 7px;
+        width: 10px;
+    }
+    .about_us .since .wrapper > .n_t > strong {
+        margin: 45px 0 30px 0;
+    }
+    .about_us .since .wrapper > .n_t > em {
+        margin-bottom: 100px;
+    }
+    .about_us .since .wrapper > .n_t > em > a > span {
+        font-size: 13px;
+        padding: 4px 15px;
+    }
+    .about_us .keyworld {
+        display: none;
+    }
+}
+@keyframes animate_a2 {
+    0% { left: 0; }
+    100% { left: calc(100% - 15px); } /* 부모 끝까지 이동 */
 }

@@ -47,9 +47,10 @@ $(document).ready(function(){
         $('header').addClass('menu_open')
         $('header').removeClass('fixed')
         $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+        $('header.menu_open').find('.gnb').hide().fadeIn(500); 
     })
     $('header .gnb .gnb_close').on('click', function(){
-        $('header').removeClass('menu_open')
+        $('header').removeClass('menu_open');
         $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
     })
 
