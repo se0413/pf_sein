@@ -560,17 +560,16 @@
     background-color: #6E4FA3;
 }
 .doctor > .wrapper > .d_r .d_career > strong,
-.doctor > .wrapper > .d_r .d_career > ul,
-.doctor > .wrapper > .d_r .d_career > .c_close {
+.doctor > .wrapper > .d_r .d_career > ul {
     opacity: 0;
     transition: 0.5s;
 }
-.doctor > .wrapper > .d_r.active .d_career > .c_open {
+.doctor > .wrapper > .d_r.active .d_career > .c_open,
+.doctor > .wrapper > .d_r.active > .d_career > .c_close {
     display: none;
 }
 .doctor > .wrapper > .d_r.active .d_career > strong,
-.doctor > .wrapper > .d_r.active .d_career > ul,
-.doctor > .wrapper > .d_r.active .d_career > .c_close {
+.doctor > .wrapper > .d_r.active .d_career > ul {
     opacity: 1;
 }
 .doctor > .wrapper > .d_r .d_career > strong {
@@ -599,7 +598,7 @@
     content: "";
     font-size: 0;
     line-height: 0;
-    opacity: 1;
+    display: block;
     z-index: 10;
 }
 .doctor > .wrapper > .d_r.active > .d_career > .c_close {
@@ -615,6 +614,7 @@
     content: "";
     font-size: 0;
     line-height: 0;
+    display: block;
 }
 .doctor > .wrapper > .d_r > .photo {
     border-radius: 250px;
