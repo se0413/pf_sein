@@ -79,4 +79,18 @@ $(document).ready(function () {
     $('.doctor > .wrapper > .d_r > .d_career > .c_close').on('click', function(){
         $('.doctor > .wrapper > .d_r').removeClass('active')
     })
+
+    /*.medical .list ul li.on or off*/
+    $('.medical .list ul li').on('mouseenter', function(){ //1025부터 적용
+        if($(window).width() > 1024){
+            $('.medical .list ul li').removeClass('on')
+            $('.medical .list ul li').addClass('off')
+            $(this).removeClass('off')
+            $(this).addClass('on')
+        }
+    })
+    $('.medical .list').on('mouseleave', function(){
+        $('.medical .list ul li').removeClass('on')
+        $('.medical .list ul li').removeClass('off')
+    })
 });

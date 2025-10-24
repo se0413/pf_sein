@@ -700,3 +700,121 @@
         line-height: 1.9;
     }
 }
+
+/*medical*/
+
+.medical .tit {
+    text-align: center;
+}
+.medical .tit h2 {
+    font-family: "Bodoni Moda", serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: #6E4FA3;
+    padding: 160px 0 10px 0;
+}
+.medical .tit p {
+    font-size: 20px;
+}
+.medical .tit em {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 100px 0;
+}
+.medical .tit a {
+    display: inline-block;
+    text-align: center;
+}
+.medical .tit a > span {
+    display: inline-block;
+    font-size: 20px;
+    padding: 8px 30px;
+    border-radius: 30px;
+    border: 1px solid #6E4FA3;
+    color: #6E4FA3;
+    transition: 0.5s;
+}
+.medical .tit a > span:hover {
+    color: #fff;
+    background-color: #6E4FA3;
+}
+.medical .list ul {
+    display: flex;
+}
+.medical .list ul li {
+    width: 25%; /*4분의1*/
+    color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; /*before의 기준이 됨*/
+    transition: 0.5s;
+}
+.medical .list ul li.m_1 {
+    background-image: url(../image/medical_1.png);
+}
+.medical .list ul li.m_2 {
+    background-image: url(../image/medical_2.png);
+}
+.medical .list ul li.m_3 {
+    background-image: url(../image/medical_3.png);
+}
+.medical .list ul li.m_4 {
+    background-image: url(../image/medical_4.png);
+}
+.medical .list ul li.m_5 {
+    background-image: url(../image/medical_5.png);
+}
+.medical .list ul li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    content: "";
+}
+.medical .list ul li a {
+    display: block;
+    height: 650px;
+    position: relative;
+    z-index: 10; /*li:before한테 준 검은색 배경때문에 글자가 뭍히는걸 방지*/
+}
+.medical .list ul li a .inner {
+    position: absolute;
+    left: 10%;
+    top: 50px;
+    width: 90%;
+    transition: 0.5s;
+    opacity: 0;
+}
+.medical .list ul li a .inner h3 {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 700;
+    font-size: 45px;
+    transition: 0.5s;
+}
+.medical .list ul li a .inner strong {
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.5s;
+    margin: 20px 0 10px 0;
+}
+.medical .list ul li a .inner p {
+    font-size: 20px;
+    transition: 0.5s;
+    font-weight: 400;
+}
+.medical .list ul li.on::before {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.medical .list ul li.off::before {
+    opacity: 0.4;
+}
+.medical .list ul li.on {
+    width: 60%;
+}
+.medical .list ul li.on a .inner {
+    opacity: 1;
+}
