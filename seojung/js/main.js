@@ -89,6 +89,11 @@ $(document).ready(function () {
             $(this).addClass('on')
         }
     })
+    $(window).on('resize load', function(){
+        if($(window).width() <= 1024){
+            $('.medical .list ul li').removeClass('on off');
+        }
+    });
     $('.medical .list').on('mouseleave', function(){
         $('.medical .list ul li').removeClass('on')
         $('.medical .list ul li').removeClass('off')

@@ -711,7 +711,7 @@
     font-size: 50px;
     font-weight: 700;
     color: #6E4FA3;
-    padding: 160px 0 10px 0;
+    padding: 160px 0 20px 0;
 }
 .medical .tit p {
     font-size: 20px;
@@ -742,12 +742,12 @@
     display: flex;
 }
 .medical .list ul li {
-    width: 25%; /*4분의1*/
+    width: 20%; 
     color: #fff;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative; /*before의 기준이 됨*/
+    position: relative; 
     transition: 0.5s;
 }
 .medical .list ul li.m_1 {
@@ -778,11 +778,27 @@
     display: block;
     height: 650px;
     position: relative;
-    z-index: 10; /*li:before한테 준 검은색 배경때문에 글자가 뭍히는걸 방지*/
+    z-index: 10; 
+}
+.medical .list ul li a::before {
+    position: absolute;
+    right: 7%;
+    bottom: 50px;
+    width: 54px;
+    height: 54px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../image/arrow_1.png);
+    content: "";
+    display: none;
+}
+.medical .list ul li.on a::before {
+    display: block;
 }
 .medical .list ul li a .inner {
     position: absolute;
-    left: 10%;
+    left: 7%;
     top: 50px;
     width: 90%;
     transition: 0.5s;
@@ -810,11 +826,105 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 .medical .list ul li.off::before {
-    opacity: 0.4;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 .medical .list ul li.on {
     width: 60%;
 }
 .medical .list ul li.on a .inner {
     opacity: 1;
+}
+
+@media screen and (max-width: 1600px){
+    .medical .tit h2 {
+        font-size: 30px;
+        padding: 100px 0 20px 0;
+    }
+    .medical .tit p {
+        font-size: 13px;
+    }
+    .medical .tit em {
+        margin: 30px 0 80px 0;
+    }
+    .medical .tit a > span {
+        font-size: 13px;
+        padding: 4px 15px;
+        border-radius: 30px;
+    }
+    .medical .list ul li a {
+        height: 400px;
+    }
+    .medical .list ul li a::before {
+        right: 5%;
+        bottom: 30px;
+        width: 24px;
+        height: 24px;
+    }
+    .medical .list ul li a .inner {
+        left: 5%;
+        top: 30px;
+    }
+    .medical .list ul li a .inner h3 {
+        font-size: 25px;
+    }
+    .medical .list ul li a .inner strong {
+        font-size: 15px;
+        margin: 10px 0 5px 0;
+    }
+    .medical .list ul li a .inner p {
+        font-size: 15px;
+    }
+    .medical .list ul li.on::before {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    .medical .list ul li.off::before {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .medical .list ul li.on {
+        width: 60%;
+    }
+    .medical .list ul li.on a .inner {
+        opacity: 1;
+    } 
+}
+@media screen and (max-width: 1024px){
+    .medical .tit p {
+        font-size: 13px;
+    }
+    .medical .list ul {
+        display: block;
+    }
+    .medical .list ul li {
+        width: auto; 
+    }
+    .medical .list ul li::before {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    .medical .list ul li a {
+        height: 100px;
+    }
+    .medical .list ul li a::before {
+        right: 3%;
+        bottom: 20px;
+        display: block;
+    }
+    .medical .list ul li a .inner {
+        position: absolute;
+        left: 3%;
+        top: 20px;
+        opacity: 1;
+    }
+    .medical .list ul li a .inner h3 {
+        font-size: 15px;
+    }
+    .medical .list ul li a .inner strong {
+        font-size: 13px;
+        margin: 5px 0 0 0;
+    }
+    .medical .list ul li a .inner p {
+        display: none;
+    }
+    .medical .list ul li.on {
+        width: 60%;
+    }
 }
