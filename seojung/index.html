@@ -13,6 +13,8 @@
     <script src="js/counter.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>서정피부과의원</title>
 </head>
@@ -148,7 +150,7 @@
             </section>
             <section class="doctor">
                 <div class="wrapper">
-                    <div class="d_l">
+                    <div class="d_l" data-aos="fade-right">
                         <div class="t_e">
                             <strong>lee<br>ji<br>young</strong>
                             <div class="t_k">
@@ -157,7 +159,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="d_r">
+                    <div class="d_r" data-aos="fade-left">
                         <div class="photo">
                             <img src="image/doctor.png" alt="이지영 대표원장 사진">
                         </div>
@@ -182,14 +184,14 @@
                 </div>
             </section>
             <section class="medical">
-                <div class="tit">
+                <div class="tit" data-aos="fade-up">
                     <div class="wrapper">
                         <h2><span>Medical</span></h2>
                         <p>피부과 진료의 본질은 단순한 치료를 넘어, 자신감을 회복하는 과정입니다.<br>전문적인 진단과 맞춤 솔루션으로 피부의 가치를 높여드립니다.</p>
                         <em><a href="#n"><span>진료전 피부 테스트</span></a></em>
                     </div>
                 </div>
-                <div class="list">
+                <div class="list" data-aos="fade-up">
                     <ul>
                         <li class="m_1">
                             <a href="#n">
@@ -239,7 +241,96 @@
                     </ul>
                 </div>
             </section>
-            <section class="equipment"></section>
+            <section class="equipment">
+                <div class="wrapper">
+                    <div class="section"> <!-- 좌우 요소를 감싸는 요소 -->
+                        <div class="tit"><!-- 고정될 요소 -->
+                            <h2>Equipment</h2>
+                            <p>효과와 안전성이 입증된 프리미엄 장비로<br>더욱 확실하게, 만족도 높은 치료를 제공합니다.</p>
+                            <em><a href="#n"><span>더 많은 장비 보기</span></a></em>
+                        </div> 
+                        <div class="cont_wrap"> <!-- 스크롤될 요소를 감싸는 요소 -->
+                            <div class="cont">
+                                <ul>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_1.png" alt="리브이 사진">
+                                        </div>
+                                        <h3>리브이</h3>
+                                        <p>고주파와 미세전류를 한번에, 불필요한 지방세포는 감소시키고새로운 세포 재생에 도움을 줍니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_2.png" alt="이온자임 사진">
+                                        </div>
+                                        <h3>이온자임</h3>
+                                        <p>이온영동 요법에 초음파를 동시에 사용하는 장비입니다. 약물의 피부 침투 효과를 배로 높여줍니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_3.png" alt="트리니티 사진">
+                                        </div>
+                                        <h3>트리니티</h3>
+                                        <p>3가지 파장대의 레이저가 동시에 조사되어 리프팅 뿐만아니라 토닝효과도 있는 복합레이저입니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_4.png" alt="이온토손 사진">
+                                        </div>
+                                        <h3>이온토손</h3>
+                                        <p>피부 표면의 불순물과 각질을 제거하고 피부재생을 촉진시켜 노화 개선에 효과적입니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_5.png" alt="트리필 프로 사진">
+                                        </div>
+                                        <h3>트리필 프로</h3>
+                                        <p>3중복합 진피재생수로 CO2가스로 유착된 피부 조직을 박리하여 형성된 에어포켓에 약물을 주입합니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_6.png" alt="마크뷰 피부진단기 사진">
+                                        </div>
+                                        <h3>마크뷰 피부진단기</h3>
+                                        <p>4가지 LED 광원을 이용한 피부진단 시스템으로 육안으로 볼 수 없는 질환들을 파악합니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_7.png" alt="물방울리프팅 LDM 사진">
+                                        </div>
+                                        <h3>물방울리프팅 LDM</h3>
+                                        <p>피부에 강한 자극을 주지 않고 자연 발생적으로 세포 단위의 활성을 유도합니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_8.png" alt="크리아오셀 사진">
+                                        </div>
+                                        <h3>크리아오셀</h3>
+                                        <p>피부표면을 냉각 시키고 혈관을 수족시켜 약물의 침투와 피부 수분 침부를 극대화합니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_9.png" alt="오투덤 LED 사진">
+                                        </div>
+                                        <h3>오투덤 LED</h3>
+                                        <p>피부호흡을 통해 피부 노화를 가소하는 활성산소를 배출시키고 피부 재생을 유도합니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_10.png" alt="리니어Z 사진">
+                                        </div>
+                                        <h3>리니어Z</h3>
+                                        <p>집속형 초음파 트랜스듀에서 출력된 초음파 에너지의 열작용으로 조직을 응고시켜 리프팅합니다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="move_txt">
+                    <p>SEOJUNG DERMATOLOGY  SEOJUNG DERMATOLOGY  SEOJUNG DERMATOLOGY</p>
+                </div>
+            </section>
             <section class="real"></section>
             <footer></footer>
         </main>

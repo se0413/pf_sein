@@ -98,4 +98,22 @@ $(document).ready(function () {
         $('.medical .list ul li').removeClass('on')
         $('.medical .list ul li').removeClass('off')
     })
+
+    gsap.registerPlugin(ScrollTrigger);
+    const sections =  document.querySelector(".section");  //좌우요소를 감싸는 요소
+    const large =  document.querySelector(".section .cont_wrap .cont"); //스크롤될 요소
+    gsap.to(large, {
+        y: () => (window.innerHeight - large.clientHeight - 64),  /* 실제 스크롤 값보다 더 스크롤 할 값 - 필요없으면 0 */
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: sections,
+            pin: true,
+            start: "top 20px", /* 좌우로 스크롤 될 동안의 위치, top top 상단에 고정, top 20% 상단에서 20% 떨어져서 */
+            end: () => "+=500",
+            scrub: 2, 
+            markers: false,
+            invalidateOnRefresh: true,
+        }
+    });
+
 });
