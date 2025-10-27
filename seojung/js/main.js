@@ -100,20 +100,40 @@ $(document).ready(function () {
     })
 
     gsap.registerPlugin(ScrollTrigger);
-    const sections =  document.querySelector(".section");  //좌우요소를 감싸는 요소
-    const large =  document.querySelector(".section .cont_wrap .cont"); //스크롤될 요소
-    gsap.to(large, {
-        y: () => (window.innerHeight - large.clientHeight - 64),  /* 실제 스크롤 값보다 더 스크롤 할 값 - 필요없으면 0 */
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: sections,
-            pin: true,
-            start: "top 20px", /* 좌우로 스크롤 될 동안의 위치, top top 상단에 고정, top 20% 상단에서 20% 떨어져서 */
-            end: () => "+=500",
-            scrub: 2, 
-            markers: false,
-            invalidateOnRefresh: true,
+
+    // 함수로 따로 정의
+    function initScrollTrigger() {
+        // 기존 트리거가 있다면 모두 제거 (중복 방지)
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+        // PC에서만 작동
+        if (window.innerWidth > 1600) {
+            const sections = document.querySelector(".section");
+            const large = document.querySelector(".section .cont_wrap .cont");
+
+            gsap.to(large, {
+                y: () => (window.innerHeight - large.clientHeight - 64),
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: sections,
+                    pin: true,
+                    start: "top 20px",
+                    end: () => "+=1000",
+                    scrub: 2,
+                    markers: false,
+                    invalidateOnRefresh: true,
+                }
+            });
         }
+    }
+
+    // 처음 실행
+    initScrollTrigger();
+
+    // 리사이즈 시 자동 재적용 (PC ↔ 모바일 전환 대응)
+    window.addEventListener("resize", () => {
+        initScrollTrigger();
     });
+
 
 });

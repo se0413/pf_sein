@@ -56,6 +56,9 @@ header .logo a::before {
     background-size: cover;
     content: "";
 }
+header.fixed {
+    background-color: #fff;
+}
 header.fixed .logo a::before{
     background-image: url(../image/logo_p.png);
 }
