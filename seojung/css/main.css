@@ -1199,3 +1199,153 @@
         top: 0;
     }
 }
+
+/*real*/
+
+.real h2 {
+    font-family: "Bodoni Moda", serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: #6E4FA3;
+    padding: 160px 0 20px 0;
+}
+.real p {
+    font-size: 20px;
+}
+.real .r_list {
+    display: flex;
+    margin-top: 100px;
+}
+.real .r_list > .r_l {
+    width: 50%;
+    overflow: hidden;
+}
+.real .r_list > .r_r {
+    width: auto;
+    height: 100%;
+}
+.real .r_list > .r_l > .r_l_u > ul,
+.real .r_list > .r_l > .r_l_d > ul {
+    display: flex;
+}
+.real .r_list > .r_l > .r_l_u > ul > li,
+.real .r_list > .r_l > .r_l_d > ul > li {
+    width: 50%;
+    overflow: hidden;
+    position: static;
+}
+.real .r_list > .r_r > ul > li {
+    width: 100%;
+    height: 50%;
+}
+.real .r_list > .r_l > .r_l_u > ul > li:nth-child(2),
+.real .r_list > .r_l > .r_l_d > ul > li:nth-child(1),
+.real .r_list > .r_r > ul > li:nth-child(2) {
+    opacity: 0;
+    transition: 0.5s;
+}
+.real .r_list > .r_l > .r_l_u > ul.on > li:nth-child(2),
+.real .r_list > .r_l > .r_l_d > ul.on >  li:nth-child(1),
+.real .r_list > .r_r> ul.on > li:nth-child(2) {
+    opacity: 1;
+}
+.real .r_list > .r_l > .r_l_u > ul > li > .photo,
+.real .r_list > .r_l > .r_l_d > ul > li > .photo,
+.real .r_list > .r_r > ul > li > .photo  {
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    padding: 24px;
+    border: 1px solid #6E4FA3;
+    position: relative;
+}
+.real .r_list > .r_l > .r_l_u > ul > li > .photo::before,
+.real .r_list > .r_l > .r_l_d > ul > li > .photo::before,
+.real .r_list > .r_r > ul > li > .photo::before  {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.real .r_list > .r_l > .r_l_u > ul > li > .photo::before {
+    background-image: url(../image/real_4.png);
+}
+.real .r_list > .r_l > .r_l_d > ul > li > .photo::before {
+    background-image: url(../image/real_5.png);
+}
+.real .r_list > .r_r > ul > li > .photo::before {
+    background-image: url(../image/real_6.png);
+}
+.real .r_list > .r_l > .r_l_u > ul.on > li > .photo::before,
+.real .r_list > .r_l > .r_l_d > ul.on > li > .photo::before,
+.real .r_list > .r_r > ul.on > li > .photo::before  {
+    opacity: 1;
+}
+.real .r_list > .r_l > .r_l_u > ul > li > .photo img,
+.real .r_list > .r_l > .r_l_d > ul > li > .photo img,
+.real .r_list > .r_r > ul > li > .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* .real .r_list > .r_l > .r_l_u > ul.on > li .photo img,
+.real .r_list > .r_l > .r_l_d > ul.on > li .photo img,
+.real .r_list > .r_r > ul.on > li .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+} */
+.real .r_list > .r_l > .r_l_u > ul > li > strong,
+.real .r_list > .r_l > .r_l_d > ul > li > strong,
+.real .r_list > .r_r > ul > li > strong  {
+    display: block;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    margin: 25% 0 5% 0;
+}
+.real .r_list > .r_l > .r_l_u > ul > li > span,
+.real .r_list > .r_l > .r_l_d > ul > li > span,
+.real .r_list > .r_r > ul > li > span  {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10%;
+    width: calc(100% - 12px);
+}
+.real .r_list > .r_l > .r_l_u > ul > li > em,
+.real .r_list > .r_l > .r_l_d > ul > li > em,
+.real .r_list > .r_r > ul > li > em {
+    display: flex;
+    justify-content: center;
+}
+
+.real .r_list > .r_l > .r_l_u > ul > li > em > a,
+.real .r_list > .r_l > .r_l_d > ul > li > em > a,
+.real .r_list > .r_r > ul > li > em > a  {
+    display: inline-block;
+    text-align: center;
+}
+.real .r_list > .r_l > .r_l_u > ul > li > em > a > span,
+.real .r_list > .r_l > .r_l_d > ul > li > em > a > span,
+.real .r_list > .r_r > ul > li > em > a > span {
+    display: inline-block;
+    font-size: 20px;
+    padding: 8px 30px;
+    border-radius: 30px;
+    border: 1px solid #6E4FA3;
+    color: #6E4FA3;
+    transition: 0.5s;
+}
+.real .r_list > .r_l > .r_l_u > ul > li > em > a > span:hover,
+.real .r_list > .r_l > .r_l_d > ul > li > em > a > span:hover,
+.real .r_list > .r_r > ul > li > em > a > span:hover {
+    color: #fff;
+    background-color: #6E4FA3;
+}
