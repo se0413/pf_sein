@@ -500,7 +500,7 @@
 .doctor {
     background-color: #F8F5F2;
 }
-.doctor h3 {
+.doctor h2 {
     display: none;
 }
 .doctor > .wrapper {
@@ -1360,7 +1360,7 @@
 .real .s_box {
     position: relative;
     width: 300px;
-    height: 310px;
+    height: 300px;
 }
 .real .s_box .slogun {
     animation: s_a 5s linear infinite;
