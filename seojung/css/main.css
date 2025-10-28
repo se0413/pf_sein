@@ -500,6 +500,9 @@
 .doctor {
     background-color: #F8F5F2;
 }
+.doctor h3 {
+    display: none;
+}
 .doctor > .wrapper {
     display: flex;
     justify-content: center;
