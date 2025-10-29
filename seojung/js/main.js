@@ -154,4 +154,19 @@ $(document).ready(function () {
         $('.real .r_list > .r_r > ul').removeClass('on')
     })
 
+    // AOS fade-up 대체 효과
+    gsap.utils.toArray(".fade-up").forEach((el) => {
+        gsap.from(el, {
+            scrollTrigger: {
+            trigger: el,
+            start: "top 80%",  
+            toggleActions: "play none none reset", 
+            },
+            opacity: 0,    
+            y: 150,        
+            duration: 0.8,      
+            ease: "power2.out",    
+        });
+    });
+
 });
