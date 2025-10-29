@@ -1508,3 +1508,305 @@
         display: block;
     }
 }
+
+/*footer*/
+
+footer {
+    background-color: #1D1D1D;
+    color: #fff;
+}
+footer h2 {
+    font-family: "Bodoni Moda", serif;
+    font-size: 50px;
+    font-weight: 700;
+    padding: 160px 0 80px 0;
+    text-align: right;
+}
+footer .f_box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+footer .f_box .f_l .call {
+    margin-bottom: 50px;
+}
+footer .f_box .f_l .call strong {
+    display: block;
+    font-weight: 700;
+    font-size: 25px;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 10px;
+}
+footer .f_box .f_l .call strong::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 30px;
+    height: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_158_430' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='35' height='35'%3E%3Crect width='35' height='35' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_158_430)'%3E%3Cpath d='M29.0938 30.625C26.0556 30.625 23.0538 29.9627 20.0885 28.638C17.1233 27.3134 14.4253 25.4358 11.9948 23.0052C9.56424 20.5747 7.68663 17.8767 6.36198 14.9115C5.03733 11.9462 4.375 8.94445 4.375 5.90625C4.375 5.46875 4.52083 5.10417 4.8125 4.8125C5.10417 4.52083 5.46875 4.375 5.90625 4.375H11.8125C12.1528 4.375 12.4566 4.49045 12.724 4.72135C12.9913 4.95226 13.1493 5.22569 13.1979 5.54167L14.1458 10.6458C14.1944 11.0347 14.1823 11.3628 14.1094 11.6302C14.0365 11.8976 13.9028 12.1285 13.7083 12.3229L10.1719 15.8958C10.658 16.7951 11.2352 17.6641 11.9036 18.5026C12.572 19.3411 13.3073 20.1493 14.1094 20.9271C14.8628 21.6806 15.6528 22.3793 16.4792 23.0234C17.3056 23.6675 18.1806 24.2569 19.1042 24.7917L22.5312 21.3646C22.75 21.1458 23.0356 20.9818 23.388 20.8724C23.7405 20.763 24.0868 20.7326 24.4271 20.7812L29.4583 21.8021C29.7986 21.8993 30.0781 22.0755 30.2969 22.3307C30.5156 22.5859 30.625 22.8715 30.625 23.1875V29.0938C30.625 29.5313 30.4792 29.8958 30.1875 30.1875C29.8958 30.4792 29.5313 30.625 29.0938 30.625ZM8.78646 13.125L11.1927 10.7188L10.5729 7.29167H7.32813C7.44965 8.28819 7.61979 9.27257 7.83854 10.2448C8.05729 11.217 8.37326 12.1771 8.78646 13.125ZM21.8385 26.1771C22.7865 26.5903 23.7526 26.9184 24.737 27.1615C25.7214 27.4045 26.7118 27.5625 27.7083 27.6354V24.4271L24.2813 23.7344L21.8385 26.1771Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+footer .f_box .f_l .call span {
+    display: block;
+    font-family: "Bodoni Moda", serif;
+    font-weight: 700;
+    font-size: 35px;
+}
+footer .f_box .f_l .time strong {
+    display: block;
+    font-weight: 700;
+    font-size: 25px;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 20px;
+}
+footer .f_box .f_l .time strong::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 30px;
+    height: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_158_433' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='35' height='35'%3E%3Crect width='35' height='35' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_158_433)'%3E%3Cpath d='M21.8752 29.1644C18.6182 29.1644 15.8595 28.0342 13.5991 25.7738C11.3387 23.5133 10.2085 20.7547 10.2085 17.4977C10.2085 14.2651 11.3387 11.5125 13.5991 9.23991C15.8595 6.96734 18.6182 5.83105 21.8752 5.83105C25.1078 5.83105 27.8604 6.96734 30.133 9.23991C32.4055 11.5125 33.5418 14.2651 33.5418 17.4977C33.5418 20.7547 32.4055 23.5133 30.133 25.7738C27.8604 28.0342 25.1078 29.1644 21.8752 29.1644ZM21.8752 26.2477C24.3057 26.2477 26.3717 25.397 28.0731 23.6956C29.7745 21.9942 30.6252 19.9283 30.6252 17.4977C30.6252 15.0672 29.7745 13.0012 28.0731 11.2998C26.3717 9.59842 24.3057 8.74772 21.8752 8.74772C19.4446 8.74772 17.3786 9.59842 15.6772 11.2998C13.9759 13.0012 13.1252 15.0672 13.1252 17.4977C13.1252 19.9283 13.9759 21.9942 15.6772 23.6956C17.3786 25.397 19.4446 26.2477 21.8752 26.2477ZM25.1929 22.93L27.271 20.8519L23.3335 16.9144V11.6644H20.4168V18.1175L25.1929 22.93ZM2.91683 13.1227V10.2061H8.75016V13.1227H2.91683ZM1.4585 18.9561V16.0394H8.75016V18.9561H1.4585ZM2.91683 24.7894V21.8727H8.75016V24.7894H2.91683Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+footer .f_box .f_l .time ul li {
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+footer .f_box .f_l .time ul li span {
+    display: block;
+    width: 100px;
+}
+footer .f_box .f_l .time ul li em {
+    display: block;
+    white-space: nowrap;
+}
+footer .f_box .f_l .time ul li:nth-child(3) em span {
+    font-size: 15px;
+}
+footer .f_m strong {
+    display: block;
+    font-weight: 700;
+    font-size: 25px;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 20px;
+}
+footer .f_m strong::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 30px;
+    height: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_158_436' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='35' height='35'%3E%3Crect width='35' height='35' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_158_436)'%3E%3Cpath d='M17.4998 32.0837C14.9234 32.0837 12.821 31.6765 11.1925 30.8623C9.56407 30.0481 8.74984 28.9969 8.74984 27.7087C8.74984 27.1253 8.92605 26.5845 9.27848 26.0863C9.63091 25.588 10.1231 25.1566 10.755 24.792L13.0519 26.943C12.8332 27.0403 12.5962 27.1496 12.341 27.2712C12.0858 27.3927 11.8853 27.5385 11.7394 27.7087C12.0554 28.0975 12.7846 28.4378 13.9269 28.7295C15.0693 29.0212 16.2603 29.167 17.4998 29.167C18.7394 29.167 19.9365 29.0212 21.091 28.7295C22.2455 28.4378 22.9807 28.0975 23.2967 27.7087C23.1266 27.5142 22.9078 27.3562 22.6405 27.2347C22.3731 27.1132 22.1179 27.0038 21.8748 26.9066L24.1353 24.7191C24.8158 25.108 25.3384 25.5515 25.703 26.0498C26.0675 26.5481 26.2498 27.101 26.2498 27.7087C26.2498 28.9969 25.4356 30.0481 23.8071 30.8623C22.1787 31.6765 20.0762 32.0837 17.4998 32.0837ZM17.5363 24.0628C19.9425 22.2885 21.7533 20.5081 22.9686 18.7217C24.1839 16.9352 24.7915 15.1427 24.7915 13.3441C24.7915 10.8649 24.0016 8.99338 22.4217 7.72949C20.8419 6.4656 19.2012 5.83366 17.4998 5.83366C15.7984 5.83366 14.1578 6.4656 12.578 7.72949C10.9981 8.99338 10.2082 10.8649 10.2082 13.3441C10.2082 14.9725 10.8037 16.6679 11.9946 18.43C13.1856 20.1922 15.0328 22.0698 17.5363 24.0628ZM17.4998 27.7087C14.0728 25.1809 11.5146 22.726 9.82536 20.3441C8.13612 17.9621 7.2915 15.6288 7.2915 13.3441C7.2915 11.6184 7.6014 10.1054 8.22119 8.80501C8.84098 7.50467 9.63699 6.41699 10.6092 5.54199C11.5814 4.66699 12.6752 4.01074 13.8905 3.57324C15.1057 3.13574 16.3089 2.91699 17.4998 2.91699C18.6908 2.91699 19.8939 3.13574 21.1092 3.57324C22.3245 4.01074 23.4182 4.66699 24.3905 5.54199C25.3627 6.41699 26.1587 7.50467 26.7785 8.80501C27.3983 10.1054 27.7082 11.6184 27.7082 13.3441C27.7082 15.6288 26.8636 17.9621 25.1743 20.3441C23.4851 22.726 20.9269 25.1809 17.4998 27.7087ZM17.4998 16.042C18.3019 16.042 18.9886 15.7564 19.5597 15.1852C20.1309 14.614 20.4165 13.9274 20.4165 13.1253C20.4165 12.3232 20.1309 11.6366 19.5597 11.0654C18.9886 10.4942 18.3019 10.2087 17.4998 10.2087C16.6978 10.2087 16.0111 10.4942 15.4399 11.0654C14.8688 11.6366 14.5832 12.3232 14.5832 13.1253C14.5832 13.9274 14.8688 14.614 15.4399 15.1852C16.0111 15.7564 16.6978 16.042 17.4998 16.042Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+footer .f_m span {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+footer .f_m  iframe {
+    border-radius: 30px;
+    height: 300px;
+}
+footer .f_r {
+    position: relative;
+}
+footer .f_r .f_r_t {
+    margin-top: 105px;
+}
+footer .f_r .f_r_t ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+footer .f_r .f_r_t ul li:last-child {
+    margin: 0;
+}
+footer .f_r .f_r_t ul li strong {
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    width: 200px;
+    white-space: nowrap;
+}
+footer .f_r .f_r_t ul li span {
+    display: block;
+    font-size: 15px;
+}
+footer .f_r .f_r_s {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+footer .f_r .f_r_s ul {
+    display: flex;
+}
+footer .f_r .f_r_s ul li {
+    width: 40px;
+    margin-right: 10px;
+}
+footer .f_r .f_r_s ul li:last-child {
+    margin: 0;
+}
+footer .f_r .f_r_s ul li a {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+    height: 40px;
+}
+footer .f_r .f_r_s ul li a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+footer .f_r .f_r_s ul li.instar a::before {
+    background-image: url(../image/f_ico_1.png);
+}
+footer .f_r .f_r_s ul li.naver a::before {
+    background-image: url(../image/f_ico_2.png);
+}
+footer .f_r .f_r_s ul li.kakao a::before {
+    background-image: url(../image/f_ico_3.png);
+}
+footer .f_f {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 70px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+}
+footer .f_f .f_list ul {
+    display: flex;
+}
+footer .f_f .f_list ul li {
+    margin-right: 15px;
+}
+footer .f_f .f_list ul li:last-child {
+    margin: 0;
+}
+
+@media screen and (max-width: 1600px){
+    footer h2 {
+        font-size: 30px;
+        padding: 160px 0 80px 0;
+    }
+    footer .f_box {
+        display: block;
+        margin-bottom: 50px;
+    }
+    footer .f_box .f_l {
+        display: flex;
+        justify-content: space-between;
+    }
+    footer .f_box .f_l .call {
+        margin-bottom: 0;
+    }
+    footer .f_box .f_l .call strong {
+        font-size: 15px;
+        padding-left: 25px;
+        margin-bottom: 5px;
+    }
+    footer .f_box .f_l .call strong::before {
+        width: 15px;
+        height: 15px;
+    }
+    footer .f_box .f_l .call span {
+        font-size: 15px;
+    }
+    footer .f_box .f_l .time strong {
+        font-size: 15px;
+        padding-left: 25px;
+    }
+    footer .f_box .f_l .time strong::before {
+        width: 15px;
+        height: 15px;
+    }
+    footer .f_box .f_l .time ul li {
+        font-size: 13px;
+    }
+    footer .f_box .f_l .time ul li:nth-child(3) em span {
+        font-size: 13px;
+    }
+    footer .f_m strong {
+        font-size: 15px;
+        padding-left: 25px;
+        margin-bottom: 20px;
+    }
+    footer .f_m strong::before {
+        width: 25px;
+        height: 25px;
+    }
+    footer .f_m span {
+        font-size: 13px;
+    }
+    footer .f_m  iframe {
+        border-radius: 15px;
+        width: 100%;
+        height: 180px;
+    }
+    footer .f_r .f_r_t {
+        margin-top: 50px;
+    }
+    footer .f_r .f_r_t ul li:last-child {
+        margin: 0;
+    }
+    footer .f_r .f_r_t ul li strong {
+        font-size: 15px;
+        width: 50%;
+    }
+    footer .f_r .f_r_t ul li span {
+        font-size: 13px;
+    }
+    footer .f_r .f_r_s {
+        position: relative;
+        margin-top: 20px;
+    }
+    footer .f_r .f_r_s ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    footer .f_r .f_r_s ul li {
+        width: 25px;
+        margin-right: 5px;
+    }
+    footer .f_r .f_r_s ul li a {
+        height: 25px;
+    }
+    footer .f_f {
+        display: block;
+        padding: 15px 0 70px 0;
+        font-size: 13px;
+    }
+    footer .f_f .f_list ul {
+        justify-content: center;
+    }
+    footer .f_f .copyright {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
