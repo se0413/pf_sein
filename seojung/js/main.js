@@ -127,13 +127,7 @@ $(document).ready(function () {
         }
     }
 
-    // 처음 실행
-    initScrollTrigger();
 
-    // 리사이즈 시 자동 재적용 (PC ↔ 모바일 전환 대응)
-    window.addEventListener("resize", () => {
-        initScrollTrigger();
-    });
 
     $('.real .r_list > .r_l > .r_l_u > ul > li > .photo').on('mouseenter', function(){
         $('.real .r_list > .r_l > .r_l_u > ul').addClass('on')

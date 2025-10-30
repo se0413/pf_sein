@@ -1652,7 +1652,7 @@ footer .f_r .f_r_t ul li span {
 }
 footer .f_r .f_r_s {
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 0;
 }
 footer .f_r .f_r_s ul {
