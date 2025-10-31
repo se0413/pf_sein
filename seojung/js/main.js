@@ -284,21 +284,22 @@ $(document).ready(function () {
     /*real hover*/
     $('.real .r_list > .r_l > .r_l_u > ul > li > .photo').on('mouseenter', function () {
         $('.real .r_list > .r_l > .r_l_u > ul').addClass('on');
-    }).on('mouseleave', function () {
-        $('.real .r_list > .r_l > .r_l_u > ul').removeClass('on');
-    });
-
+    })
     $('.real .r_list > .r_l > .r_l_d > ul > li > .photo').on('mouseenter', function () {
         $('.real .r_list > .r_l > .r_l_d > ul').addClass('on');
-    }).on('mouseleave', function () {
-        $('.real .r_list > .r_l > .r_l_d > ul').removeClass('on');
-    });
-
-    $('.real .r_list > .r_r > ul > li > .photo').on('mouseenter', function () {
+    })
+    $('.real .r_list > .r_r  > ul > li > .photo').on('mouseenter', function () {
         $('.real .r_list > .r_r > ul').addClass('on');
-    }).on('mouseleave', function () {
+    })
+    $('.real .r_list > .r_l > .r_l_u > ul').on('mouseleave', function () {
+        $('.real .r_list > .r_l > .r_l_u > ul').removeClass('on');
+    })
+    $('.real .r_list > .r_l > .r_l_d > ul').on('mouseleave', function () {
+        $('.real .r_list > .r_l > .r_l_d > ul').removeClass('on');
+    })
+    $('.real .r_list > .r_r > ul').on('mouseleave', function () {
         $('.real .r_list > .r_r > ul').removeClass('on');
-    });
+    })
 
     
 });

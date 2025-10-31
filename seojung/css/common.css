@@ -18,6 +18,11 @@ html, body{
     margin: 0px auto; 
 }
 
+body.is-resizing * {
+    transition: none !important;
+    animation: none !important;
+}
+
 @media screen and (max-width: 1600px){
     #wrap { 
         min-width: 100%;

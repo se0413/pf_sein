@@ -1000,11 +1000,20 @@
     border-radius: 30px;
     overflow: hidden;
     position: relative;
+    transition: 0.5s;
 }
 .equipment .cont ul li .photo {
     font-size: 0;
     line-height: 0;
     overflow:hidden;
+}
+.equipment .cont ul li:nth-child(odd):hover {
+    transform: translateY(-12px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+.equipment .cont ul li:nth-child(even):hover {
+    transform: translate(0, 118px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
 }
 .equipment .cont ul li .photo img {
     width: 100%;
@@ -1256,11 +1265,13 @@
 .real .r_list > .r_r > ul > li:nth-child(2) {
     opacity: 0;
     transition: 0.5s;
+    pointer-events: none;
 }
 .real .r_list > .r_l > .r_l_u > ul.on > li:nth-child(2),
 .real .r_list > .r_l > .r_l_d > ul.on >  li:nth-child(1),
 .real .r_list > .r_r> ul.on > li:nth-child(2) {
     opacity: 1;
+    pointer-events: auto;
 }
 .real .r_list > .r_l > .r_l_u > ul > li > .photo,
 .real .r_list > .r_l > .r_l_d > ul > li > .photo,
@@ -1808,8 +1819,4 @@ footer .f_f .f_list ul li:last-child {
         text-align: center;
         margin-top: 10px;
     }
-}
-body.is-resizing * {
-    transition: none !important;
-    animation: none !important;
 }
