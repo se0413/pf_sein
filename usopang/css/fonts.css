@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'Coop Bold'; 
-    src: url('COOPBL.woff') format('woff'); 
+    src: url(../fonts/COOPBL.woff) format('woff'); 
     font-weight: normal; 
     font-style: normal; 
 }
