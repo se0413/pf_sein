@@ -48,13 +48,6 @@ $(document).ready(function(){
             $(this).addClass('on')
         }
     })
-    $('header .gnb .gnb_wrap ul.depth1 > li:last-child > ul.depth2 > li:last-child > a').on('focusout', function(){
-        if(pc_mobile == 'pc'){
-            $('header').removeClass('menu_over')
-            $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
-            $(this).removeClass('on')
-        }
-    })
     $('header').on('mouseleave', function(){
         if(pc_mobile == 'pc'){
             $('header').removeClass('menu_over')
@@ -62,13 +55,6 @@ $(document).ready(function(){
             $(this).removeClass('on')
         }
     })
-
-    $("header .gnb .gnb_wrap ul.depth1 > li > a").on("click", function(e){
-        if(pc_mobile == 'mobile'){
-            e.preventDefault();		
-            $(this).parent().toggleClass('open')
-        }
-    });
     
 
     //header .gnb .gnb_open, header .gnb .gnb_close

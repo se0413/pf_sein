@@ -4,27 +4,17 @@ $(document).ready(function(){
     let tab_cnt = $('.board .tap_area .tap_cnt div[role="tabpanel"]')
     let tab_cnt_prant = $('.board .tap_area .tap_cnt')
     
-    const visual_swiper = new Swiper('.visual .swiper', { 
-
-        effect: "fade", 
-        autoplay: {  
-            delay: 5000,
-            disableOnInteraction: true,
+    const visualSwiper = new Swiper('.visual .swiper', {
+        effect: 'fade', // fade 효과 추가
+        fadeEffect: {
+            crossFade: true
         },
-
-        loop: true,  
-
-        pagination: {  
-            el: '.visual .paging', 
-            clickable: true,  
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
         },
-        
-
-        navigation: { 
-            nextEl: '.visual .btn_next',  
-            prevEl: '.visual .btn_prev',  
-        },
-
     });
 
     $('.visual .btn_wrap .btn_stop').on('click', function(){
