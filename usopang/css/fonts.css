@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Gmarket Sans';
+    font-weight: 500;
+    font-display: swap;
+    src: local('GmarketSansMedium'), url(../fonts/GmarketSansMedium.woff2) format('woff2'), url(../fonts/GmarketSansMedium.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Coop Bold'; 
+    src: url('COOPBL.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
