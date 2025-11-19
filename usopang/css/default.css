@@ -14,18 +14,6 @@ a {
     color: inherit; 
     text-decoration: none; 
 }
-img { 
-    border: 0px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-.photo {
-    font-size: 0;
-    line-height: 0;
-    overflow: hidden;
-}
 em, span, strong, address {
     font-style: inherit;
 }

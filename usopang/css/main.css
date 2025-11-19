@@ -48,3 +48,89 @@
     -webkit-text-stroke: 10px #fff;
     paint-order: stroke fill; 
 }
+@media screen and (max-width: 1024px) {
+    .visual{
+        width: auto;
+        height: 400px;
+    }
+    .visual strong {
+        font-size: var(--txt-size-tit4);
+        margin: 100px 0 10px 0;
+    }
+    .visual span {
+        margin-top: 35px;
+        font-size: var(--txt-size-cont3);
+        -webkit-text-stroke: 5px #fff;
+    }
+    .visual .swiper ul li .photo {
+        height: 130px;
+    }
+
+}
+
+/*ingredients*/
+
+.ingredients {
+    background-image: url(../images/main/ingredients_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 1000px;
+}
+.ingredients h2 {
+    font-size: 0;
+    line-height: 0;
+}
+.ingredients .txt_box {
+    margin-top: 250px;
+}
+.ingredients .butter,
+.ingredients .milk,
+.ingredients .heart,
+.ingredients .salt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: var(--txt-size-tit2);
+    margin: 20px 0 ;
+}
+.ingredients .butter strong {
+    display: block;
+    font-family: 'Crimson Pro';
+}
+.ingredients .butter span {
+    display: block;
+    font-family: 'Coop Bold'; 
+}
+.ingredients .milk strong {
+    display: block;
+    font-family: 'Cutive Mono';
+}
+.ingredients .milk span {
+    display: block;
+    font-family: 'Croissant One'; 
+}
+.ingredients .heart strong {
+    display: block;
+    font-family: 'Montserrat'; 
+}
+.ingredients .heart span {
+    display: block;
+    font-family: 'Caveat Brush';
+}
+.ingredients .salt strong {
+    display: block;
+    font-family: 'Cookie';
+}
+.ingredients .salt span {
+    display: block;
+    font-family: 'Cormorant Unicase'; 
+}
+.ingredients .photo {
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    margin: 0 40px;
+}
