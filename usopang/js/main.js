@@ -1,9 +1,25 @@
 $(document).ready(function(){
-    let tab_btn = $('.board .tap_area .tap_btn ul li') 
+    let tab_btn = $('.menu .tap_area .tap_btn ul li') 
     let tab_name
-    let tab_cnt = $('.board .tap_area .tap_cnt div[role="tabpanel"]')
-    let tab_cnt_prant = $('.board .tap_area .tap_cnt')
+    let tab_cnt = $('.menu .tap_area .tap_cnt div[role="tabpanel"]')
+    let tab_cnt_prant = $('.menu .tap_area .tap_cnt')
     
+    tab_btn.on('click', function(){
+        tab_btn.removeClass('active')
+        $(this).addClass('active')
+
+        tab_btn.attr('aria-selected', 'false')
+        $(this).attr('aria-selected', 'true')
+
+        tab_name = $(this).attr('aria-controls')
+        tab_name = '#'+ tab_name 
+        console.log(tab_name)
+
+        tab_cnt.removeClass('active')
+        tab_cnt_prant.find(tab_name).addClass('active')
+        
+    })
+
     const visualSwiper = new Swiper('.visual .swiper', {
         effect: 'fade', // fade 효과 추가
         fadeEffect: {
@@ -50,37 +66,6 @@ $(document).ready(function(){
 
 
 
-    $('.board .main_link a').on('mouseover', function(){
-        $('.board .main_link a').removeClass('on')
-        $(this).addClass('on')
-    })
-    $('.board .main_link a').on('mouseleave', function(){
-        $(this).removeClass('on')
-    })
-
-    $('.row_board .fa .rb_list ul li a').on('mouseover', function(){
-        $('.row_board .fa .rb_list ul li a').removeClass('on')
-        $(this).addClass('on')
-    })
-    $('.row_board .fa .rb_list ul li a').on('mouseleave', function(){
-        $(this).removeClass('on')
-    })
-
-    tab_btn.on('click', function(){
-        tab_btn.removeClass('active')
-        $(this).addClass('active')
-
-        tab_btn.attr('aria-selected', 'false')
-        $(this).attr('aria-selected', 'true')
-
-        tab_name = $(this).attr('aria-controls')
-        tab_name = '#'+ tab_name 
-        console.log(tab_name)
-
-        tab_cnt.removeClass('active')
-        tab_cnt_prant.find(tab_name).addClass('active')
-        
-     })
 
 
     const foundation_news_swiper = new Swiper('.foundation_news .swiper', { 
