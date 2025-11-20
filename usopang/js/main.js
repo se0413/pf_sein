@@ -12,7 +12,7 @@ $(document).ready(function(){
         slidesPerView: 1,
         loop: true,
         autoplay: {
-            delay: 2000,
+            delay: 1500,
             disableOnInteraction: false,
         },
     });
@@ -28,6 +28,28 @@ $(document).ready(function(){
         $('.visual .btn_wrap .btn_stop').show()
     })
     
+
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const photos = document.querySelectorAll('.ingredients .photo');
+                photos.forEach((photo, index) => {
+                    setTimeout(() => {
+                        photo.classList.add('on');
+                    }, index * 300);
+                });
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '100px'
+    });
+
+    observer.observe(document.querySelector('.ingredients'));
+
+
+
     $('.board .main_link a').on('mouseover', function(){
         $('.board .main_link a').removeClass('on')
         $(this).addClass('on')
@@ -60,26 +82,6 @@ $(document).ready(function(){
         
      })
 
-     const excellence_swiper = new Swiper('.excellence .swiper', {
-        slidesPerView: 1, 
-        spaceBetween: 16, 
-        breakpoints: {
-            500: {  
-                slidesPerView: 2,
-                spaceBetween: 16,
-            },
-            768: {  
-                slidesPerView: 3,
-                spaceBetween: 16,
-            },
-            1300: {  
-                slidesPerView: 4,
-                spaceBetween: 24,
-            },
-        },
-        centeredSlides: true, 
-        loop: true, 
-    });
 
     const foundation_news_swiper = new Swiper('.foundation_news .swiper', { 
 
