@@ -1,24 +1,4 @@
 $(document).ready(function(){
-    let tab_btn = $('.menu .tap_area .tap_btn ul li') 
-    let tab_name
-    let tab_cnt = $('.menu .tap_area .tap_cnt div[role="tabpanel"]')
-    let tab_cnt_prant = $('.menu .tap_area .tap_cnt')
-    
-    tab_btn.on('click', function(){
-        tab_btn.removeClass('active')
-        $(this).addClass('active')
-
-        tab_btn.attr('aria-selected', 'false')
-        $(this).attr('aria-selected', 'true')
-
-        tab_name = $(this).attr('aria-controls')
-        tab_name = '#'+ tab_name 
-        console.log(tab_name)
-
-        tab_cnt.removeClass('active')
-        tab_cnt_prant.find(tab_name).addClass('active')
-        
-    })
 
     const visualSwiper = new Swiper('.visual .swiper', {
         effect: 'fade', // fade 효과 추가
@@ -68,19 +48,51 @@ $(document).ready(function(){
 
 
 
-    const foundation_news_swiper = new Swiper('.foundation_news .swiper', { 
+    let tab_btn = $('.menu .tap_area .tap_btn ul li') 
+    let tab_name
+    let tab_cnt = $('.menu .tap_area .tap_cnt div[role="tabpanel"]')
+    let tab_cnt_prant = $('.menu .tap_area .tap_cnt')
 
-        slidesPerView: 1, 
-        spaceBetween: 16, 
-        centeredSlides: true, 
+    // 올바른 셀렉터로 수정
+    let pannel2Swiper = new Swiper('#sig_panel_02 .swiper', { 
+        slidesPerView: 3, 
+        spaceBetween: 20, 
+        centeredSlides: false, 
         loop: true, 
-
         navigation: { 
-            nextEl: '.foundation_news .btn_next',  
-            prevEl: '.foundation_news .btn_prev',  
+            nextEl: '#sig_panel_02 .btn_next',  
+            prevEl: '#sig_panel_02 .btn_prev',  
         },
-
     });
+
+    let pannel3Swiper = new Swiper('#sig_panel_03 .swiper', { 
+        slidesPerView: 3, 
+        spaceBetween: 20, 
+        centeredSlides: false, 
+        loop: true, 
+        navigation: { 
+            nextEl: '#sig_panel_03 .btn_next',  
+            prevEl: '#sig_panel_03 .btn_prev',  
+        },
+    });
+
+    // 탭 클릭
+    tab_btn.on('click', function(){
+        tab_btn.removeClass('active')
+        $(this).addClass('active')
+
+        tab_btn.attr('aria-selected', 'false')
+        $(this).attr('aria-selected', 'true')
+
+        tab_name = $(this).attr('aria-controls')
+        tab_name = '#'+ tab_name 
+
+        tab_cnt.removeClass('active')
+        tab_cnt_prant.find(tab_name).addClass('active')
+    })
+
+
+    
 
     let start = $(window).height() * 0.2;
     AOS.init({

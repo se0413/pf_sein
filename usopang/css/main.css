@@ -271,11 +271,15 @@
 }
 .menu .tap_area .tap_cnt div[role="tabpanel"].active {
     display: block; /*보임*/
-}.menu .tap_cnt .signature_cnt {
-    margin: 90px 0 210px 0;
+}
+.menu .tap_cnt .signature_cnt {
+    position: relative;
+    margin: 90px 0 0 0;
+    padding-bottom: 300px;
 }
 .menu .tap_cnt .signature_cnt ul li {
     width: calc(33.3% - 10px);
+    height: 300px;
     position: relative;
 }
 .menu .tap_cnt .signature_cnt ul li span,
@@ -290,12 +294,68 @@
     paint-order: stroke fill;
     font-family: 'Coop Bold'; 
     color: transparent;
+    white-space: nowrap;
+    padding-top: 50px;
 }
 .menu .tap_cnt .signature_cnt ul li .photo {
     position: absolute;
     left: 50%;
-    top: 100%;
+    top: 60%;
     transform: translate(-50%, -50%);
     width: 270px;
     z-index: 2;
+}
+.menu .tap_cnt .pannel3 .signature_cnt .photo {
+    top: 50%;
+    width: 240px;
+}
+.menu .tap_cnt .signature_cnt .btn_wrap {
+    position: absolute;
+    display: flex;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    width: 1260px;
+    font-size: 0;
+    line-height: 0;
+}
+.menu .tap_cnt .signature_cnt .btn_wrap .btn_prev {
+    position: absolute;
+    left: -100px;
+    width: 90px;
+    height: 90px;
+    background-image: url("data:image/svg+xml,%3Csvg width='95' height='95' viewBox='0 0 95 95' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_130_1173' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='95' height='95'%3E%3Crect x='95' y='95' width='95' height='95' transform='rotate(-180 95 95)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_130_1173)'%3E%3Cpath d='M66.5983 13.0625L69.666 16.1302L38.2962 47.5L69.666 78.8698L66.5983 81.9375L32.1608 47.5L66.5983 13.0625Z' fill='%23096B38' fill-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.menu .tap_cnt .signature_cnt .btn_wrap .btn_next {
+    position: absolute;
+    right: -100px;
+    width: 90px;
+    height: 90px;
+    background-image: url("data:image/svg+xml,%3Csvg width='95' height='95' viewBox='0 0 95 95' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_130_1176' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='95' height='95'%3E%3Crect width='95' height='95' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_130_1176)'%3E%3Cpath d='M28.4017 81.9375L25.334 78.8698L56.7038 47.5L25.334 16.1302L28.4017 13.0625L62.8392 47.5L28.4017 81.9375Z' fill='%23096B38' fill-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E%0A");   
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.menu .tap_cnt .signature_cnt .more {
+    text-align: center;
+    margin-top: 50px;
+}
+.menu .tap_cnt .signature_cnt .more a {
+    font-family: 'Coop Bold';
+    display: inline-block;
+    padding: 10px 28px;
+    font-size: var(--txt-size-cont1);
+    color: var(--txt-color-main);
+    background-color: var(--txt-color-sub1);
+    border-radius: 30px;
+    border-width: 1px 1px 10px 1px;
+    border-style: solid;
+    border-color: var(--txt-color-main);
+    text-align: center;
 }
