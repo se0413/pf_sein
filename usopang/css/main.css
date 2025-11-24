@@ -198,17 +198,26 @@
 .menu {
     background-color: var(--txt-color-cont);
 }
-.menu a {
-    display: block;
-}
 .menu h2 {
     font-size: 0;
     line-height: 0;
 }
+.menu .tap_area .tap_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--txt-color-main);
+}
+.menu .tap_area .tap_btn strong {
+    display: block;
+    font-family: 'Coop Bold'; 
+    font-size: var(--txt-size-tit2);
+    color: var(--txt-color-main);
+    margin-bottom: 10px;
+}
 .menu .tap_area .tap_btn > ul {
     display: flex;
     justify-content:flex-end;
-    border-bottom: 1px solid var(--txt-color-main);
     padding-top: 210px;
 }
 .menu .tap_cnt .signature_cnt .photo {
@@ -281,9 +290,30 @@
     padding-bottom: 300px;
 }
 .menu .tap_cnt .signature_cnt ul li {
-    width: calc(33.3% - 10px);
-    height: 300px;
     position: relative;
+    margin-top: 10px;
+}
+.menu .tap_cnt .signature_cnt ul li::before {
+    position: absolute;
+    left: 0;
+    top: -50px;
+    width: 180px;
+    height: 180px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    z-index: 3;
+}
+.menu .tap_cnt .signature_cnt ul li.on.y_i_1::before {
+    background-image: url(../images/main/y_i_1.png);
+}
+.menu .tap_cnt .signature_cnt ul li.on.y_i_2::before {
+    background-image: url(../images/main/y_i_2.png);
+}
+.menu .tap_cnt .signature_cnt ul li a {
+    display: block;
+    height: 300px;
 }
 .menu .tap_cnt .signature_cnt ul li:hover,
 .menu .tap_cnt .signature_cnt ul li.on {
@@ -353,7 +383,7 @@
 .menu .tap_cnt .signature_cnt ul li.on .t_box {
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: 10px;
     transform: translate(-50%, 0);
     z-index: 2;
     text-align: right;
@@ -384,8 +414,12 @@
     top: 50%;
     width: 210px;
 }
-.menu .tap_cnt .pannel3 .signature_cnt li:hover .photo,
-.menu .tap_cnt .pannel3 .signature_cnt li.on .photo {
+.menu .tap_cnt .pannel2 .signature_cnt ul li:hover .photo,
+.menu .tap_cnt .pannel2 .signature_cnt ul li.on .photo {
+    width: 360px;
+}
+.menu .tap_cnt .pannel3 .signature_cnt ul li:hover .photo,
+.menu .tap_cnt .pannel3 .signature_cnt ul li.on .photo {
     width: 220px;
 }
 .menu .tap_cnt .signature_cnt .btn_wrap {
@@ -437,4 +471,110 @@
     border-style: solid;
     border-color: var(--txt-color-main);
     text-align: center;
+}
+.menu .tap_cnt .signature_cnt .more a:hover {
+    margin-top: 10px;
+    border-width: 1px 1px 1px 1px;
+}
+@media screen and (max-width: 1400px) {
+    .menu .tap_cnt .signature_cnt .btn_wrap {
+        display: none;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .menu .tap_area .wrapper {
+        overflow: visible; 
+    }
+    .menu .tap_area .tap_btn strong {
+        font-size: var(--txt-size-cont1);
+        margin-bottom: 10px;
+    }
+    .menu .tap_area .tap_btn > ul {
+        padding-top: 75px;
+    }
+    .menu .tap_area .tap_btn > ul > li {
+        width: 30px;
+        height: 40px;
+    }
+    .menu .tap_area .tap_btn > ul > li::before {
+        width: 20px;
+        height: 30px;
+    }
+    .menu .tap_cnt .signature_cnt {
+        margin: 30px 0 0 0;
+        padding-bottom: 80px;
+    }
+    .menu .tap_cnt .signature_cnt ul li::before {
+        width: 85px;
+        height: 65px;
+        top: -10px;
+        left: 30px;
+    }
+    .menu .tap_cnt .signature_cnt ul li a {
+        display: block;
+        height: 150px;
+    }
+    .menu .tap_cnt .signature_cnt ul li:hover,
+    .menu .tap_cnt .signature_cnt ul li.on {
+        border-radius: 150px 150px 0 0;
+    }
+    .menu .tap_cnt .signature_cnt ul li span,
+    .menu .tap_cnt .signature_cnt ul li em {
+        font-size: 13px;
+        padding-left: 10px;
+    }
+    .menu .tap_cnt .signature_cnt ul li .t_box .t span::before,
+    .menu .tap_cnt .signature_cnt ul li .t_box .t em::before {
+        left: -3px;
+        top: -4px;
+        width: 10px;
+        height: 10px;
+    }
+    .menu .tap_cnt .signature_cnt ul li em {
+        margin-left: 10px;
+    }
+    .menu .tap_cnt .signature_cnt ul li strong {
+        font-size: var(--txt-size-tit4);
+        padding-top: 50px;
+    }
+    .menu .tap_cnt .signature_cnt ul li strong.b {
+        font-size: var(--txt-size-tit4);
+    }
+    .menu .tap_cnt .signature_cnt ul li strong.a {
+        font-size: var(--txt-size-tit4);
+    }
+    .menu .tap_cnt .signature_cnt ul li:hover .t_box,
+    .menu .tap_cnt .signature_cnt ul li.on .t_box {
+        bottom: 5px;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+    }
+    .menu .tap_cnt .signature_cnt ul li:hover .photo,
+    .menu .tap_cnt .signature_cnt ul li.on .photo {
+        top: 50%;
+        width: 160px;
+    }
+    .menu .tap_cnt .pannel3 .signature_cnt .photo {
+        width: 210px;
+    }
+    .menu .tap_cnt .pannel2 .signature_cnt ul li:hover .photo,
+    .menu .tap_cnt .pannel2 .signature_cnt ul li.on .photo {
+        width: 190px;
+    }
+    .menu .tap_cnt .pannel3 .signature_cnt ul li:hover .photo,
+    .menu .tap_cnt .pannel3 .signature_cnt ul li.on .photo {
+        width: 110px;
+    }
+    .menu .tap_cnt .signature_cnt .more {
+        margin-top: 50px;
+    }
+    .menu .tap_cnt .signature_cnt .more a {
+        padding: 8px 12px;
+        font-size: 13px;
+        border-radius: 30px;
+        border-width: 1px 1px 5px 1px;
+    }
+    .menu .tap_cnt .signature_cnt .more a:hover {
+        margin-top: 5px;
+    }
+
 }

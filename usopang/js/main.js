@@ -46,35 +46,11 @@ $(document).ready(function(){
 
 
 
-
-
     let tab_btn = $('.menu .tap_area .tap_btn ul li') 
     let tab_name
     let tab_cnt = $('.menu .tap_area .tap_cnt div[role="tabpanel"]')
     let tab_cnt_prant = $('.menu .tap_area .tap_cnt')
 
-    // 올바른 셀렉터로 수정
-    let pannel2Swiper = new Swiper('#sig_panel_02 .swiper', { 
-        slidesPerView: 3, 
-        spaceBetween: 20, 
-        centeredSlides: false, 
-        loop: true, 
-        navigation: { 
-            nextEl: '#sig_panel_02 .btn_next',  
-            prevEl: '#sig_panel_02 .btn_prev',  
-        },
-    });
-
-    let pannel3Swiper = new Swiper('#sig_panel_03 .swiper', { 
-        slidesPerView: 3, 
-        spaceBetween: 20, 
-        centeredSlides: false, 
-        loop: true, 
-        navigation: { 
-            nextEl: '#sig_panel_03 .btn_next',  
-            prevEl: '#sig_panel_03 .btn_prev',  
-        },
-    });
 
     // 탭 클릭
     tab_btn.on('click', function(){
@@ -91,7 +67,60 @@ $(document).ready(function(){
         tab_cnt_prant.find(tab_name).addClass('active')
     })
 
+    // .pannel swiper
+    const signature_cnt_swiper = new Swiper('.signature_cnt .swiper', { 
+        slidesPerView: 1, 
+        spaceBetween: 16, 
+        breakpoints: {
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            400: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+        },
+        loop: false, 
+        navigation: { 
+            nextEl: '.tap_cnt .btn_next',  
+            prevEl: '.tap_cnt .btn_prev',  
+        },
+    });
 
+    let $defaultItem = $('.menu .signature_cnt li.on');
+
+    function handleMenuHover() {
+        if (window.innerWidth > 1024) {
+            // PC만 hover 이벤트
+            $('.menu .signature_cnt li').off('mouseenter mouseleave');
+            
+            $('.menu .signature_cnt li').on('mouseenter', function(){
+                $('.menu .signature_cnt li').removeClass('on');
+                $(this).addClass('on');
+            });
+            
+            $('.menu .signature_cnt li').on('mouseleave', function(){
+                $('.menu .signature_cnt li').removeClass('on');
+                $defaultItem.addClass('on');
+            });
+            
+            // 기본 상태
+            $('.menu .signature_cnt li').removeClass('on');
+            $defaultItem.addClass('on');
+        } else {
+            // 모바일: 모든 li에 on
+            $('.menu .signature_cnt li').off('mouseenter mouseleave');
+            $('.menu .signature_cnt li').addClass('on');
+        }
+    }
+
+    handleMenuHover();
+    $(window).on('resize', handleMenuHover);
     
 
 })
