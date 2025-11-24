@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     const visualSwiper = new Swiper('.visual .swiper', {
-        effect: 'fade', // fade 효과 추가
+        effect: 'fade',
         fadeEffect: {
             crossFade: true
         },
@@ -13,28 +13,14 @@ $(document).ready(function(){
         },
     });
 
-    $('.visual .btn_wrap .btn_stop').on('click', function(){
-        visual_swiper.autoplay.stop();  
-        $(this).hide()
-        $('.visual .btn_wrap .btn_play').show()
-    })
-    $('.visual .btn_wrap .btn_play').on('click', function(){
-        visual_swiper.autoplay.start();  
-        $(this).hide()
-        $('.visual .btn_wrap .btn_stop').show()
-    })
-    
-
-
-    const observer = new IntersectionObserver((entries) => {
+    // Ingredients 섹션 스크롤 애니메이션
+    const ingredientsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const photos = document.querySelectorAll('.ingredients .photo');
-                photos.forEach((photo, index) => {
-                    setTimeout(() => {
-                        photo.classList.add('on');
-                    }, index * 300);
-                });
+                document.querySelector('.ingredients .butter').classList.add('on');
+                document.querySelector('.ingredients .milk').classList.add('on');
+                document.querySelector('.ingredients .heart').classList.add('on');
+                document.querySelector('.ingredients .salt').classList.add('on');
             }
         });
     }, {
@@ -42,33 +28,36 @@ $(document).ready(function(){
         rootMargin: '100px'
     });
 
-    observer.observe(document.querySelector('.ingredients'));
+    ingredientsObserver.observe(document.querySelector('.ingredients'));
 
 
+    // 탭 관련
+    let tab_btn = $('.menu .tap_area .tap_btn ul li');
+    let tab_name;
+    let tab_cnt = $('.menu .tap_area .tap_cnt div[role="tabpanel"]');
+    let tab_cnt_prant = $('.menu .tap_area .tap_cnt');
 
-    let tab_btn = $('.menu .tap_area .tap_btn ul li') 
-    let tab_name
-    let tab_cnt = $('.menu .tap_area .tap_cnt div[role="tabpanel"]')
-    let tab_cnt_prant = $('.menu .tap_area .tap_cnt')
-
-
-    // 탭 클릭
-    tab_btn.on('click', function(){
-        tab_btn.removeClass('active')
-        $(this).addClass('active')
-
-        tab_btn.attr('aria-selected', 'false')
-        $(this).attr('aria-selected', 'true')
-
-        tab_name = $(this).attr('aria-controls')
-        tab_name = '#'+ tab_name 
-
-        tab_cnt.removeClass('active')
-        tab_cnt_prant.find(tab_name).addClass('active')
-    })
-
-    // .pannel swiper
-    const signature_cnt_swiper = new Swiper('.signature_cnt .swiper', { 
+    const pannel1Swiper = new Swiper('#sig_panel_01 .swiper', { 
+        slidesPerView: 1, 
+        spaceBetween: 16, 
+        breakpoints: {
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            400: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+        },
+        loop: false, 
+    });
+    
+    const pannel2Swiper = new Swiper('#sig_panel_02 .swiper', { 
         slidesPerView: 1, 
         spaceBetween: 16, 
         breakpoints: {
@@ -87,16 +76,55 @@ $(document).ready(function(){
         },
         loop: false, 
         navigation: { 
-            nextEl: '.tap_cnt .btn_next',  
-            prevEl: '.tap_cnt .btn_prev',  
+            nextEl: '#sig_panel_02 .btn_next',
+            prevEl: '#sig_panel_02 .btn_prev',  
         },
     });
 
+    const pannel3Swiper = new Swiper('#sig_panel_03 .swiper', { 
+        slidesPerView: 1, 
+        spaceBetween: 16, 
+        breakpoints: {
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            400: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+        },
+        loop: false, 
+        navigation: { 
+            nextEl: '#sig_panel_03 .btn_next',
+            prevEl: '#sig_panel_03 .btn_prev',  
+        },
+    });
+
+    // 탭 클릭 이벤트
+    tab_btn.on('click', function(){
+        tab_btn.removeClass('active');
+        $(this).addClass('active');
+
+        tab_btn.attr('aria-selected', 'false');
+        $(this).attr('aria-selected', 'true');
+
+        tab_name = $(this).attr('aria-controls');
+        tab_name = '#' + tab_name;
+
+        tab_cnt.removeClass('active');
+        tab_cnt_prant.find(tab_name).addClass('active');
+    });
+
+    // 메뉴 hover 효과
     let $defaultItem = $('.menu .signature_cnt li.on');
 
     function handleMenuHover() {
         if (window.innerWidth > 1024) {
-            // PC만 hover 이벤트
             $('.menu .signature_cnt li').off('mouseenter mouseleave');
             
             $('.menu .signature_cnt li').on('mouseenter', function(){
@@ -109,11 +137,9 @@ $(document).ready(function(){
                 $defaultItem.addClass('on');
             });
             
-            // 기본 상태
             $('.menu .signature_cnt li').removeClass('on');
             $defaultItem.addClass('on');
         } else {
-            // 모바일: 모든 li에 on
             $('.menu .signature_cnt li').off('mouseenter mouseleave');
             $('.menu .signature_cnt li').addClass('on');
         }
@@ -121,6 +147,4 @@ $(document).ready(function(){
 
     handleMenuHover();
     $(window).on('resize', handleMenuHover);
-    
-
-})
+});
