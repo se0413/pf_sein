@@ -652,15 +652,108 @@
 .event {
     display: flex;
     width: 100%;
-    height: 1000px;
 }
 .event .l_box,
 .event .r_box {
+    width: 50%;
+}
+.event .l_box .photo,
+.event .r_box .photo {
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.event .l_box .photo img,
+.event .r_box .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.event .l_box .l_top,
+.event .l_box .l_bottom,
+.event .r_box .r_top,
+.event .r_box .r_bottom {
     display: flex;
 }
 .event .l_box .l_top li,
 .event .l_box .l_bottom li,
-.event .r_box li .r_top li,
-.event .r_box li .r_bottom li {
+.event .r_box .r_top li,
+.event .r_box .r_bottom li {
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.event .l_box .l_top li,
+.event .r_box .r_top li {
+    color: #fff;
+    background-color: var(--txt-color-main);
+}
+.event .l_box .l_top li:nth-child(1) .photo {
+    padding: 50px;
+}
+.event .l_box .l_bottom li,
+.event .r_box .r_bottom li {
+    color: var(--txt-color-sub2);
+    background-color: var(--txt-color-sub1);
+}
+.event .r_box .r_bottom li:nth-child(2) .photo {
+    width: 250px;
+    height: 340px;
+}
+.event .l_box .l_bottom .l_bottom_txt strong,
+.event .r_box .r_top .r_box_txt strong {
+    font-family: 'Coop Bold'; 
+    display: block;
+    font-size: var(--txt-size-tit3);
+    text-align: center;
+    line-height: 70px;
+}
+.event .l_box .l_bottom .l_bottom_txt span,
+.event .r_box .r_top .r_box_txt span {
+    display: block;
+    font-size: var(--txt-size-cont2);
+    text-align: center;
+    margin: 20px 0 30px 0;
+}
+.event .l_box .l_bottom .l_bottom_txt .more,
+.event .r_box .r_top .r_box_txt .more {
+    text-align: center;
+}
+.event .l_box .l_bottom .l_bottom_txt .more a{
+    font-family: 'Coop Bold';
+    display: inline-block;
+    padding: 10px 28px;
+    font-size: var(--txt-size-cont1);
+    color: var(--txt-color-sub2);
+    background-color: var(--txt-color-sub1);
+    border-radius: 30px;
+    border-width: 1px 1px 10px 1px;
+    border-style: solid;
+    border-color: var(--txt-color-sub2);
+    text-align: center;
+}
+.event .r_box .r_top .r_box_txt .more a {
+    font-family: 'Coop Bold';
+    display: inline-block;
+    padding: 10px 28px;
+    font-size: var(--txt-size-cont1);
+    color: #fff;
+    background-color: var(--txt-color-main);
+    border-radius: 30px;
+    border-width: 1px 1px 10px 1px;
+    border-style: solid;
+    border-color: #fff;
+    text-align: center;
+}
+.event .l_box .l_bottom .l_bottom_txt .more a:hover,
+.event .r_box .r_top .r_box_txt .more a:hover {
+    margin-top: 10px;
+    border-width: 1px 1px 1px 1px;
+}
+@media screen and (max-width: 1400px) {
+
 }
