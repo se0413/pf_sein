@@ -245,19 +245,19 @@
         font-size: var(--txt-size-cont2);
         margin: 10px 0 ;
     }
-    .ingredients .photo.on {
+    .ingredients .photo {
         margin: 0 10px;
     }
-    .ingredients .b.on {
+    .ingredients .b {
         width: 70px;
     }
-    .ingredients .m.on {
+    .ingredients .m {
         width: 45px;
     }
-    .ingredients .h.on {
+    .ingredients .h {
         width: 30px;
     }
-    .ingredients .s.on {
+    .ingredients .s {
         width: 30px;
     }
 }
@@ -692,17 +692,14 @@
     color: #fff;
     background-color: var(--txt-color-main);
 }
-.event .l_box .l_top li:nth-child(1) .photo {
-    padding: 50px;
-}
 .event .l_box .l_bottom li,
 .event .r_box .r_bottom li {
     color: var(--txt-color-sub2);
     background-color: var(--txt-color-sub1);
 }
 .event .r_box .r_bottom li:nth-child(2) .photo {
-    width: 250px;
-    height: 340px;
+    width: 30%;
+    height: 37%;
 }
 .event .l_box .l_bottom .l_bottom_txt strong,
 .event .r_box .r_top .r_box_txt strong {
@@ -755,5 +752,51 @@
     border-width: 1px 1px 1px 1px;
 }
 @media screen and (max-width: 1400px) {
-
+    .event .l_box .l_bottom .l_bottom_txt span,
+    .event .r_box .r_top .r_box_txt span {
+        display: none;
+    }
+    .event .l_box .l_bottom .l_bottom_txt .more,
+    .event .r_box .r_top .r_box_txt .more {
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .event {
+        display: block;
+        width: auto;
+    }
+    .event .l_box,
+    .event .r_box {
+        width: auto;
+    }
+    .event .r_box .r_bottom li:nth-child(2) .photo {
+        width: 30%;
+        height: 37%;
+    }
+    .event .l_box .l_bottom .l_bottom_txt strong,
+    .event .r_box .r_top .r_box_txt strong {
+        font-size: var(--txt-size-cont1);
+        line-height: 35px;
+    }
+    .event .l_box .l_bottom .l_bottom_txt .more,
+    .event .r_box .r_top .r_box_txt .more {
+        text-align: center;
+    }
+    .event .l_box .l_bottom .l_bottom_txt .more a{
+        padding: 8px 12px;
+        font-size: 13px;
+        border-radius: 30px;
+        border-width: 1px 1px 5px 1px;
+    }
+    .event .r_box .r_top .r_box_txt .more a {
+        padding: 8px 12px;
+        font-size: 13px;
+        border-radius: 30px;
+        border-width: 1px 1px 5px 1px;
+    }
+    .event .l_box .l_bottom .l_bottom_txt .more a:hover,
+    .event .r_box .r_top .r_box_txt .more a:hover {
+        margin-top: 5px;
+    }
 }
