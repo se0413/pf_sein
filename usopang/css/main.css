@@ -536,14 +536,17 @@
     color: var(--txt-color-main);
     background-color: var(--txt-color-sub1);
     border-radius: 30px;
-    border-width: 1px 1px 10px 1px;
-    border-style: solid;
+    border: 10px solid transparent;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
     border-color: var(--txt-color-main);
-    text-align: center;
+    box-sizing: border-box; 
+    transition: all .2s ease;
 }
 .menu .tap_cnt .signature_cnt .more a:hover {
-    margin-top: 10px;
-    border-width: 1px 1px 1px 1px;
+    border-bottom-width: 1px;
+    margin-top: 9px; 
 }
 @media screen and (max-width: 1400px) {
     .menu .tap_cnt .signature_cnt .btn_wrap {
@@ -640,10 +643,11 @@
         padding: 8px 12px;
         font-size: 13px;
         border-radius: 30px;
-        border-width: 1px 1px 5px 1px;
+        border-bottom-width: 5px;
     }
     .menu .tap_cnt .signature_cnt .more a:hover {
-        margin-top: 5px;
+        border-bottom-width: 1px;
+        margin-top: 4px;
     }
 }
 
@@ -728,10 +732,13 @@
     color: var(--txt-color-sub2);
     background-color: var(--txt-color-sub1);
     border-radius: 30px;
-    border-width: 1px 1px 10px 1px;
-    border-style: solid;
+    border: 10px solid transparent;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
     border-color: var(--txt-color-sub2);
-    text-align: center;
+    box-sizing: border-box; 
+    transition: all .2s ease;
 }
 .event .r_box .r_top .r_box_txt .more a {
     font-family: 'Coop Bold';
@@ -741,15 +748,18 @@
     color: #fff;
     background-color: var(--txt-color-main);
     border-radius: 30px;
-    border-width: 1px 1px 10px 1px;
-    border-style: solid;
+    border: 10px solid transparent;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
     border-color: #fff;
-    text-align: center;
+    box-sizing: border-box; 
+    transition: all .2s ease;
 }
 .event .l_box .l_bottom .l_bottom_txt .more a:hover,
 .event .r_box .r_top .r_box_txt .more a:hover {
-    margin-top: 10px;
-    border-width: 1px 1px 1px 1px;
+    border-bottom-width: 1px;
+    margin-top: 9px; 
 }
 @media screen and (max-width: 1400px) {
     .event .l_box .l_bottom .l_bottom_txt span,
@@ -793,11 +803,12 @@
         padding: 8px 12px;
         font-size: 13px;
         border-radius: 30px;
-        border-width: 1px 1px 5px 1px;
+        border-bottom-width: 5px;
     }
     .event .l_box .l_bottom .l_bottom_txt .more a:hover,
     .event .r_box .r_top .r_box_txt .more a:hover {
-        margin-top: 5px;
+        border-bottom-width: 1px;
+        margin-top: 4px;
     }
 }
 
@@ -820,12 +831,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 150px;
 }
 .place .place_box .map_photo {
     font-size: 0;
     line-height: 0;
     overflow: hidden;
     position: relative;
+    width: 50%;
 }
 .place .place_box .map_photo img {
     width: 100%;
@@ -874,7 +887,7 @@
     text-align: right;
     font-size: var(--txt-size-cont2);
     color: var(--txt-color-main);
-    width: 670px;
+    width: 50%;
 }
 .place .place_box .map_info > div {/* 지점 정보 기본 숨김 */
     display: none;
@@ -961,15 +974,18 @@
     color: var(--txt-color-main);
     background-color: var(--txt-color-sub1);
     border-radius: 30px;
-    border-width: 1px 1px 10px 1px;
-    border-style: solid;
+    border: 10px solid transparent;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
     border-color: var(--txt-color-main);
-    text-align: center;
+    box-sizing: border-box; 
+    transition: all .2s ease;
 }
 .place .place_box .map_info .order a:hover,
 .place .place_box .map_info .order a:hover {
-    margin-top: 10px;
-    border-width: 1px 1px 1px 1px;
+    border-bottom-width: 1px;
+    margin-top: 9px; 
 }
 .place .place_box .map_info .delivery {
     padding-right: 140px;
@@ -987,4 +1003,109 @@
     background-repeat: no-repeat;
     background-size: contain;
     content: "";
+}
+.place .place_box .map_info .store_head {
+    display: grid;
+}
+.place .place_box .map_info .store_head strong {
+    margin-left: auto;
+}
+@media screen and (max-width: 1024px) {
+    .place h2 {
+        font-size: var(--txt-size-cont1);
+        padding-top: 80px;
+        margin-bottom: 30px;
+    }
+    .place .place_box {
+        display: block;
+        padding-bottom: 100px;
+    }
+    .place .place_box .map_photo {
+        width: 250px;
+        margin: 0 auto;
+    }
+    .place .place_box .map_photo button {
+        width: 23px;
+        height: 31px;
+    }
+    .place .place_box .map_photo button.store1 {
+        left: 130px;
+        top: 18px;
+    }
+    .place .place_box .map_photo button.store2 {
+        left: 120px;
+        top: 65px;
+    }
+    .place .place_box .map_photo button.store3 {
+        left: 65px;
+        top: 75px;
+    }
+    .place .place_box .map_info {
+        text-align: center;
+        font-size: 13px;
+        width: auto;
+        margin-top: 30px;
+    }
+    .place .place_box .map_info strong,
+    .place .place_box .map_info .address,
+    .place .place_box .map_info .list1 li {
+        border-radius: 30px;
+        padding: 7px 20px;
+    }
+    .place .place_box .map_info .list2 li,
+    .place .place_box .map_info .delivery {
+        border-radius: 30px;
+        padding: 7px 20px;
+    }
+    .place .place_box .map_info .list2 li.red {
+        border-radius: 30px;
+        padding: 7px 20px;
+    }
+    .place .place_box .map_info .list1 li,
+    .place .place_box .map_info .address {
+        padding-left: 55px;
+    }
+    .place .place_box .map_info .list1 li::before,
+    .place .place_box .map_info .address::before {
+        left: 20px;
+        width: 17px;
+        height: 17px;
+    }
+    .place .place_box .map_info .list1 .time {
+        margin-right: 0;
+    }   
+    .place .place_box .map_info .address,
+    .place .place_box .map_info .list2 {
+        margin: 10px 0;
+    }
+    .place .place_box .map_info .list2 li {
+        margin-left: 0;
+    }
+    .place .place_box .map_info .list2 li:last-child {
+        margin: 0;
+    }
+    .place .place_box .map_info .order a {
+        padding: 8px 12px;
+        font-size: 13px;
+        border-radius: 30px;
+        border-bottom-width: 5px;
+    }
+    .place .place_box .map_info .order a:hover,
+    .place .place_box .map_info .order a:hover {
+        border-bottom-width: 1px;
+        margin-top: 4px;
+    }
+    .place .place_box .map_info .delivery {
+        padding-right: 80px;
+    }
+    .place .place_box .map_info .delivery::before {
+        right: 20px;
+        width: 50px;
+    }
+    .place .place_box .map_info .store_head {
+        justify-content: center ;
+    }
+    .place .place_box .map_info .store_head strong {
+        margin: 0 auto 10px auto;
+    }
 }
