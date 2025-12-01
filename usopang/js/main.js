@@ -145,6 +145,30 @@ $(document).ready(function(){
         }
     }
 
+    // place
     handleMenuHover();
-    $(window).on('resize', handleMenuHover);
+        $(window).on('resize', handleMenuHover);
+
+        $(document).ready(function(){
+        
+        // 깃발 버튼 클릭 이벤트
+        $('.map_photo button').on('click', function(){
+            // 모든 버튼 비활성화
+            $('.map_photo button').removeClass('active');
+            // 클릭한 버튼 활성화
+            $(this).addClass('active');
+            
+            // 클릭한 버튼의 data-store 값 가져오기
+            const storeId = $(this).data('store');
+            
+            // 모든 지점 정보 숨기기
+            $('.map_info > div').removeClass('active').hide();
+            
+            // 해당 지점 정보만 보이기
+            $('#' + storeId).addClass('active').fadeIn(300);
+        });
+        
+        // 페이지 로드 시 첫 번째 지점 자동 표시
+        $('.map_photo button').first().click();
+    });
 });
