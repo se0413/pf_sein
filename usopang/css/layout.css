@@ -237,5 +237,10 @@ header .gnb .gnb_wrap .depth1 > li.on > a {
 	display: block;
 }
 .popup {
-	cursor: none !important; /* 만약 마우스 오버 시 생성한 cursor만 나타나고 실제 마우스 포인터는 안보이게 하려면 오버하는 요소에서 마우스 포인트를 안보이게 해야 함 */
+	cursor: none !important;
 }
+@media screen and (max-width: 1024px) {
+    .cursor {
+        display: none !important;
+    }
+}   

@@ -171,4 +171,21 @@ $(document).ready(function(){
         // 페이지 로드 시 첫 번째 지점 자동 표시
         $('.map_photo button').first().click();
     });
+
+    //review
+    const review_swiper = new Swiper('.review .swiper', { 
+        slidesPerView: 'auto', // 이 설정을 변경해야 합니다.
+        freeMode: true,
+        freeModeMomentum: true,
+        spaceBetween: 16,
+        
+        breakpoints: {
+            640: {
+                // **핵심 수정 부분**
+                slidesPerView: 5.5 , // 4개 + 1개의 절반(0.5)을 표시
+                spaceBetween: 20,
+            },
+        },
+    });
+
 });
