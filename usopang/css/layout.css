@@ -199,3 +199,43 @@ header .gnb .gnb_wrap .depth1 > li.on > a {
         margin-top: 4px;
     }
 }
+
+/*cursor*/
+.cursor { 
+	position: absolute;
+	z-index: 1000;
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--txt-color-cont2);
+    border: 2px solid var(--txt-color-main);
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	display: none;
+    font-size: 0;
+    line-height: 0;
+}
+.cursor span {
+    display: block;
+    height: 100%;
+    position: relative;
+}
+.cursor span::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 14px;
+    transform: translate(-50%, -50%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='15' viewBox='0 0 50 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M41.9286 0.292745C42.3191 -0.0976805 42.9521 -0.0974827 43.3427 0.292745L49.707 6.657C50.0975 7.04753 50.0975 7.68054 49.707 8.07106L43.3427 14.4353C42.9521 14.8256 42.3191 14.8257 41.9286 14.4353C41.5382 14.0449 41.5384 13.4118 41.9286 13.0213L46.5859 8.36403H3.41399L8.07121 13.0213C8.46144 13.4118 8.46164 14.0449 8.07121 14.4353C7.68079 14.8257 7.0477 14.8256 6.65715 14.4353L0.292893 8.07106C-0.0976311 7.68054 -0.0976311 7.04753 0.292893 6.657L6.65715 0.292745C7.0477 -0.0974827 7.68079 -0.0976805 8.07121 0.292745C8.46164 0.68317 8.46144 1.31626 8.07121 1.70681L3.41399 6.36403H46.5859L41.9286 1.70681C41.5384 1.31626 41.5382 0.68317 41.9286 0.292745Z' fill='%23096B38'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.cursor.on {
+	display: block;
+}
+.popup {
+	cursor: none !important; /* 만약 마우스 오버 시 생성한 cursor만 나타나고 실제 마우스 포인터는 안보이게 하려면 오버하는 요소에서 마우스 포인트를 안보이게 해야 함 */
+}
