@@ -176,6 +176,11 @@ $(document).ready(function(){
     const review_swiper = new Swiper('.review .swiper', { 
         slidesPerView: '2.5',
         spaceBetween: 16,
+        loop: true,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
         breakpoints: {
             1600: {
                 centeredSlides: true,
