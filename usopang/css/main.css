@@ -940,7 +940,7 @@
     border-color: var(--txt-color-sub2);
     border-radius: 50px;
     color: var(--txt-color-sub2);
-    padding: 10px 26px;
+    padding: 10px 26px 7px 26px;
     text-align: center;
 }
 .place .place_box .map_info .list1 li,
