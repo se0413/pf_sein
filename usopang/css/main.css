@@ -735,6 +735,7 @@
 .event .l_box .l_bottom .l_bottom_txt,
 .event .r_box .r_top .r_box_txt {
     text-align: center;
+    height: 290px;
 }
 .event .l_box .l_bottom .l_bottom_txt strong,
 .event .r_box .r_top .r_box_txt strong {
@@ -813,6 +814,10 @@
         width: 30%;
         height: 37%;
     }
+    .event .l_box .l_bottom .l_bottom_txt, 
+    .event .r_box .r_top .r_box_txt {
+        height: 120px;
+    }
     .event .l_box .l_bottom .l_bottom_txt strong,
     .event .r_box .r_top .r_box_txt strong {
         font-size: var(--txt-size-cont1);
@@ -825,7 +830,6 @@
     .event .l_box .l_bottom .l_bottom_txt .more a,
     .event .r_box .r_top .r_box_txt .more a{
         padding: 8px 12px;
-        
     }
     .event .l_box .l_bottom .l_bottom_txt .more:hover,
     .event .r_box .r_top .r_box_txt .more:hover {
@@ -1079,19 +1083,19 @@
     .place .place_box .map_info .address,
     .place .place_box .map_info .list1 li {
         border-radius: 30px;
-        padding: 7px 20px;
+        padding: 7px 20px 5px 20px;
     }
     .place .place_box .map_info .list2 li,
     .place .place_box .map_info .delivery {
         border-radius: 30px;
-        padding: 7px 20px;
+        padding: 7px 20px 5px 20px;
     }
     .place .place_box .map_info .delivery {
         margin-bottom: 100px;
     }
     .place .place_box .map_info .list2 li.red {
         border-radius: 30px;
-        padding: 7px 20px;
+        padding: 7px 20px 5px 20px;
     }
     .place .place_box .map_info .list1 li,
     .place .place_box .map_info .address {
