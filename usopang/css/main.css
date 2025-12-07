@@ -48,7 +48,7 @@
     -webkit-text-stroke: 10px #fff;
     paint-order: stroke fill; 
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .visual{
         width: auto;
         height: 400px;
@@ -230,7 +230,7 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .ingredients {
         width: auto;
         height: 400px;
@@ -577,7 +577,7 @@
         display: none;
     }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .menu .tap_area .wrapper {
         overflow: visible; 
     }
@@ -800,8 +800,12 @@
     .event .r_box .r_top .r_box_txt span {
         display: none;
     }
+    .event .l_box .l_bottom .l_bottom_txt, 
+    .event .r_box .r_top .r_box_txt {
+        height: 200px;
+    }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .event {
         display: block;
         width: auto;
@@ -1043,7 +1047,7 @@
 .place .place_box .map_info .store_head strong {
     margin-left: auto;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .place h2 {
         font-size: var(--txt-size-cont1);
         padding-top: 80px;
@@ -1404,7 +1408,7 @@ footer .copyright span {
     font-size: var(--txt-size-cont3);
     white-space: nowrap;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     footer .f_zone {
         display: block;
         padding-top: 100px;
