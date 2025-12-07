@@ -1308,7 +1308,7 @@
         font-size: 13px;
     }
     .review .review_box .user_txt strong {
-        font-size: var(--txt-size-cont3);
+        font-size: 13px;
     }
     .review .review_sns .wrapper > ul > li {
         width: 40px;
@@ -1448,6 +1448,7 @@ footer .copyright span {
         position: relative;
         top: 0;
         margin: 60px auto 0 auto;
+        width: 250px;
     }
     footer .copyright {
         display: block;
