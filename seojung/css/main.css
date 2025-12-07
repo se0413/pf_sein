@@ -100,7 +100,7 @@
     font-size: 25px;
     color: #fff;
     z-index: 10;
-    margin: 0px auto;
+    margin: 0;
 }
 .progress {
     flex: 1;
@@ -132,6 +132,12 @@
 }
 
 @media screen and (max-width: 1600px){
+    .visual .swiper > .wrapper {
+        left: 0;
+        transform: none;
+    }
+}
+@media screen and (max-width: 1400px){
     .visual {
         border-radius: 0 0 70px 70px;
     }
@@ -347,8 +353,11 @@
 .about_us .keyworld .wrapper > ul {
     display: flex;
     align-content: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 160px;
+}
+.about_us .keyworld .wrapper > ul > li:nth-child(2) {
+    margin: 0 270px;
 }
 .about_us .keyworld .wrapper > ul > li > strong {
     display: block;
@@ -1134,6 +1143,9 @@
     }
     .equipment .cont ul li:nth-child(even) {
         transform: translate(0, 0);
+    }
+    .equipment .cont ul li:nth-child(even):hover {
+        transform: translate(0, -12px);
     }
     .equipment .cont ul li {
         width: calc(20% - 16px);

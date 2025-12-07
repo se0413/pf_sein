@@ -201,6 +201,7 @@ header .gnb .gnb_wrap .depth1 > li.on > a {
 }
 
 /*cursor*/
+/*
 .cursor { 
 	position: absolute;
 	z-index: 1000;
@@ -244,3 +245,4 @@ header .gnb .gnb_wrap .depth1 > li.on > a {
         display: none !important;
     }
 }   
+*/
