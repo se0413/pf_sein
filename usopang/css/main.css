@@ -805,7 +805,7 @@
         height: 200px;
     }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
     .event {
         display: block;
         width: auto;

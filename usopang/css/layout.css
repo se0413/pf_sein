@@ -99,7 +99,7 @@ header .gnb .gnb_wrap .depth1 > li.on > a {
     margin-top: 9px; 
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     header {
         height: 50px;
         padding: 0;
@@ -217,7 +217,6 @@ header .gnb .gnb_wrap .depth1 > li.on > a {
     line-height: 0;
 }
 .cursor span {
-    display: block;
     height: 100%;
     position: relative;
 }
