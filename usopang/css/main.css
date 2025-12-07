@@ -805,19 +805,7 @@
         height: 200px;
     }
 }
-@media screen and (max-width: 1024px) {
-    .event {
-        display: block;
-        width: auto;
-    }
-    .event .l_box,
-    .event .r_box {
-        width: auto;
-    }
-    .event .r_box .r_bottom li:nth-child(2) .photo {
-        width: 30%;
-        height: 37%;
-    }
+@media screen and (max-width: 1200px) {
     .event .l_box .l_bottom .l_bottom_txt, 
     .event .r_box .r_top .r_box_txt {
         height: 120px;
@@ -839,6 +827,20 @@
     .event .r_box .r_top .r_box_txt .more:hover {
         border-bottom-width: 1px;
         margin-top: 4px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .event {
+        display: block;
+        width: auto;
+    }
+    .event .l_box,
+    .event .r_box {
+        width: auto;
+    }
+    .event .r_box .r_bottom li:nth-child(2) .photo {
+        width: 30%;
+        height: 37%;
     }
 }
 
@@ -1103,11 +1105,11 @@
     }
     .place .place_box .map_info .list1 li,
     .place .place_box .map_info .address {
-        padding-left: 55px;
+        padding-left: 40px;
     }
     .place .place_box .map_info .list1 li::before,
     .place .place_box .map_info .address::before {
-        left: 20px;
+        left: 15px;
         width: 17px;
         height: 17px;
     }
@@ -1239,7 +1241,6 @@
 .review .review_sns .wrapper {
     position: relative;
 }
-
 .review .review_sns .wrapper > ul {
     display: flex;
     justify-content: flex-end;
@@ -1294,7 +1295,7 @@
     display: block;
     height: 50px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .review .review_box {
         padding-top: 55px;
         margin-bottom: 50px;
