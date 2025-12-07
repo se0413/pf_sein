@@ -1112,7 +1112,7 @@
         height: 17px;
     }
     .place .place_box .map_info .list1 .time {
-        margin-right: 0;
+        margin-right: 10px;
     }   
     .place .place_box .map_info .address,
     .place .place_box .map_info .list2 {
@@ -1120,6 +1120,9 @@
     }
     .place .place_box .map_info .list2 li {
         margin-left: 0;
+    }
+    .place .place_box .map_info .list2 li:nth-child(2) {
+        margin: 0 10px;
     }
     .place .place_box .map_info .list2 li:last-child {
         margin: 0;
