@@ -888,7 +888,7 @@
         margin: 10px 0 5px 0;
     }
     .medical .list ul li a .inner p {
-        font-size: 15px;
+        font-size: 13px;
     }
     .medical .list ul li.on::before {
         background-color: rgba(0, 0, 0, 0.2);
