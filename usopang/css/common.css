@@ -1,0 +1,55 @@
+html, body{
+    font-family: 'Gmarket Sans';
+    font-weight:500; 
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: #1d1d1d;
+    word-break: keep-all; 
+    word-wrap: break-word; 
+}
+#wrap{ 
+    min-width: 1260px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0px auto; 
+}
+
+@media screen and (max-width: 1300px){
+    #wrap { 
+        min-width: 100%;
+    }
+    .wrapper {
+        margin: 0 20px; 
+        width: auto;
+    }
+}
+@media screen and (max-width: 1024px){
+    html, body{
+        font-size: 13px;
+    } 
+}
+@media screen and (max-width: 768px){
+    html, body{
+        font-size: 13px;
+    } 
+}
+
+:root {
+    --txt-size-tit1 : 100px;
+    --txt-size-tit2 : 70px;
+    --txt-size-tit3 : 50px;
+    --txt-size-tit4 : 40px;
+    --txt-size-cont1 : 25px;
+    --txt-size-cont2 : 20px;
+    --txt-size-cont3 : 15px;
+    --txt-size-cont4 : 85px;
+    --txt-size-cont5 : 75px;
+    --txt-color-main : #096B38;
+    --txt-color-sub1 : #FDB700;
+    --txt-color-sub2 : #F94D2D;
+    --txt-color-cont1 : #FBFDF1;
+    --txt-color-cont2 : #E4EAC6;
+}

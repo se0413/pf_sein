@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/counter.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>서정피부과의원</title>
+</head>
+<body>
+    <div class="skip_nav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_nav">대메뉴 바로가기</a>
+    </div>
+    <div id="wrap">
+        <header>
+            <h1 class="logo"><a href="index.html">서정피부과의원</a></h1>
+            <nav class="gnb">           
+                <button class="gnb_open">메뉴열기</button>
+                <div class="gnb_wrap">
+                    <ul class="depth1">
+                        <li class="active">
+                            <a href="#n">About us</a>
+                            <ul class="depth2">
+                                <li><a href="#n">병원 소개</a></li>
+                                <li><a href="#n">의료진 소개</a></li>
+                                <li><a href="#n">층별 내부 안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#n">Clinic</a>
+                            <ul class="depth2">
+                                <li><a href="#n">피부질환</a></li>
+                                <li><a href="#n">항노화</a></li>
+                                <li><a href="#n">여드름</a></li>
+                                <li><a href="#n">색소침착</a></li>
+                                <li><a href="#n">보톡스</a></li>
+                                <li><a href="#n">치료별 기기 소개</a></li>
+                                <li><a href="#n">치료 후기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#n">Place</a>
+                            <ul class="depth2">
+                                <li><a href="#n">오시는 길</a></li>
+                                <li><a href="#n">층별 내부 안내</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="gnb_close">메뉴닫기</button>
+            </nav>
+        </header>
+        <aside class="quick_menu">
+            <button class="quick_open"><span>Quick<br>Menu</span></button>
+            <ul>
+                <li class="top"><button><span>Top</span></button></li>
+                <li class="service"><a href="#n"><span>고객 센터</span></a></li>
+                <li class="event"><a href="#n"><span>이벤트</span></a></li>
+                <li class="reserve"><a href="#n"><span>예약</span></a></li>
+            </ul>
+            <button class="quick_close"><span>Close</span></button>
+        </aside>
+        <main class="container">
+            <section class="visual">
+                <div class="swiper"> 
+                    <ul class="swiper-wrapper"> 
+                        <li class="swiper-slide bg1">
+                            <div class="wrapper">
+                                <h2>Pure Skin, <br>True Confidence</h2>
+                                <p>깨끗한 피부에서 피어나는 자신감,<br>서정피부과가 함께합니다.</p>
+                            </div>
+                        </li> 
+                        <li class="swiper-slide bg2">
+                            <div class="wrapper">
+                                <h2>Radiant Touch, <br>Gentle Care</h2>
+                                <p>피부에 닿는 모든 순간,<br>세심한 진심으로 빛을 더합니다.</p>
+                            </div>
+                        </li> 
+                        <li class="swiper-slide bg3">
+                            <div class="wrapper">
+                                <h2>Delicate Balance, <br>Beauty</h2>
+                                <p>균형 잡힌 케어로<br>오래도록 이어지는 아름다움.</p>
+                            </div>
+                        </li> 
+                    </ul>
+                    <div class="wrapper">
+                        <div class="visual-progress-wrap">
+                            <span class="current">01</span>
+                                <div class="progress">
+                                    <span class="progress-bar"></span>
+                                </div>
+                            <span class="total">03</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll">
+                    <strong>scroll</strong>
+                </div>
+            </section>
+            <section class="about_us">
+                <h2>about us</h2>
+                <div class="since" data-aos="fade-up">
+                    <div class="wrapper">
+                        <div class="n_s">
+                            <div class="n_l">
+                                <strong><span>2022</span></strong>
+                                <em>SINCE</em>
+                            </div>
+                            <div class="s_bar"></div>
+                            <div class="n_r">
+                                <strong><span>2025</span></strong>
+                            </div>
+                        </div>
+                        <div class="n_t">
+                            <strong>피부과 전문의의 진료는 비전문의 진료보다<br>임상의 경험과 지식의 깊이가 다릅니다.<br>보다 넓은 지식과 경험으로 맞춤 진료에 최선을 다하겠습니다.</strong>
+                            <em><a href="#n"><span>서정이야기</span></a></em>
+                        </div>
+                    </div>
+                </div>
+                <div class="keyworld" data-aos="fade-up">
+                    <div class="wrapper">
+                        <ul>
+                            <li>
+                                <strong>Special</strong>
+                                <span>대한민국 의사중 단 2%</span>
+                            </li>
+                            <li>
+                                <strong>Health</strong>
+                                <span>맞춤 건강 스킨케어 설계</span>
+                            </li>
+                            <li>
+                                <strong>Premium</strong>
+                                <span>프리미엄 1:1 서비스</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="doctor">
+                <h2>대표원장 소개</h2>
+                <div class="wrapper">
+                    <div class="d_l" data-aos="fade-right">
+                        <div class="t_e">
+                            <strong>lee<br>ji<br>young</strong>
+                            <div class="t_k">
+                                <strong>이지영</strong>
+                                <span>대표원장</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d_r" data-aos="fade-left">
+                        <div class="photo">
+                            <img src="image/doctor.png" alt="이지영 대표원장 사진">
+                        </div>
+                        <div class="d_career">
+                            <button class="c_open">자세히보기</button>
+                            <strong>Career</strong>
+                            <ul>
+                                <li>피부과전문의, 의학박사</li>
+                                <li>미국 의사면허(UCFMG certificate) 취득</li>
+                                <li>대한피부과학회 정회원</li>
+                                <li>대한피부과의사회 정회원</li>
+                                <li>대한피부항노화학회(KAAD) 정회원</li>
+                                <li>대한여드름학회 정회원</li>
+                                <li>대한아토피피부염학회 정회원</li>
+                                <li>이지함피부과 청담점 원장</li>
+                                <li>비앤씨피부과 강남점 원장</li>
+                                <li>클린업피부과 영등포점 원장 역임</li>
+                            </ul>
+                            <button class="c_close">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="medical" data-aos="fade-up">
+                <div class="tit">
+                    <div class="wrapper">
+                        <h2><span>Medical</span></h2>
+                        <p>피부과 진료의 본질은 단순한 치료를 넘어, 자신감을 회복하는 과정입니다.<br>전문적인 진단과 맞춤 솔루션으로 피부의 가치를 높여드립니다.</p>
+                        <em><a href="#n"><span>진료전 피부 테스트</span></a></em>
+                    </div>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li class="m_1">
+                            <a href="#n">
+                                <div class="inner">
+                                    <h3>Skin disease</h3>
+                                    <strong>피부질환</strong>
+                                    <p>피부염, 두드러기, 무좀, 탈모 등<br>단순한 트러블을 넘어 전문적인 진단과<br>맞춤 치료가 필요한 면역 및 염증성 질환입니다</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="m_2">
+                            <a href="#n">
+                                <div class="inner">
+                                    <h3>Anti-aging child</h3>
+                                    <strong>항노화</strong>
+                                    <p>피부 속 콜라겐과 탄력을 근본적으로 회복시키는 치료입니다.<br>피부과 전문의의 정확한 진단으로 노화의 원인을 타겟하여<br>건강한 동안을 유지하세요.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="m_3 on">
+                            <a href="#n">
+                                <div class="inner">
+                                    <h3>Acne</h3>
+                                    <strong>여드름</strong>
+                                    <p>염증성부터 화농성까지<br>손상된 피부가 정상화 되도록<br>높은 만족도 치료를 제공합니다.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="m_4">
+                            <a href="#n">
+                                <div class="inner">
+                                    <h3>Pigmentation</h3>
+                                    <strong>색소침착</strong>
+                                    <p>점, 검버섯, 주근깨, 기미, 홍조 등<br>개개인의 피부 타입에 맞춘 레이저 및<br>관리 프로그램으로 맞춤 치료를 시작하세요.</p>
+                                </div>
+                            </a>
+                        </li>                       
+                        <li class="m_5">
+                            <a href="#n">
+                                <div class="inner">
+                                    <h3>Botox</h3>
+                                    <strong>보톡스</strong>
+                                    <p>근육의 움직임을 조절하여 표정 주름 이마, 미간, 눈가를<br>효과적으로 개선하고, 사각턱 등 불필요하게 발달된 근육의<br>윤곽을 매끈하게 다듬어 줍니다. </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="equipment">
+                <div class="wrapper">
+                    <div class="section">
+                        <div class="tit">
+                            <h2>Equipment</h2>
+                            <p>효과와 안전성이 입증된 프리미엄 장비로<br>더욱 확실하게, 만족도 높은 치료를 제공합니다.</p>
+                            <em><a href="#n"><span>더 많은 장비 보기</span></a></em>
+                        </div> 
+                        <div class="cont_wrap">
+                            <div class="cont">
+                                <ul>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_1.png" alt="리브이 사진">
+                                        </div>
+                                        <h3>리브이</h3>
+                                        <p>고주파와 미세전류를 한번에, 불필요한 지방세포는 감소시키고새로운 세포 재생에 도움을 줍니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_2.png" alt="이온자임 사진">
+                                        </div>
+                                        <h3>이온자임</h3>
+                                        <p>이온영동 요법에 초음파를 동시에 사용하는 장비입니다. 약물의 피부 침투 효과를 배로 높여줍니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_3.png" alt="트리니티 사진">
+                                        </div>
+                                        <h3>트리니티</h3>
+                                        <p>3가지 파장대의 레이저가 동시에 조사되어 리프팅 뿐만아니라 토닝효과도 있는 복합레이저입니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_4.png" alt="이온토손 사진">
+                                        </div>
+                                        <h3>이온토손</h3>
+                                        <p>피부 표면의 불순물과 각질을 제거하고 피부재생을 촉진시켜 노화 개선에 효과적입니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_5.png" alt="트리필 프로 사진">
+                                        </div>
+                                        <h3>트리필 프로</h3>
+                                        <p>3중복합 진피재생수로 CO2가스로 유착된 피부 조직을 박리하여 형성된 에어포켓에 약물을 주입합니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_6.png" alt="마크뷰 피부진단기 사진">
+                                        </div>
+                                        <h3>마크뷰 피부진단기</h3>
+                                        <p>4가지 LED 광원을 이용한 피부진단 시스템으로 육안으로 볼 수 없는 질환들을 파악합니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_7.png" alt="물방울리프팅 LDM 사진">
+                                        </div>
+                                        <h3>물방울리프팅 LDM</h3>
+                                        <p>피부에 강한 자극을 주지 않고 자연 발생적으로 세포 단위의 활성을 유도합니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_8.png" alt="크리아오셀 사진">
+                                        </div>
+                                        <h3>크리아오셀</h3>
+                                        <p>피부표면을 냉각 시키고 혈관을 수족시켜 약물의 침투와 피부 수분 침부를 극대화합니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_9.png" alt="오투덤 LED 사진">
+                                        </div>
+                                        <h3>오투덤 LED</h3>
+                                        <p>피부호흡을 통해 피부 노화를 가소하는 활성산소를 배출시키고 피부 재생을 유도합니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/equipment_10.png" alt="리니어Z 사진">
+                                        </div>
+                                        <h3>리니어Z</h3>
+                                        <p>집속형 초음파 트랜스듀에서 출력된 초음파 에너지의 열작용으로 조직을 응고시켜 리프팅합니다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <em class="m_m"><a href="#n"><span>더 많은 장비 보기</span></a></em>
+                    </div>
+                </div>
+                <div class="move_txt">
+                    <p>SEOJUNG DERMATOLOGY  SEOJUNG DERMATOLOGY  SEOJUNG DERMATOLOGY</p>
+                </div>
+            </section>
+            <section class="real">
+                <div class="wrapper fade-up">
+                    <h2>Real Stories</h2>
+                    <p>실제 치료 후기와 시술 전후 사진으로<br>보다 확실하게 확인해보세요.</p>
+                    <div class="r_box">
+                        <div class="r_list">
+                            <div class="r_l">
+                                <div class="r_l_u">
+                                    <ul>
+                                        <li>
+                                            <div class="photo">
+                                                <img src="image/real_1.png" alt="미백클리닉 전 사진">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <strong>미백 클리닉</strong>
+                                            <span>거울 볼 때마다 만족! 칙칙했던<br>피부 톤이 맑고 투명하게 살아났어요.</span>
+                                            <em><a href="#n"><span>자세히 보기</span></a></em>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="r_l_d">
+                                    <ul>
+                                        <li>
+                                            <strong>레이저 치료</strong>
+                                            <span>시술 후에도 피부가 편안해서 만족했어요.<br>자신감 100% 충전!</span>
+                                            <em><a href="#n"><span>자세히 보기</span></a></em>
+                                        </li>
+                                        <li>
+                                            <div class="photo">
+                                                <img src="image/real_2.png" alt="레이저 치료 전 사진">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="r_r">
+                                <ul>
+                                    <li>
+                                        <div class="photo">
+                                            <img src="image/real_3.png" alt="홍조 케어 전 사진">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <strong>홍조 케어</strong>
+                                        <span>외출할 때마다 신경 쓰이던 붉음이 많이 사라졌어요.</span>
+                                        <em><a href="#n"><span>자세히 보기</span></a></em>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="s_box">
+                            <div class="slogun">
+                                <img src="image/slogun.png" alt="SEOJUNG DERMATOLOGY">
+                            </div>
+                            <div class="s_m">
+                                <em><a href="#n"><span>More View</span></a></em>
+                            </div>
+                        </div>
+                    </div>
+                    <em class="m_m"><a href="#n"><span>더 많은 후기 보기</span></a></em>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="wrapper fade-up">
+                <h2>information</h2>
+                <div class="f_box">
+                    <div class="f_l">
+                        <div class="call">
+                            <strong>대표전화</strong>
+                            <span>02.533.9300</span>
+                        </div>
+                        <div class="time">
+                            <strong>진료시간</strong>
+                            <ul>
+                                <li>
+                                    <span>월, 목</span>
+                                    <em>09:30 ~ 19:30</em>
+                                </li>
+                                <li>
+                                    <span>화, 금</span>
+                                    <em>09:30 ~ 18:30</em>
+                                </li>
+                                <li>
+                                    <span>토</span>
+                                    <em>09:30 ~ 03:00<br><span>(점심시간 없이 진료)</span></em>
+                                </li>
+                                <li>
+                                    <span>점심시간</span>
+                                    <em>12:30 ~ 13:30</em>
+                                </li>
+                                <li>*수요일, 공휴일 휴진</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="f_m">
+                        <strong>오시는길</strong>
+                        <span>서울특별시 서초구 서초중앙로 188 이크로비스타 로비층 B-123호</span>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.4138978263823!2d127.01315279999999!3d37.498155100000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca139e0057de3%3A0xc37bc4d426d0a296!2z7ISc7KCVIO2UvOu2gOqzvOydmOybkA!5e0!3m2!1sko!2skr!4v1761698744843!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="f_r">
+                        <div class="f_r_t">
+                            <ul>
+                                <li>
+                                    <strong>상호명</strong>
+                                    <span>서정피부과의원</span>
+                                </li>
+                                <li>
+                                    <strong>대표자</strong>
+                                    <span>이지영</span>
+                                </li>
+                                <li>
+                                    <strong>사업자 등록번호</strong>
+                                    <span>342-17-01916</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="f_r_s">
+                            <ul>
+                                <li class="instar"><a href="#n">인스타그램</a></li>
+                                <li class="naver"><a href="#n">네이버</a></li>
+                                <li class="kakao"><a href="#n">카카오톡</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="f_f">
+                    <div class="f_list">
+                        <ul>
+                            <li>개인정보처리방침</li>
+                            <li>비급여진료항목</li>
+                            <li>이용약관</li>
+                        </ul>
+                    </div>
+                    <div class="copyright">copyright 2022 seo jung dermatology. all rights reserved.</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        AOS.init({
+            offset: 150,
+            duration: 500,
+            easing: 'ease',
+        });
+    </script>
+</body>
+</html>

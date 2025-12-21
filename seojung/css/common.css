@@ -1,0 +1,40 @@
+html, body{
+    font-family: "Pretendard";
+    font-weight:400; 
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: 0;
+    color: #3E3E3E;
+    word-break: keep-all; 
+    word-wrap: break-word; 
+    overflow-x: hidden;
+}
+#wrap{ 
+    min-width: 1620px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 1620px;
+    margin: 0px auto; 
+}
+
+body.is-resizing * {
+    transition: none !important;
+    animation: none !important;
+}
+
+@media screen and (max-width: 1600px){
+    #wrap { 
+        min-width: 100%;
+    }
+    .wrapper {
+        margin: 0 20px; 
+        width: auto;
+    }
+}
+@media screen and (max-width: 1024px){
+
+}
+@media screen and (max-width: 768px){
+
+}

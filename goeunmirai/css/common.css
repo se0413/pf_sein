@@ -1,0 +1,48 @@
+html, body{
+    font-family: "Noto Serif KR", serif;
+    font-weight:300; 
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: var(--txt-color-cts);
+    word-break: keep-all; 
+    word-wrap: break-word; 
+}
+#wrap{ 
+    min-width: 1260px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0px auto; 
+}
+
+@media screen and (max-width: 1300px){
+    #wrap { 
+        min-width: 100%;
+    }
+    .wrapper {
+        margin: 0 20px; 
+        width: auto;
+    }
+}
+@media screen and (max-width: 1024px){
+    html, body{
+        font-size: var(--txt-size-tit6);
+    } 
+}
+@media screen and (max-width: 768px){
+
+}
+
+:root {
+    --txt-size-tit1 : 3.333rem; /*50px*/
+    --txt-size-tit2 : 2rem; /*30px*/
+    --txt-size-tit3 : 1.667rem; /*25px*/
+    --txt-size-tit4 : 1.25rem; /*20px*/
+    --txt-size-tit5 : 0.938rem; /*15px*/
+    --txt-size-tit6 : 0.813rem; /*13px*/
+    --txt-color-main : #0F271F;
+    --txt-color-sub : #CCA269;
+    --txt-color-cnt : #ffffff;
+}

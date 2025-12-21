@@ -1,0 +1,55 @@
+html, body{
+    font-family: 'SUIT';
+    font-weight: 400; 
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: #1d1d1d;
+    word-break: keep-all; 
+    word-wrap: break-word; 
+}
+#wrap{ 
+    min-width: 1260px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 1750px;
+    margin: 0px auto; 
+}
+
+@media screen and (max-width: 1500px){
+    #wrap { 
+        min-width: 100%;
+    }
+    .wrapper {
+        margin: 0 20px; 
+        width: auto;
+    }
+}
+@media screen and (max-width: 1024px){
+    html, body{
+        font-size: 13px;
+    } 
+}
+@media screen and (max-width: 768px){
+    html, body{
+        font-size: 13px;
+    } 
+}
+
+:root {
+    --txt-size-tit1 : 70px;
+    --txt-size-tit2 : 50px;
+    --txt-size-cont1 : 30px;
+    --txt-size-cont2 : 25px;
+    --txt-size-cont3 : 23px;
+    --txt-size-cont4 : 20px;
+    --txt-size-cont5 : 18px;
+    --txt-size-cont6 : 15px;
+    --txt-size-cont7 : 13px;
+    --txt-color-main : #00479D;
+    --txt-color-sub1 : #E6EDF5;
+    --txt-color-cont1 : rgba(29, 29, 29, 0.4);
+    --txt-color-cont2 : rgba(61, 61, 61, 0.6);
+    --txt-color-cont3 : rgba(255, 255, 255, 0.6);
+}

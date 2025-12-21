@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Gmarket Sans';
+    font-weight: 500;
+    font-display: swap;
+    src: local('GmarketSansMedium'), url(../fonts/GmarketSansMedium.woff2) format('woff2'), url(../fonts/GmarketSansMedium.woff) format('woff');
+}
+@font-face {
+    font-family: 'Coop Bold'; 
+    src: url(../fonts/COOPBL.woff) format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face { /*High Quality */
+    font-family: 'Crimson Pro';
+    src: url(../fonts/crimson-pro-v28-latin-regular.woff2) format('woff2'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+@font-face { /*fresh*/
+    font-family: 'Cutive Mono';
+    src: url(../fonts/cutive-mono-v23-latin-regular.woff2) format('woff2'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+@font-face { /*milk*/
+    font-family: 'Croissant One'; 
+    src: url(../fonts/croissant-one-v28-latin-regular.woff2) format('woff2'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+@font-face { /*A warm*/
+    font-family: 'Montserrat'; 
+    src: url(../fonts/montserrat-v31-latin-regular.woff2) format('woff2'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+@font-face {
+    font-family: 'Caveat Brush'; /*heart*/
+    src: url(../fonts/caveat-brush-v12-latin-regular.woff2) format('woff2'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+@font-face { /*Premium*/
+    font-family: 'Cookie';
+    src: url(../fonts/cookie-latin-400-normal.woff2) format('woff2'), url(../fonts/cookie-latin-400-normal.woff) format('woff');
+    font-weight: normal; 
+    font-style: normal; 
+}
+@font-face { /*Salt*/
+    font-family: 'Cormorant Unicase'; 
+    src: url(../fonts/cormorant-unicase-v25-latin-regular.woff2) format('woff2'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
