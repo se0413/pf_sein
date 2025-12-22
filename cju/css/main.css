@@ -1144,7 +1144,7 @@
 }
 .highlights .move .tap_box > ul {
     display: flex;
-    padding-top: 10px;
+    padding-top: 16px;
 }
 .highlights .move .tap_box > ul > li > button{
     font-size: 0;
@@ -1179,22 +1179,22 @@
     background-size: contain;
     content: "";
 }
-.highlights .move .tap_box > ul > li[id="tab_01"] > button > span::before {
+.highlights .move .tap_box > ul > li[id="tab_0001"] > button > span::before {
     background-image: url(../images/main/move_ico1.png);
 }
-.highlights .move .tap_box > ul > li[id="tab_02"] > button > span::before {
+.highlights .move .tap_box > ul > li[id="tab_0002"] > button > span::before {
     background-image: url(../images/main/move_ico2.png);
 }
-.highlights .move .tap_box > ul > li[id="tab_03"] > button > span::before {
+.highlights .move .tap_box > ul > li[id="tab_0003"] > button > span::before {
     background-image: url(../images/main/move_ico3.png);
 }
-.highlights .move .tap_box > ul > li[id="tab_04"] > button > span::before {
+.highlights .move .tap_box > ul > li[id="tab_0004"] > button > span::before {
     background-image: url(../images/main/move_ico4.png);
 }
-.highlights .move .tap_box > ul > li[id="tab_05"] > button > span::before {
+.highlights .move .tap_box > ul > li[id="tab_0005"] > button > span::before {
     background-image: url(../images/main/move_ico5.png);
 }
-.highlights .move .tap_box > ul > li[id="tab_06"] > button > span::before {
+.highlights .move .tap_box > ul > li[id="tab_0006"] > button > span::before {
     background-image: url(../images/main/move_ico6.png);
 }
 .highlights .move .tap_cnt div[role="tabpanel"] {
