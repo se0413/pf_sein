@@ -43,7 +43,7 @@ header {
     color: #fff;
     display: flex;
     justify-content: center;
-    padding: auto 20px;
+    padding: 0 20px;
     pointer-events: auto;
 }
 header .wrapper {
@@ -254,7 +254,7 @@ header .gnb .gnb_wrap .navgnb .depth3 > li > a {
 header .gnb .gnb_wrap .navgnb .depth3 > li:hover {
     color: var(--txt-color-main);
     padding-left: 15px;
-    font-family: 600;
+    font-weight: 600;
 }
 header .tnb > ul {
     display: flex;
