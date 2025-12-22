@@ -1017,6 +1017,9 @@
 .pride .swiper .p_detail > li > a > span.p_ico_3::before {
     background-image: url(../images/main/p_ico_3.png);
 }
+.pride .swiper .p_detail > li > a > span.p_ico_5::before {
+    background-image: url(../images/main/p_ico_5.png);
+}
 .pride .swiper-pagination {
     position: relative;
     margin-top: 80px;
