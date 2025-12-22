@@ -761,7 +761,7 @@
 .notice .n_box .tap_cnt .detail > li > a > strong {
     font-family: 'SUIT';
     font-weight: 700; 
-    font-size: var(--txt-size-cont1);
+    font-size: var(--txt-size-cont2);
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -1137,13 +1137,14 @@
 }
 .highlights .h_list {
     display: flex;
+    justify-content: space-between;
 }
 .highlights .move {
     width: 60%;
 }
 .highlights .move .tap_box > ul {
     display: flex;
-    padding-top: 3px;
+    padding-top: 10px;
 }
 .highlights .move .tap_box > ul > li > button{
     font-size: 0;
@@ -1207,13 +1208,35 @@
     border: 1px solid var(--txt-color-main);
     min-height: 300px;
 }
-.highlights .move .tap_cnt .detail .video_box video {
-    width: 100% !important;
-    height: auto !important;
+.highlights .move .tap_cnt .detail .video_box {
+    width: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    position: relative;
+}
+.highlights .move .tap_cnt .detail .video_box::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 150 150' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_966_1272' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='150' height='150'%3E%3Crect width='150' height='150' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_966_1272)'%3E%3Cpath d='M60.9366 100.237L100.24 74.9961L60.9366 49.7555V100.237ZM75.0101 134.371C66.7976 134.371 59.0783 132.813 51.8523 129.696C44.6262 126.579 38.3408 122.35 32.996 117.007C27.6512 111.664 23.4195 105.382 20.3007 98.1586C17.183 90.9357 15.6241 83.2185 15.6241 75.007C15.6241 66.7945 17.1825 59.0753 20.2991 51.8492C23.4158 44.6232 27.6455 38.3378 32.9882 32.993C38.3309 27.6482 44.6137 23.4164 51.8366 20.2977C59.0596 17.1799 66.7767 15.6211 74.9882 15.6211C83.2007 15.6211 90.92 17.1794 98.146 20.2961C105.372 23.4128 111.657 27.6424 117.002 32.9852C122.347 38.3279 126.579 44.6107 129.698 51.8336C132.815 59.0565 134.374 66.7737 134.374 74.9851C134.374 83.1976 132.816 90.9169 129.699 98.143C126.582 105.369 122.353 111.654 117.01 116.999C111.667 122.344 105.385 126.576 98.1616 129.695C90.9387 132.812 83.2215 134.371 75.0101 134.371ZM74.9991 124.996C88.9575 124.996 100.78 120.152 110.468 110.465C120.155 100.777 124.999 88.9544 124.999 74.9961C124.999 61.0378 120.155 49.2148 110.468 39.5273C100.78 29.8398 88.9575 24.9961 74.9991 24.9961C61.0408 24.9961 49.2179 29.8398 39.5304 39.5273C29.8429 49.2148 24.9991 61.0378 24.9991 74.9961C24.9991 88.9544 29.8429 100.777 39.5304 110.465C49.2179 120.152 61.0408 124.996 74.9991 124.996Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.highlights .move .tap_cnt .detail .video_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .highlights .book {
-    width: 30%;
+    width: 450px;
 }
 .highlights .book .book_box {
     position: relative;
@@ -1225,12 +1248,12 @@
 }
 .highlights .book .book_box .wow {
     position: absolute;
-    left: 100px;
+    left: -110px;
     top: 0;
 }
 .highlights .book .book_box .bro {
     position: absolute;
-    left: 360px;
+    left: 120px;
     top: 190px;
 }
 .highlights .book .book_box .wow strong,
@@ -1248,7 +1271,7 @@
 .highlights .book .book_box .bro .bro_b {
     padding: 15px;
     border: 1px solid var(--txt-color-main);
-    width: 340px;
+    width: auto;
     background-color: #fff;
 }
 .highlights .book .book_box .wow .wow_b .photo,
@@ -1262,4 +1285,71 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+@media screen and (max-width: 1800px) {
+    .highlights .wrapper {
+        margin: 0 auto;
+        width: auto;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .highlights .h_list {
+        display: block;
+    }
+    .highlights .move {
+        width: auto;
+    }
+    .highlights .book {
+        width: auto;
+    }
+    .highlights .book .book_box {
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    .highlights .book .book_box .wow {
+        position: relative;
+        left: auto;
+        top: auto;
+    }
+    .highlights .book .book_box .bro {
+        position: relative;
+        left: auto;
+        top: auto;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .highlights {
+        padding: 60px 0;
+    }
+    .highlights h2 {
+        font-size: var(--txt-size-cont3)23px;
+        margin-bottom: 10px;
+    }
+    .highlights .move .tap_box > ul > li > button {
+        width: 35px;
+        height: 25px;
+        position: relative;
+        border-radius: 5px 5px 0 0;
+    }
+    .highlights .move .tap_box > ul > li > button > span {
+        width: 15px;
+        height: 15px;
+    }
+    .highlights .move .tap_cnt .detail .video_box {
+        padding: 10px;
+    }
+    .highlights .move .tap_cnt .detail .video_box::before {
+        width: 50px;
+        height: 50px;
+    }
+    .highlights .book .book_box .wow .wow_b, 
+    .highlights .book .book_box .bro .bro_b {
+        padding: 8px;
+    }
+    .highlights .book .book_box .wow strong, 
+    .highlights .book .book_box .bro strong {
+        font-size: var(--txt-size-cont);
+    }
 }

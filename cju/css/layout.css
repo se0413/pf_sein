@@ -528,6 +528,12 @@ header .tnb > ul > li > a {
     .quick_popup .quick_inner .wrapper {
         margin: 0;
     }
+    .quick_popup .quick_inner .quick_top {
+        margin-bottom: 20px;
+    }
+    .quick_popup .quick_inner .quick_top strong {
+      font-size: var(--txt-size-tit2);  
+    }
     .quick_popup .quick_inner .quick_sub > ul {
         display: block;
     }
