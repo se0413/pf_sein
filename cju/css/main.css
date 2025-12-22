@@ -712,7 +712,7 @@
     display: flex;
 }
 .notice .n_box .tap_box > ul > li {
-    margin-left: 20px;
+    margin-right: 20px;
 }
 .notice .n_box .tap_box > ul > li:last-child {
     margin: 0;
