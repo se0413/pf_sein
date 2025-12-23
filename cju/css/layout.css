@@ -329,6 +329,7 @@ header .tnb > ul > li > a {
     }
     header {
         height: 50px;
+        padding: 0;
     }
     header h1 a {
         width: 82px;
@@ -355,7 +356,7 @@ header .tnb > ul > li > a {
     position: fixed;
     display: grid;
     right: 1.6%;
-    bottom: 100px;
+    bottom: 20px;
     z-index: 90;
 }
 .quick h2 {
@@ -366,6 +367,7 @@ header .tnb > ul > li > a {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 .quick .open {
     background-image: url(../images/main/quick_bg_1.png);

@@ -119,7 +119,7 @@
     .visual .swiper > ul > li p {
         font-size: var(--txt-size-cont6);
     }
-    .swiper-pagination-fraction {
+    .visual .swiper-pagination-fraction {
         font-size: var(--txt-size-cont7);
         width: 90px;
         height: 26px;
@@ -620,7 +620,7 @@
     }
     .cju_board .now .tap_cnt .d_list > .l_d,
     .cju_board .research .swiper > ul > li {
-        width: auto;
+        width: 100%;
         padding: 20px;
     }
     .cju_board .now .tap_cnt .d_list > .r_d {
@@ -1673,7 +1673,51 @@
     display: block;
 }
 .sns .tap_cnt .swiper > ul > li {
-    height: 450px;
+    position: relative;
+    margin-bottom: 40px;
+}
+.sns .tap_cnt .swiper > ul > li > a > .photo {
+    height: 470px;
+}
+.sns .tap_cnt .swiper > ul > li > a > .photo::before {
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    transform: translate(-50%, 0);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    background-position: center center;
+    background-size: contain;
+    background-size: contain;
+    content: "";
+}
+.sns .tap_cnt .swiper > ul > li > a > .photo::after {
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    transform: translate(-50%, 0);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: contain;
+    background-size: contain;
+    content: "";
+    z-index: 2;
+}
+.sns .tap_cnt div[role="tabpanel"]#panel_00001 .swiper > ul > li > a > .photo::after {
+    background-image: url(../images/main/blog_ico.png);
+}
+.sns .tap_cnt div[role="tabpanel"]#panel_00002 .swiper > ul > li > a > .photo::after {
+    background-image: url(../images/main/facebook_ico.png);
+}
+.sns .tap_cnt div[role="tabpanel"]#panel_00003 .swiper > ul > li > a > .photo::after {
+    background-image: url(../images/main/instar_ico.png);
+}
+.sns .tap_cnt div[role="tabpanel"]#panel_00004 .swiper > ul > li > a > .photo::after {
+    background-image: url(../images/main/youtube_ico.png);
 }
 .sns .tap_cnt .swiper > ul > li > a {
     display: block;
@@ -1687,4 +1731,79 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.sns .controlbar {
+    position: relative;
+    width: 30%;
+    padding: 20px 0;
+    margin: 45px auto;
+}
+.sns .controlbar .scroll {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background: rgba(0, 71, 157, 0.6);
+    border-radius: 2px;
+}
+.sns .swiper-scrollbar {
+    position: relative;
+    width: 50%;
+    height: 4px;
+    background: transparent;
+    border-radius: 2px;
+}
+.sns .swiper-scrollbar-drag {
+    position: relative;
+    background: var(--txt-color-main);
+    border-radius: 50%;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    left: 0;
+    top: -10px;
+}
+@media screen and (max-width: 1800px) {
+    .sns h2 {
+        font-size: 32px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .sns {
+        padding: 60px 0;
+    }
+    .sns h2 {
+        font-size: var(--txt-size-cont3);
+        margin-bottom: 20px;
+    }
+    .sns .tap_box > ul {
+        margin-bottom: 20px;
+    }
+    .sns .tap_box > ul > li > button {
+        font-size: var(--txt-size-cont6);
+    }
+    .sns .tap_cnt .swiper > ul > li > a > .photo {
+        height: 300px;
+    }
+    .sns .tap_cnt .swiper > ul > li > a > .photo::before {
+        width: 26px;
+        height: 26px;
+        bottom: -10px;
+    }
+    .sns .tap_cnt .swiper > ul > li > a > .photo::after {
+        width: 18px;
+        height: 15px;
+        bottom: -5px;
+    }
+    .sns .controlbar {
+        position: relative;
+        width: 50%;
+        padding: 20px 0;
+        margin: 45px auto;
+    }
+    .sns .controlbar .scroll {
+        height: 1px;
+    }
+    .sns .swiper-scrollbar {
+        height: 1px;
+    }
 }

@@ -75,7 +75,7 @@ $(document).ready(function(){
 
 
     const research_swiper = new Swiper('.research .swiper', { 
-
+        slidesPerView: 'auto',
         pagination: { 
             el: '.research .swiper-pagination',
             clickable: true, 
@@ -84,7 +84,7 @@ $(document).ready(function(){
                 return '<span class="' + className + '">' + (index + 1) + "</span>";
             },
         },
-        
+
 
         navigation: {
             nextEl: '.research .btn_next', 
@@ -137,15 +137,25 @@ $(document).ready(function(){
     })
 
     const sns_swiper = new Swiper('.sns .swiper', { 
-
-    slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
-        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
-        
+    centeredSlides: true,
+    slidesPerView: 1, 
+    initialSlide: 3,
+        spaceBetween: 16,
         breakpoints: {
-            640: {    /* 640px 이상일때 적용 */
-                slidesPerView: 5,    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
+            1500: {
+                slidesPerView: 5,
                 spaceBetween: 24,
             },
+            568: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+        },
+        scrollbar: {
+            el: ".sns .swiper-scrollbar",
+            hide: false,
+            draggable: true,
+            dragSize: 30,
         },
 
     });
