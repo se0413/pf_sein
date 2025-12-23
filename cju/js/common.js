@@ -91,4 +91,8 @@ $(document).ready(function(){
         },500)
     })
     
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        document.body.classList.add('touch-device');
+    }
+
 })

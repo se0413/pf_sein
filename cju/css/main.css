@@ -396,7 +396,7 @@
     width: 30%;
 }
 .cju_board .research {
-    min-width: 420px;
+    min-width: auto;
     width: 35%;
     background-color: var(--txt-color-main);
     padding: 150px 0;
@@ -1362,6 +1362,7 @@
         position: relative;
         left: auto;
         top: auto;
+        margin-right: 5px;
     }
     .highlights .book .book_box .bro {
         position: relative;
@@ -1759,10 +1760,10 @@
     background: var(--txt-color-main);
     border-radius: 50%;
     cursor: pointer;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     left: 0;
-    top: -10px;
+    top: -6px;
 }
 @media screen and (max-width: 1800px) {
     .sns h2 {
@@ -1787,14 +1788,14 @@
         height: 300px;
     }
     .sns .tap_cnt .swiper > ul > li > a > .photo::before {
-        width: 26px;
-        height: 26px;
-        bottom: -10px;
+        width: 40px;
+        height: 40px;
+        bottom: -20px;
     }
     .sns .tap_cnt .swiper > ul > li > a > .photo::after {
-        width: 18px;
-        height: 15px;
-        bottom: -5px;
+        width: 25px;
+        height: 25px;
+        bottom: -12px;
     }
     .sns .controlbar {
         position: relative;
@@ -1959,5 +1960,11 @@ footer .f_sub .f_s_r .f_logo {
     }
     footer .f_sub .f_s_r .f_logo {
         display: none;
+    }
+}
+@media (hover: none) and (pointer: coarse) {
+    /* 모든 호버 효과 무시 */
+    *:hover {
+        /* 호버 스타일 무시 */
     }
 }

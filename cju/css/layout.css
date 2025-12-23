@@ -528,6 +528,24 @@ header .tnb > ul > li > a {
         min-height: 100vh;
         border: 0;
     }
+    .quick button {
+        width: 50px;
+        height: 50px;
+    }
+    .quick .open,
+    .quick .top {
+        font-size: var(--txt-size-cont7);
+    }
+    .quick .top {
+        margin-top: 5px;
+    }
+    .quick .top > span {
+        padding-top: 15px;
+    }
+    .quick .top > span::before {
+        width: 15px;
+        height: 15px;
+    }
     .quick_popup .quick_inner .wrapper {
         margin: 0;
     }
