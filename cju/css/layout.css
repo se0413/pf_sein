@@ -520,6 +520,7 @@ header .tnb > ul > li > a {
         top: 0;
         transform: translate(-50%, 0);
         height: 100vh;
+        overflow-y: auto;
     }
     .quick_popup .quick_inner {
         position: relative;
