@@ -1204,7 +1204,7 @@
     display: none; 
 }
 .highlights .move .tap_cnt div[role="tabpanel"].active {
-    display: block !important;
+    display: block;
 }
 .highlights .move .tap_cnt .detail .video_box {
     padding: 30px;
@@ -1629,5 +1629,62 @@
 
 /*sns*/
 .sns {
-    height: 1800px;
+    padding: 150px 0;
+    background-color: rgba(221, 221, 221, 0.2);
+}
+.sns h2 {
+    font-family: 'Inter';
+    color: #1d1d1d;
+    font-size: var(--txt-size-tit2);
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.sns h2 span {
+    color: var(--txt-color-main);
+}
+.sns .tap_box > ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.sns .tap_box > ul > li {
+    margin-right: 20px;
+}
+.sns .tap_box > ul > li:last-child {
+    margin: 0;
+}
+.sns .tap_box > ul > li > button {
+    font-family: 'Inter';
+    font-size: var(--txt-size-cont1);
+    color: var(--txt-color-cont1);
+    font-weight: 700;
+}
+.sns .tap_box > ul > li.active > button {
+    color: #1d1d1d;
+}
+.sns .tap_box > ul > li.active > button > span {
+    border-bottom: 2px solid #1d1d1d;
+}
+.sns .tap_box .tap_cnt div[role="tabpanel"] {
+    display: none; 
+}
+.sns .tap_box .tap_cnt div[role="tabpanel"].active {
+    display: block;
+}
+.sns .tap_cnt .swiper > ul > li {
+    height: 450px;
+}
+.sns .tap_cnt .swiper > ul > li > a {
+    display: block;
+}
+.sns .tap_cnt .swiper > ul > li > a > .photo {
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.sns .tap_cnt .swiper > ul > li > a > .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

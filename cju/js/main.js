@@ -47,9 +47,9 @@ $(document).ready(function(){
     });
 
 
-    //tap 기능
+//tap 기능
     function initTabMenu(sectionClass) {
-        let tab_btn = $(sectionClass + ' .tap_btn .tap_box ul li') 
+        let tab_btn = $(sectionClass + ' .tap_box ul li') 
         let tab_name
         let tab_cnt = $(sectionClass + ' .tap_cnt div[role="tabpanel"]')
         let tab_cnt_prant = $(sectionClass + ' .tap_cnt')
@@ -71,7 +71,7 @@ $(document).ready(function(){
     // 실행 (섹션마다 호출)
     initTabMenu('.cju_board .now')
     initTabMenu('.notice')  
-
+    initTabMenu('.sns')
 
 
     const research_swiper = new Swiper('.research .swiper', { 
@@ -135,4 +135,19 @@ $(document).ready(function(){
         $('.service .s_box .s_list_3 .btn_close').hide()
         $('.service .s_box .s_list_3 .btn_open').show()
     })
+
+    const sns_swiper = new Swiper('.sns .swiper', { 
+
+    slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        
+        breakpoints: {
+            640: {    /* 640px 이상일때 적용 */
+                slidesPerView: 5,    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
+                spaceBetween: 24,
+            },
+        },
+
+    });
+
 })
