@@ -105,4 +105,34 @@ $(document).ready(function(){
 
     });
     
+    $('.service .s_box .s_list_1 .btn_open').on('click', function(){
+        $('.service .s_box .s_list_1 > ul').addClass('on')
+        $('.service .s_box .s_list_1 .btn_open').hide()
+        $('.service .s_box .s_list_1 .btn_close').show()
+    })
+    $('.service .s_box .s_list_1 .btn_close').on('click', function(){
+        $('.service .s_box .s_list_1 > ul').removeClass('on')
+        $('.service .s_box .s_list_1 .btn_close').hide()
+        $('.service .s_box .s_list_1 .btn_open').show()
+    })
+    $('.service .s_box .s_list_2 .btn_open').on('click', function(){
+        $('.service .s_box .s_list_2 > ul').show()
+        $('.service .s_box .s_list_2 .btn_open').hide()
+        $('.service .s_box .s_list_2 .btn_close').show()
+    })
+    $('.service .s_box .s_list_2 .btn_close').on('click', function(){
+        $('.service .s_box .s_list_2 > ul').hide()
+        $('.service .s_box .s_list_2 .btn_close').hide()
+        $('.service .s_box .s_list_2 .btn_open').show()
+    })
+    $('.service .s_box .s_list_3 .btn_open').on('click', function(){
+        $('.service .s_box .s_list_3 > ul').show()
+        $('.service .s_box .s_list_3 .btn_open').hide()
+        $('.service .s_box .s_list_3 .btn_close').show()
+    })
+    $('.service .s_box .s_list_3 .btn_close').on('click', function(){
+        $('.service .s_box .s_list_3 > ul').hide()
+        $('.service .s_box .s_list_3 .btn_close').hide()
+        $('.service .s_box .s_list_3 .btn_open').show()
+    })
 })
