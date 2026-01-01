@@ -222,11 +222,10 @@ header .gnb .gnb_wrap .depth1 > li.on > a {
 }
 .cursor span::before {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 13px;
+    top: 12px;
     width: 50px;
     height: 14px;
-    transform: translate(-50%, -50%);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -244,3 +243,77 @@ header .gnb .gnb_wrap .depth1 > li.on > a {
         display: none !important;
     }
 }   
+
+/*popup*/
+
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 101;
+    cursor: auto !important;
+}
+.popup .wrapper {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.popup .popup_box > ul {
+    display: flex;
+    justify-content: space-around;
+}
+.popup .popup_box > ul > li {
+    width: calc(33.33% - 24px);
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.popup .popup_box > ul > li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.popup .popup_btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.popup .popup_btn .oneday_btn {
+    font-size: var(--txt-size-cont3);
+    color: var(--txt-color-main);
+    font-family: 'Gmarket Sans';
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+.popup .popup_btn .oneday_btn:hover {
+    background-color: var(--txt-color-main);
+    color: #fff;
+}
+.popup .popup_btn .close_btn {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-left: 24px;
+}
+.popup .popup_btn .close_btn::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='40' fill='white'/%3E%3Cmask id='mask0_345_564' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='15' y='15' width='50' height='50'%3E%3Cpath d='M15 15H65V65H15V15Z' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_345_564)'%3E%3Cpath d='M39.9987 42.9154L29.7904 53.1237C29.4084 53.5056 28.9223 53.6966 28.332 53.6966C27.7418 53.6966 27.2556 53.5056 26.8737 53.1237C26.4918 52.7418 26.3008 52.2556 26.3008 51.6654C26.3008 51.0751 26.4918 50.589 26.8737 50.207L37.082 39.9987L26.8737 29.7904C26.4918 29.4084 26.3008 28.9223 26.3008 28.332C26.3008 27.7418 26.4918 27.2556 26.8737 26.8737C27.2556 26.4918 27.7418 26.3008 28.332 26.3008C28.9223 26.3008 29.4084 26.4918 29.7904 26.8737L39.9987 37.082L50.207 26.8737C50.589 26.4918 51.0751 26.3008 51.6654 26.3008C52.2556 26.3008 52.7418 26.4918 53.1237 26.8737C53.5056 27.2556 53.6966 27.7418 53.6966 28.332C53.6966 28.9223 53.5056 29.4084 53.1237 29.7904L42.9154 39.9987L53.1237 50.207C53.5056 50.589 53.6966 51.0751 53.6966 51.6654C53.6966 52.2556 53.5056 52.7418 53.1237 53.1237C52.7418 53.5056 52.2556 53.6966 51.6654 53.6966C51.0751 53.6966 50.589 53.5056 50.207 53.1237L39.9987 42.9154Z' fill='%23096B38'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.popup .popup_btn .close_btn:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23096B38'/%3E%3Cmask id='mask0_350_572' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='15' y='15' width='50' height='50'%3E%3Cpath d='M15 15H65V65H15V15Z' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_350_572)'%3E%3Cpath d='M39.9987 42.9154L29.7904 53.1237C29.4084 53.5056 28.9223 53.6966 28.332 53.6966C27.7418 53.6966 27.2556 53.5056 26.8737 53.1237C26.4918 52.7418 26.3008 52.2556 26.3008 51.6654C26.3008 51.0751 26.4918 50.589 26.8737 50.207L37.082 39.9987L26.8737 29.7904C26.4918 29.4084 26.3008 28.9223 26.3008 28.332C26.3008 27.7418 26.4918 27.2556 26.8737 26.8737C27.2556 26.4918 27.7418 26.3008 28.332 26.3008C28.9223 26.3008 29.4084 26.4918 29.7904 26.8737L39.9987 37.082L50.207 26.8737C50.589 26.4918 51.0751 26.3008 51.6654 26.3008C52.2556 26.3008 52.7418 26.4918 53.1237 26.8737C53.5056 27.2556 53.6966 27.7418 53.6966 28.332C53.6966 28.9223 53.5056 29.4084 53.1237 29.7904L42.9154 39.9987L53.1237 50.207C53.5056 50.589 53.6966 51.0751 53.6966 51.6654C53.6966 52.2556 53.5056 52.7418 53.1237 53.1237C52.7418 53.5056 52.2556 53.6966 51.6654 53.6966C51.0751 53.6966 50.589 53.5056 50.207 53.1237L39.9987 42.9154Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
