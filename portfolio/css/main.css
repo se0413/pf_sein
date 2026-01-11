@@ -240,3 +240,104 @@
 .web .d_box .d_wrap .d_list .link > ul > li.page:hover::before {
     background-image: url("data:image/svg+xml,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_546_12' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='35' height='35'%3E%3Crect width='35' height='35' fill='%230C0C0C'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_546_12)'%3E%3Cpath d='M9.02506 25.215L8.021 24.2109L22.7221 9.48177H9.17089V8.02344H25.2126V24.0651H23.7542V10.5139L9.02506 25.215Z' fill='%230C0C0C'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
+
+/*design*/
+
+.design {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+}
+.design h1 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+.design .wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.design .de_box {
+    display: flex;
+    width: 100%;
+}
+.design .de_box > .d_l > ul > .draw,
+.design .de_box > .d_r > ul > .draw {
+    background-color: #0C0C0C;
+}
+.design .de_box .d_l,
+.design .de_box .d_r {
+    width: 50%;
+}
+.design .de_box .d_l > ul,
+.design .de_box .d_r > ul {
+    display: flex;
+}
+.design .de_box .d_l > ul > li,
+.design .de_box .d_r > ul > li {
+    width: 50%;
+    height: 270px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+.design .de_box .d_l > ul > li::before,
+.design .de_box .d_r > ul > li::before {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 80px;
+    height: 80px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='39.5' fill='white' stroke='%230C0C0C'/%3E%3Cmask id='mask0_502_1507' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='22' y='23' width='35' height='35'%3E%3Crect x='22' y='23' width='35' height='35' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_502_1507)'%3E%3Cpath d='M31.0251 48.215L30.021 47.2109L44.7221 32.4818H31.1709V31.0234H47.2126V47.0651H45.7542V33.5139L31.0251 48.215Z' fill='%230C0C0C'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.design .de_box .d_l > ul > li.draw::before {
+    display: none;
+}
+.design .de_box .d_l > ul > li > a,
+.design .de_box .d_r > ul > li > a {
+    display: block;
+    font-size: 35px;
+    margin-top: auto;
+}
+
+/*finally*/
+
+.finally {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/finally_bg.png);
+    width: 100%;
+    height: 100vh;
+    color: #fff;  
+}
+.finally .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.finally h1 {
+    font-size: 0;
+    line-height: 0;
+}
+.finally .f_box {
+    margin-top: auto;
+}
+.finally .f_box > ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+.finally .f_box > ul > li {
+    font-weight: 700;
+    font-size: 30px;
+}

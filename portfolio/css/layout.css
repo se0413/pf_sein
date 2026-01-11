@@ -43,6 +43,6 @@ header .gnb .gnb_wrap > ul > li.active {
 	display: block;
 	mix-blend-mode: difference;
 }
-.popup {
+.event {
 	cursor: none !important;
 }
