@@ -1,0 +1,38 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+
+/*main*/
+
+.main {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/main_bg.png);
+    height: 1080px;
+    position: relative;
+    display: flex;
+}
+.main .wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.main h1 {
+    font-size: 0;
+    line-height: 0;
+}
+.main .m_box {
+    margin-top: auto;
+}
+.main .m_box > ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+.main .m_box > ul > li {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    color: #0C0C0C;
+    font-size: 30px;
+}
