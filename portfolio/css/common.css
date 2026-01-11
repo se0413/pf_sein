@@ -15,8 +15,9 @@ html, body{
     margin: 0px auto; 
 }
 section {
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
+    scroll-margin-top: 100px;
 }
 .photo {
     line-height: 0;

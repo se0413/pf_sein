@@ -24,3 +24,25 @@ header .gnb .gnb_wrap > ul > li {
 header .gnb .gnb_wrap > ul > li:last-child {
     margin: 0;
 }
+header .gnb .gnb_wrap > ul > li.active {
+    color: #fff;
+    background-color: #0c0c0c;
+    border-color: #fff;
+}
+
+/*cusur*/
+
+.cursor { 
+	position: absolute;
+	z-index: 1000;
+	transform: translate(-50%, -50%);
+	pointer-events: none; 
+	display:none;
+}
+.cursor.on {
+	display: block;
+	mix-blend-mode: difference;
+}
+.popup {
+	cursor: none !important;
+}
