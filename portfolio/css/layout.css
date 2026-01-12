@@ -20,11 +20,14 @@ header .gnb .gnb_wrap > ul > li {
     border-radius: 30px;
     border: 1px solid #0c0c0c;
     margin-right: 20px;
+    cursor: pointer;
+    transition: 0.5s;
 }
 header .gnb .gnb_wrap > ul > li:last-child {
     margin: 0;
 }
-header .gnb .gnb_wrap > ul > li.active {
+header .gnb .gnb_wrap > ul > li.active,
+header .gnb .gnb_wrap > ul > li:hover {
     color: #fff;
     background-color: #0c0c0c;
     border-color: #fff;

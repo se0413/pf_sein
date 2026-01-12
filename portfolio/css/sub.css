@@ -1,4 +1,217 @@
 @import url(default.css);
 @import url(fonts.css);
 @import url(common.css);
-@import url(layout.css);
+
+/*header*/
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    z-index: 100;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+header .home {
+    padding: 7px 18px;
+    border: 1px solid #0C0C0C;
+    border-radius: 30px;
+    background-color: #fff;
+    transition: 0.5s;
+}
+header .home > a {
+    display: block;
+    font-family: 'SDKukdetopokki';
+    font-size: 30px;
+    font-weight: 700;
+    color: #0C0C0C;
+    transition: 0.5s;
+}
+header .home:hover{
+    background-color: #0C0C0C;
+}
+header .home:hover > a {
+    color: #fff;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul > li {
+    width: 140px;
+    margin-right: 50px;
+}
+header .gnb ul > li:last-child {
+    margin: 0;
+}
+header .gnb ul > li > a {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    height: 35px;
+    position: relative;
+}
+header .gnb ul > li > a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    transition: 0.5s;
+}
+header .gnb ul > li.seo > a::before {
+    background-image: url(../images/seo_logo_b.png);
+}
+header .gnb ul > li.uso > a::before {
+    background-image: url(../images/uso_logo_b.png);
+}
+header .gnb ul > li.cju > a::before {
+    background-image: url(../images/cju_logo_b.png);
+}
+header .gnb ul > li.seo > a:hover::before,
+header .gnb ul > li.seo.active > a::before {
+    background-image: url(../images/seo_logo_c.png);
+}
+header .gnb ul > li.uso > a:hover::before,
+header .gnb ul > li.uso.active > a:hover::before {
+    background-image: url(../images/uso_logo_c.png);
+}
+header .gnb ul > li.cju > a:hover::before,
+header .gnb ul > li.cju.active > a:hover::before {
+    background-image: url(../images/cju_logo_c.png);
+}
+
+/*visual*/
+
+.visual {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/seo_bg.png);
+    width: 100%;
+    height: 100%;
+    padding: 250px 0;
+    color: #fff;
+}
+.visual .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.visual .t_box h1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.visual .t_box .t_title {
+    margin: 5px 0 40px 0;
+    display: flex;
+    align-items: center;
+}
+.visual .t_box .t_title > strong {
+    display: block;
+    font-size: 70px;
+    font-weight: 700;
+    margin-right: 35px;
+}
+.visual .t_box .t_title > a {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    width: 76px;
+    height: 76px;
+    position: relative;
+}
+.visual .t_box .t_title > a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='76' height='76' viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3CforeignObject x='-10' y='-10' width='96' height='96'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='backdrop-filter:blur(5px);clip-path:url(%23bgblur_0_522_656_clip_path);height:100%25;width:100%25'%3E%3C/div%3E%3C/foreignObject%3E%3Ccircle data-figma-bg-blur-radius='10' cx='38' cy='38' r='37.5' fill='%230C0C0C' fill-opacity='0.1' stroke='white'/%3E%3Cmask id='mask0_522_656' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='20' y='21' width='35' height='35'%3E%3Crect x='20.9004' y='21.8438' width='33.25' height='33.25' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_522_656)'%3E%3Cpath d='M29.4739 45.8085L28.52 44.8547L42.4861 30.862H29.6124V29.4766H44.852V44.7161H43.4666V31.8425L29.4739 45.8085Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='bgblur_0_522_656_clip_path' transform='translate(10 10)'%3E%3Ccircle cx='38' cy='38' r='37.5'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    content: "";
+    transition: 0.5s;
+}
+.visual .t_box .t_title > a:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='76' height='76' viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3CforeignObject x='-10' y='-10' width='96' height='96'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='backdrop-filter:blur(5px);clip-path:url(%23bgblur_0_571_2_clip_path);height:100%25;width:100%25'%3E%3C/div%3E%3C/foreignObject%3E%3Ccircle data-figma-bg-blur-radius='10' cx='38' cy='38' r='37.5' fill='%230C0C0C' stroke='white'/%3E%3Cmask id='mask0_571_2' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='20' y='21' width='35' height='35'%3E%3Crect x='20.9004' y='21.8438' width='33.25' height='33.25' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_571_2)'%3E%3Cpath d='M29.4739 45.8085L28.52 44.8547L42.4861 30.862H29.6124V29.4766H44.852V44.7161H43.4666V31.8425L29.4739 45.8085Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='bgblur_0_571_2_clip_path' transform='translate(10 10)'%3E%3Ccircle cx='38' cy='38' r='37.5'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+.visual .t_box ul > li {
+    display: flex;
+    margin-bottom: 10px;
+}
+.visual .t_box ul > li:last-child {
+    margin-bottom: 40px;
+}
+.visual .t_box ul > li > strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    width: 110px;
+    margin-right: 40px;
+}
+.visual .t_box ul > li > span {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+}
+.visual .t_box em {
+    display: block;
+    width: 400px;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 25px;
+}
+
+/*mood*/
+
+.mood,
+.detail {
+    background-color: #fff;
+    padding: 150px 0 170px 0;
+}
+.detail .d_title {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 170px;
+}
+.mood h2,
+.detail .d_title h2 {
+    display: inline-flex;
+    font-family: 'SDKukdetopokki';
+    color: #fff;
+    background-color: #0C0C0C;
+    border-radius: 35px;
+    padding: 15px 30px 15px 55px;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 40px;
+}
+.detail .d_title h2 {
+    margin: 0 35px 0 0;
+}
+.mood h2::before,
+.detail .d_title h2::before {
+    position: absolute;
+    left: 25px;
+    top: 31px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    content: "";
+}
+.detail .d_title p {
+    font-size: 25px;
+    font-family: 400;
+}
