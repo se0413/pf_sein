@@ -18,7 +18,6 @@ header .wrapper {
     height: 100%;
 }
 header .home {
-    padding: 7px 18px;
     border: 1px solid #0C0C0C;
     border-radius: 30px;
     background-color: #fff;
@@ -30,6 +29,7 @@ header .home > a {
     font-size: 30px;
     font-weight: 700;
     color: #0C0C0C;
+    padding: 7px 18px;
     transition: 0.5s;
 }
 header .home:hover{
@@ -81,11 +81,11 @@ header .gnb ul > li.seo.active > a::before {
     background-image: url(../images/seo_logo_c.png);
 }
 header .gnb ul > li.uso > a:hover::before,
-header .gnb ul > li.uso.active > a:hover::before {
+header .gnb ul > li.uso.active > a::before {
     background-image: url(../images/uso_logo_c.png);
 }
 header .gnb ul > li.cju > a:hover::before,
-header .gnb ul > li.cju.active > a:hover::before {
+header .gnb ul > li.cju.active > a::before {
     background-image: url(../images/cju_logo_c.png);
 }
 
@@ -95,11 +95,19 @@ header .gnb ul > li.cju.active > a:hover::before {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../images/seo_bg.png);
     width: 100%;
     height: 100%;
     padding: 250px 0;
     color: #fff;
+}
+.visual.seo {
+    background-image: url(../images/seo_bg.png);
+}
+.visual.uso {
+    background-image: url(../images/usopang_bg.png);
+}
+.visual.cju {
+    background-image: url(../images/cju_bg.png);
 }
 .visual .wrapper {
     display: flex;
@@ -173,7 +181,7 @@ header .gnb ul > li.cju.active > a:hover::before {
     line-height: 25px;
 }
 
-/*mood*/
+/*mood ,detail*/
 
 .mood,
 .detail {
@@ -214,4 +222,57 @@ header .gnb ul > li.cju.active > a:hover::before {
 .detail .d_title p {
     font-size: 25px;
     font-family: 400;
+}
+.detail.cju h2 {
+    font-size: 0;
+    line-height: 0;
+}
+.detail.cju .tap_area .tap_btn {
+    margin-bottom: 40px;
+}
+.detail.cju .tap_area .tap_btn > ul {
+    display: flex;
+}
+.detail.cju .tap_area .tap_btn > ul > li {
+    margin-right: 30px;
+}
+.detail.cju .tap_area .tap_btn > ul > li:last-child {
+    margin: 0;
+}
+.detail.cju .tap_area .tap_btn > ul > li > button {
+    font-family: 'SDKukdetopokki';
+    color: #0C0C0C;
+    background-color: #fff;
+    border-radius: 35px;
+    padding: 15px 30px 15px 55px;
+    font-size: 40px;
+    position: relative;
+
+    border: 1px solid #0C0C0C;
+    position: relative;
+}
+.detail.cju .tap_area .tap_btn > ul > li > button:hover, 
+.detail.cju .tap_area .tap_btn > ul > li.active > button {
+    color: #fff;
+    background-color: #0C0C0C;
+}
+.detail.cju .tap_area .tap_btn > ul > li > button::before {
+    position: absolute;
+    left: 25px;
+    top: 31px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #0C0C0C;
+    content: "";
+}
+.detail.cju .tap_area .tap_btn > ul > li.active > button::before,
+.detail.cju .tap_area .tap_btn > ul > li > button:hover::before {
+    background-color: #fff;
+}
+.detail.cju .tap_area .tap_cnt div[role="tabpanel"] {
+    display: none; /*숨김*/
+}
+.detail.cju .tap_area .tap_cnt div[role="tabpanel"].active {
+    display: block; /*보임*/
 }

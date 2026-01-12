@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/sub.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="../css/sub.css">
+    <title>청주대학교 | PORTFOLIO</title>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="wrapper">
+                <h1 class="home">
+                    <a href="../index.html">H&#40;  &#41;ME</a></h1>
+                <nav class="gnb">
+                    <div class="gnb_wrap">
+                        <ul>
+                            <li class="seo">
+                                <a href="seojung.html">서정피부과의원</a>
+                            </li>
+                            <li class="uso">
+                                <a href="usopang.html">우소빵</a>
+                            </li>
+                            <li class="cju active">
+                                <a href="cju.html">청주대학교</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section class="visual cju">
+            <div class="wrapper">
+                <div class="t_box" data-aos="fade-right">
+                    <h2>CHEONGJU UNIVERSITY</h2>
+                    <div class="t_title">
+                        <strong>청주대학교</strong>
+                        <a href="../../cju/index.html">홈페이지 바로가기</a>
+                    </div>
+                    <ul>
+                        <li>
+                            <strong>제작기간</strong>
+                            <span>7일</span>
+                        </li>
+                        <li>
+                            <strong>기여도</strong>
+                            <span>100% 개인 작업</span>
+                        </li>
+                        <li>
+                            <strong>사용 프로그램</strong>
+                            <span>Figma, HTML, CSS, JS</span>
+                        </li>
+                    </ul>
+                    <em>청주대학교 대외협력팀 근무 당시 팝업 게시 수의 제한과 구디자인으로 인해 홍보 콘텐츠의 활용도가 낮았으며, 공지사항·언론보도·수상·홍보물 등 주요 정보의 노출과 정보 알림 기능이 월활히 운영되지 않는 문제를 가지고 있었습니다. 이러한 실무적 한계를 개선하기 위해 정보 구조와 UI 전반을 재정비하여 리디자인을 진행했습니다.</em>
+                </div>
+                <div class="photo" data-aos="fade-left">
+                    <img src="../images/cju_mockup.png" alt="청주대학교 목업">
+                </div>
+            </div>
+        </section>
+        <section class="mood" data-aos="fade-up">
+            <div class="wrapper">
+                <h2>MOOD BOARD</h2>
+                <div class="photo">
+                    <img src="../images/cju_moodboard.png" alt="청주대학교 무드 보드">
+                </div>
+            </div>
+        </section>
+        <section class="detail cju" data-aos="fade-up">
+            <h2>DESIGN DETAIL</h2>
+            <div class="tap_area">
+                <div class="wrapper">
+                    <div class="tap_btn">
+                        <ul role="tablist">
+                            <li id="tab_01" aria-selected="true" aria-controls="panel_01" role="tab" class="active"><button><span>DESIGN DETAIL</span></button></li>
+                            <li id="tab_02" aria-selected="false" aria-controls="panel_02" role="tab"><button><span>HOVER VER</span></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tap_cnt">
+                    <div id="panel_01" role="tabpanel" aria-labelledby="tab_01" class="active">
+                        <div class="photo">
+                            <img src="../images/cju_designdetail.png" alt="청주대학교 디자인 디테일">
+                        </div>
+                    </div>
+                    <div id="panel_02" role="tabpanel" aria-labelledby="tab_02">
+                        <div class="photo">
+                            <img src="../images/cju_hover.png" alt="청주대학교 마우스 오버 버전">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        AOS.init({
+        offset: 150,
+        duration: 500,
+        easing: 'ease',
+        });
+    </script>
+</body>
+</html>
