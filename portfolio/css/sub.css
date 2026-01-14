@@ -221,7 +221,7 @@ header .gnb ul > li.cju.active > a::before {
 }
 .detail .d_title p {
     font-size: 25px;
-    font-family: 400;
+    font-weight: 400;
 }
 .detail.cju h2 {
     font-size: 0;
