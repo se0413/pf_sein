@@ -58,6 +58,15 @@ $(document).ready(function(){
 	return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 	}
 
+	if (isMobileDevice()) {
+		setViewportHeight();
+		window.addEventListener('resize', setViewportHeight);
+		window.addEventListener('orientationchange', setViewportHeight);
+		
+		// 여기서 return으로 아래 이벤트 리스너들 실행 안되게 막기
+		return;
+	}
+
 	function setViewportHeight() {
 		const vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', vh + 'px');
