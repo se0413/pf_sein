@@ -249,6 +249,9 @@ header .gnb ul > li.cju.active > a::before {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
+.visual.pop .cardnews {
+    margin-top: 24px;
+}
 
 /*mood ,detail*/
 
