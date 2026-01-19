@@ -1270,7 +1270,14 @@
     border-bottom-width: 1px;
     margin-top: 9px;
 }
-.review .review_sns .wrapper > ul > li::before {
+.review .review_sns .wrapper > ul > li:first-child {
+    margin-left: 0;
+}
+.review .review_sns .wrapper > ul > li > a {
+    display: block;
+    height: 50px;
+}
+.review .review_sns .wrapper > ul > li > a::before {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -1282,18 +1289,11 @@
     background-size: contain;
     content: "";
 }
-.review .review_sns .wrapper > ul > li.naver::before {
+.review .review_sns .wrapper > ul > li.naver > a::before {
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='18' viewBox='0 0 16 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 0V18H11.9165L5.00803 8.27901H4.87961V18H0V0H4.16051L10.9663 9.67127H11.1204V0H16Z' fill='%23096B38'/%3E%3C/svg%3E%0A");
 }
-.review .review_sns .wrapper > ul > li.instar::before {
+.review .review_sns .wrapper > ul > li.instar > a::before {
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.3574 4.29395C17.5758 4.29395 16.9551 4.92613 16.9551 5.69624C16.9551 6.46636 17.5873 7.09854 18.3574 7.09854C19.1275 7.09854 19.7597 6.46636 19.7597 5.69624C19.7597 4.92613 19.1275 4.29395 18.3574 4.29395Z' fill='%23096B38'/%3E%3Cpath d='M12.1034 6.09375C8.83899 6.09375 6.19531 8.74892 6.19531 12.0018C6.19531 15.2547 8.85049 17.9098 12.1034 17.9098C15.3562 17.9098 18.0114 15.2547 18.0114 12.0018C18.0114 8.74892 15.3562 6.09375 12.1034 6.09375ZM12.1034 15.7834C10.0114 15.7834 8.32175 14.0823 8.32175 12.0018C8.32175 9.92134 10.0229 8.22019 12.1034 8.22019C14.1838 8.22019 15.885 9.92134 15.885 12.0018C15.885 14.0823 14.1838 15.7834 12.1034 15.7834Z' fill='%23096B38'/%3E%3Cpath d='M16.7931 24H7.2069C3.22988 24 0 20.7701 0 16.7931V7.2069C0 3.22988 3.22988 0 7.2069 0H16.7931C20.7701 0 24 3.22988 24 7.2069V16.7931C24 20.7701 20.7701 24 16.7931 24ZM7.2069 2.25287C4.47126 2.25287 2.25287 4.47126 2.25287 7.2069V16.7931C2.25287 19.5287 4.47126 21.7471 7.2069 21.7471H16.7931C19.5287 21.7471 21.7471 19.5287 21.7471 16.7931V7.2069C21.7471 4.47126 19.5287 2.25287 16.7931 2.25287H7.2069Z' fill='%23096B38'/%3E%3C/svg%3E%0A");
-}
-.review .review_sns .wrapper > ul > li:first-child {
-    margin-left: 0;
-}
-.review .review_sns .wrapper > ul > li > a {
-    display: block;
-    height: 50px;
 }
 @media screen and (max-width: 1200px) {
     .review .review_box {
