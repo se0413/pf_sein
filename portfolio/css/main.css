@@ -279,7 +279,6 @@
 .design .de_box .d_l > ul > li,
 .design .de_box .d_r > ul > li {
     width: 50%;
-    height: 270px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -293,14 +292,15 @@
 .design .de_box .d_l > ul > li > a,
 .design .de_box .d_r > ul > li > a {
     display: block;
+    width: 100%;
+    height: 270px;
     font-size: 35px;
-    margin-top: auto;
 }
 .design .de_box .d_l > ul > li > a::before,
 .design .de_box .d_r > ul > li > a::before {
     position: absolute;
     right: 20px;
-    top: 20px;
+    bottom: 20px;
     width: 80px;
     height: 80px;
     background-position: center center;
