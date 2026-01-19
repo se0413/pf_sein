@@ -308,6 +308,13 @@
     background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='39.5' fill='white' stroke='%230C0C0C'/%3E%3Cmask id='mask0_502_1507' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='22' y='23' width='35' height='35'%3E%3Crect x='22' y='23' width='35' height='35' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_502_1507)'%3E%3Cpath d='M31.0251 48.215L30.021 47.2109L44.7221 32.4818H31.1709V31.0234H47.2126V47.0651H45.7542V33.5139L31.0251 48.215Z' fill='%230C0C0C'/%3E%3C/g%3E%3C/svg%3E%0A");
     content: "";
+    transition: 0.5s;
+}
+.design .de_box .d_l > ul > li.popup {
+    cursor: pointer;
+}
+.design .de_box .d_l > ul > li.popup:hover a::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='39.5' fill='%230C0C0C' stroke='white'/%3E%3Cmask id='mask0_502_1424' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='22' y='23' width='35' height='35'%3E%3Crect x='22' y='23' width='35' height='35' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_502_1424)'%3E%3Cpath d='M31.0251 48.215L30.021 47.2109L44.7221 32.4818H31.1709V31.0234H47.2126V47.0651H45.7542V33.5139L31.0251 48.215Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 .design .de_box .d_l > ul > li.draw > a:before {
     display: none;
