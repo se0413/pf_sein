@@ -4,26 +4,30 @@
 
 /*header*/
 
-header {
+header,
+.p_header {
     position: fixed;
     width: 100%;
     height: 100px;
     background-color: #fff;
     z-index: 100;
 }
-header .wrapper {
+header .wrapper,
+.p_header .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
 }
-header .home {
+header .home,
+.p_header .home {
     border: 1px solid #0C0C0C;
     border-radius: 30px;
     background-color: #fff;
     transition: 0.5s;
 }
-header .home > a {
+header .home > a,
+.p_header .home > a {
     display: block;
     font-family: 'SDKukdetopokki';
     font-size: 30px;
@@ -32,20 +36,40 @@ header .home > a {
     padding: 7px 18px;
     transition: 0.5s;
 }
-header .home:hover{
+header .home:hover,
+.p_header .home:hover {
     background-color: #0C0C0C;
 }
-header .home:hover > a {
+header .home:hover > a,
+.p_header .home:hover > a {
     color: #fff;
 }
-header .gnb ul {
+header .gnb ul,
+.p_header .gnb ul {
     display: flex;
 }
-header .gnb ul > li {
+header .gnb ul > li,
+.p_header .gnb ul > li {
     width: 140px;
+    cursor: pointer;
     margin-right: 50px;
+    transition: 0.5s;
 }
-header .gnb ul > li:last-child {
+.p_header .gnb ul > li {
+    margin-right: 50px;
+    padding: 5px 18px;
+    background-color: #fff;
+    border-radius: 30px;
+    border: 1px solid #0c0c0c;
+    margin-right: 20px;
+    transition: 0.5s;
+}
+.p_header .gnb ul > li:hover {
+    background-color: #0C0C0C;
+    border-color: #fff;
+}
+header .gnb ul > li:last-child,
+.p_header .gnb ul > li:last-child {
     margin: 0;
 }
 header .gnb ul > li > a {
@@ -53,6 +77,21 @@ header .gnb ul > li > a {
     font-size: 0;
     line-height: 0;
     height: 35px;
+    line-height: 35px;
+    text-align: center;
+    position: relative;
+}
+.p_header .gnb ul > li > a {
+    display: block;
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 30px;
+    color: #0C0C0C;
+}
+.p_header .gnb ul > li:hover > a {
+    color: #fff;
+}
+.p_header .gnb ul > li > a::before {
     position: relative;
 }
 header .gnb ul > li > a::before {
@@ -180,6 +219,36 @@ header .gnb ul > li.cju.active > a::before {
     color: rgba(255, 255, 255, 0.6);
     line-height: 25px;
 }
+.visual.pop .wrapper {
+    display: block;
+}
+.visual.pop h2 {
+    display: inline-flex;
+    font-family: 'SDKukdetopokki';
+    color: #fff;
+    background-color: #0C0C0C;
+    border-radius: 35px;
+    padding: 15px 30px 15px 55px;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 40px;
+}
+.visual.pop h2::before {
+    position: absolute;
+    left: 25px;
+    top: 31px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    content: "";
+}
+.visual.pop ul {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
 
 /*mood ,detail*/
 
@@ -276,3 +345,6 @@ header .gnb ul > li.cju.active > a::before {
 .detail.cju .tap_area .tap_cnt div[role="tabpanel"].active {
     display: block; /*보임*/
 }
+
+/*popup*/
+

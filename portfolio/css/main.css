@@ -286,6 +286,10 @@
     align-items: flex-start;
     position: relative;
 }
+.design .de_box .d_l > ul > li.draw,
+.design .de_box .d_r > ul > li.draw {
+    padding: 0;
+}
 .design .de_box .d_l > ul > li > a,
 .design .de_box .d_r > ul > li > a {
     display: block;

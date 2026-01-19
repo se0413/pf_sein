@@ -86,14 +86,4 @@ $(document).ready(function(){
         $('.cursor').toggleClass('on');
     });
 
-    $('body').css('overflow', 'hidden');
-
-    $('.popup button').on('click', function () {
-    // 팝업 닫기
-    $('.popup').fadeOut(200);
-
-    // 스크롤 다시 허용
-    $('body').css('overflow', '');
-    
-    });
 })
