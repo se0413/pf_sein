@@ -1724,6 +1724,37 @@
 }
 .sns .tap_cnt .swiper > ul > li > a {
     display: block;
+    position: relative;
+}
+.sns .tap_cnt .swiper > ul > li > a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    content: "";
+    display: none;
+}
+.sns .tap_cnt .swiper > ul > li > a::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_971_246' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='80' height='80'%3E%3Crect width='80' height='80' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_971_246)'%3E%3Cpath d='M17.6925 68.3346C16.0086 68.3346 14.5834 67.7513 13.4167 66.5846C12.25 65.418 11.6667 63.9927 11.6667 62.3088V17.6938C11.6667 16.0099 12.25 14.5846 13.4167 13.418C14.5834 12.2513 16.0086 11.668 17.6925 11.668H38.7175V16.668H17.6925C17.4359 16.668 17.2009 16.7749 16.9875 16.9888C16.7736 17.2021 16.6667 17.4371 16.6667 17.6938V62.3088C16.6667 62.5655 16.7736 62.8005 16.9875 63.0138C17.2009 63.2277 17.4359 63.3346 17.6925 63.3346H62.3075C62.5642 63.3346 62.7992 63.2277 63.0125 63.0138C63.2264 62.8005 63.3334 62.5655 63.3334 62.3088V41.2838H68.3334V62.3088C68.3334 63.9927 67.75 65.418 66.5834 66.5846C65.4167 67.7513 63.9914 68.3346 62.3075 68.3346H17.6925ZM32.3975 51.1163L28.885 47.6038L59.8209 16.668H46.6667V11.668H68.3334V33.3346H63.3334V20.1805L32.3975 51.1163Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+    display: none;
+}
+.sns .tap_cnt .swiper > ul > li:hover > a::after {
+    display: block;
+}
+.sns .tap_cnt .swiper > ul > li:hover > a::before {
+    display: block;
 }
 .sns .tap_cnt .swiper > ul > li > a > .photo {
     font-size: 0;
