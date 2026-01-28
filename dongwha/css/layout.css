@@ -1,0 +1,102 @@
+.skip_nav {
+    position: absolute;
+    left: 0;
+    top: -100px; 
+    width: 100%;
+    z-index: 9999999999999999999999999999999999;
+}
+.skip_nav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #E60012;
+    text-align: center;
+    color: #0E0E0E;
+    line-height: 50px;
+}
+.skip_nav a:focus {
+    top: 100px;
+}
+header.fixed { 
+    position: fixed;
+    background-color: #fff;
+    color: #E60012;
+}
+header.fixed::after {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--txt-color-main);
+    content: "";
+}
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+    font-family: 'SpokaHanSansNeo';
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    pointer-events: auto;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    font-size: 0;
+    line-height: 0;
+}
+header h1 a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 45px;
+}
+header h1 a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/main/logo_w.png);
+    content: "";
+}
+header.fixed h1 a::before {
+    background-image: url(../images/main/logo_r.png);
+}
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none;
+}
+header .gnb .gnb_wrap .depth1 {
+    display: flex;
+    
+    font-weight: 700;
+}
+header .gnb .gnb_wrap .depth1 > li {
+    width: 120px;
+    text-align: center;
+}
+header .gnb .gnb_wrap .depth1 > li > a {
+    display: block;
+    height: 80px;
+    font-size: 20px;
+    line-height: 80px;
+}
+header .gnb .gnb_wrap .depth2 {
+    display: none;
+}
