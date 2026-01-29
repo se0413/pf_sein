@@ -164,6 +164,56 @@ body.white_bg {
         margin-top: 35px;
     }
 }
+/*trust_w*/
 .trust_w {
-    height: 1500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 900px;
+}
+.trust_w .wrapper {
+    height: 100%;
+}
+.trust_w .medicine_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    pointer-events: none;
+}
+.trust_w .medicine {
+    position: absolute;
+}
+.trust_w .medicine img {
+    width: auto;
+    height: auto;
+}
+.trust_w .m1 {
+    rotate: 30deg;
+    left: 10%;
+    top: 0;
+}
+.trust_w .m2 {
+    rotate: -15deg;
+    right: 10%;
+    top: 15%;
+}
+.trust_w .m3 {
+    rotate: -35deg;
+    left: 0%;
+    bottom: -35%;
+}
+.trust_w .m4 {
+    rotate: -17deg;
+    right: -10%;
+    bottom: -15%;
+}
+
+/*research*/
+.research {
+    height: 800px;
 }
