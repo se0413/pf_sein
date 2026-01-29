@@ -2,7 +2,7 @@ $(document).ready(function(){
     const visual_swiper = new Swiper('.visual .swiper', {
 
         autoplay: {  
-            delay: 3000,
+            delay: 5000,
             disableOnInteraction: true,
         },
 
@@ -11,18 +11,8 @@ $(document).ready(function(){
         loop: true,
 
         pagination: { 
-            el: '.swiper-pagination',
-            clickable: true, 
-            type: 'fraction',
-            renderBullet: function (index, className) {
-                return '<span class="' + className + '">' + (index + 1) + "</span>";
-            },
-        },
-        
-
-        navigation: {  
-            nextEl: '.btn_next',
-            prevEl: '.btn_prev',  
+            el: '.visual .paging',
+            // clickable: true, 
         },
 
     });
@@ -110,37 +100,6 @@ $(document).ready(function(){
         },
 
     });
-    
-    $('.service .s_box .s_list_1 .btn_open').on('click', function(){
-        $('.service .s_box .s_list_1 > ul').addClass('on')
-        $('.service .s_box .s_list_1 .btn_open').hide()
-        $('.service .s_box .s_list_1 .btn_close').show()
-    })
-    $('.service .s_box .s_list_1 .btn_close').on('click', function(){
-        $('.service .s_box .s_list_1 > ul').removeClass('on')
-        $('.service .s_box .s_list_1 .btn_close').hide()
-        $('.service .s_box .s_list_1 .btn_open').show()
-    })
-    $('.service .s_box .s_list_2 .btn_open').on('click', function(){
-        $('.service .s_box .s_list_2 > ul').show()
-        $('.service .s_box .s_list_2 .btn_open').hide()
-        $('.service .s_box .s_list_2 .btn_close').show()
-    })
-    $('.service .s_box .s_list_2 .btn_close').on('click', function(){
-        $('.service .s_box .s_list_2 > ul').hide()
-        $('.service .s_box .s_list_2 .btn_close').hide()
-        $('.service .s_box .s_list_2 .btn_open').show()
-    })
-    $('.service .s_box .s_list_3 .btn_open').on('click', function(){
-        $('.service .s_box .s_list_3 > ul').show()
-        $('.service .s_box .s_list_3 .btn_open').hide()
-        $('.service .s_box .s_list_3 .btn_close').show()
-    })
-    $('.service .s_box .s_list_3 .btn_close').on('click', function(){
-        $('.service .s_box .s_list_3 > ul').hide()
-        $('.service .s_box .s_list_3 .btn_close').hide()
-        $('.service .s_box .s_list_3 .btn_open').show()
-    })
 
     const sns_swiper = new Swiper('.sns .swiper', { 
     centeredSlides: true,

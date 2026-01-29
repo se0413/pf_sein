@@ -3,7 +3,96 @@
 @import url(common.css);
 @import url(layout.css);
 
-.visual {
+/*visual*/
+
+.visual .swiper ul li {
+    width: 100%;
     height: 800px;
-    background-color: black;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.visual .swiper ul li.bg1 {
+    background-image: url(../images/main/visual_bg1.png);
+}
+.visual .swiper ul li.bg2 {
+    background-image: url(../images/main/visual_bg2.png);
+}
+.visual .swiper ul li.bg3 {
+    background-image: url(../images/main/visual_bg3.png);
+}
+.visual .swiper ul li h2 {
+    font-family: 'Montserrat';
+    font-size: 70px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 270px;
+}
+.visual .btn_wrap {
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+.visual .btn_wrap .paging {
+    width: auto;
+    display: flex;
+}
+.visual .btn_wrap .paging .swiper-pagination-bullet {
+    width: 250px;
+    height: 5px;
+    border-radius: 0;
+    background-color: rgba(157, 157, 157, 0.6);
+    opacity: 1;
+    position: relative;
+}
+.visual .btn_wrap .paging .swiper-pagination-bullet-active::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #fff;
+    content: "";
+    animation-name: visual_count;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes visual_count {
+    0% {width: 0%;}
+    100% {width: 100%;}
+}
+
+@media screen and (max-width: 1400px) {
+    .visual .swiper ul li {
+        height: 600px;
+    }
+    .visual .swiper ul li h2 {
+        font-size: 40px;
+        margin-top: 230px;
+    }
+    .visual .btn_wrap {
+        bottom: 70px;
+    }
+    .visual .btn_wrap .paging .swiper-pagination-bullet {
+        width: 80px;
+        height: 3px;
+    }
+}
+@media screen and (max-width: 768px) {
+.visual .swiper ul li {
+        height: 500px;
+    }
+    .visual .swiper ul li h2 {
+        font-size: 25px;
+        margin-top: 200px;
+    }
+    .visual .btn_wrap {
+        bottom: 50px;
+    }
 }

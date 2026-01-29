@@ -5,7 +5,7 @@ $(document).ready(function(){
 
     function resize_chk(){
         win_w = $(window).width()
-        if(win_w > 1024){
+        if(win_w > 1400){
             pc_mobile = 'pc'
         }else{
             pc_mobile = 'mobile'
@@ -82,27 +82,5 @@ $(document).ready(function(){
         $('header').removeClass('menu_open')
         $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
     })
-
-    //quick
-
-    $('.quick .open').on('click', function(){
-        $('.quick_popup, .quick_bg').show();
-        $('body').addClass('scroll_lock'); // 스크롤 잠금
-    });
-
-    $('.quick_popup .close').on('click', function(){
-        $('.quick_popup, .quick_bg').hide();
-        $('body').removeClass('scroll_lock'); // 스크롤 해제
-    });
-    
-    $('.quick .top').on('click', function(){
-        $('html, body').animate({
-            scrollTop:0
-        },500)
-    })
-    
-    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-        document.body.classList.add('touch-device');
-    }
 
 })

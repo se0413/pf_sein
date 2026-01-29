@@ -30,7 +30,7 @@ header.fixed::after {
     top: 80px;
     width: 100%;
     height: 1px;
-    background-color: rgba(14, 14, 14, 0.4);
+    background-color: rgba(14, 14, 14, 0.2);
     content: "";
 }
 header.menu_over::before {
@@ -40,6 +40,7 @@ header.menu_over::before {
     width: 100%;
     height: 80px;
     background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0 , 0.2);
     content: "";
     z-index: -1;
 }
@@ -95,19 +96,20 @@ header .gnb .gnb_close {
 header .gnb .gnb_wrap .depth1 {
     display: flex;
     position: relative;
-    font-weight: 700;
+    font-weight: 400;
 }
 header .gnb .gnb_wrap .depth1 > li {
     text-align: center;
 }
 header .gnb .gnb_wrap .depth1 > li > a {
     display: block;
+    width: 150px;
     height: 80px;
     font-size: 20px;
     line-height: 80px;
-    padding: 0 30px;
 }
 header .gnb .gnb_wrap .depth1 > li.on > a {
+    font-weight: 700;
     color: #E60012;
 }
 header .gnb .gnb_wrap .depth2 {
@@ -235,8 +237,6 @@ header .gnb .m_search {
     }
     header .gnb .gnb_wrap .depth1 {
         display: block;
-        font-size: 15px;
-        font-weight: 400;
         padding-top: 40px;
     }
     header .gnb .gnb_wrap .depth1 > li {
@@ -250,6 +250,8 @@ header .gnb .m_search {
         height: auto;
         padding: 15px 20px;
         line-height: 20px;
+        font-size: 15px;
+        font-weight: 400;
         position: relative;
     }
     header .gnb .gnb_wrap .depth1 > li > a::before {
@@ -281,6 +283,8 @@ header .gnb .m_search {
     header .gnb .gnb_wrap .depth1 > li.open .depth2 > li > a {
         display: block;
         padding: 10px 20px;
+        font-size: 13px;
+        font-weight: 400;
     }
     header .gnb .gnb_wrap .depth1 > li.open .depth2 > li:hover > a {
         color: #E60012;
@@ -352,8 +356,8 @@ header .gnb .m_search {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 16px;
-        height: 16px;
+        width: 17px;
+        height: 17px;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
