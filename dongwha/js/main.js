@@ -29,6 +29,7 @@ $(document).ready(function(){
     let slogan_w
     let scrolling
     let win_h
+    let trust_w_top
 
     // 구급상자 애니메이션 변수
     let kit_img = $('.trust .photo img')
@@ -91,11 +92,11 @@ $(document).ready(function(){
             // 애니메이션 진행 중
             kit_scroll = Math.max(0, Math.min(100, kit_scroll))
             kit_scale = 1 + (kit_scroll / 100) * 1.5 // 1배에서 2.5배까지 확대
-            kit_translateY = (kit_scroll / 100) * 100 // 100px 아래로 이동
+            kit_translateY = (kit_scroll / 100) * 400 // 100px 아래로 이동
         }else{
             // 애니메이션 종료 후
             kit_scale = 2.5
-            kit_translateY = 100
+            kit_translateY = 400
         }
         
         kit_img.css({
@@ -103,4 +104,22 @@ $(document).ready(function(){
         })
     }
 
+    function scroll_chk(){
+        win_h = $(window).height()
+        scrolling = $(window).scrollTop()
+        trust_w_top = $('.trust_w').offset().top
+
+        if(scrolling > (trust_w_top - win_h + (win_h / 5))){
+            $('body').addClass('white_bg')
+        }else{
+            $('body').removeClass('white_bg')
+        }
+    }
+    scroll_chk() //로딩된 이후 1번
+    $(window).scroll(function(){ //브라우저가 스크롤 될때마다
+        scroll_chk()
+    })
+    $(window).resize(function(){ //브라우저가 리사이즈 될때마다
+        scroll_chk()
+    })
 })

@@ -100,7 +100,7 @@
 /*trust*/
 
 .trust {
-    padding: 70vh 0 70vh 0;
+    padding: 360px 0 200px 0;
     background-color: #0E0E0E;
 }
 .trust .tit {
@@ -139,6 +139,13 @@
     transform-origin: center center;
     will-change: transform;
 }
+body {
+    background-color: #0E0E0E;
+    transition: 1s;
+}
+body.white_bg {
+    background-color: #fff;
+}
 
 @media screen and (max-width: 1400px) {
     .trust {
@@ -156,4 +163,7 @@
         height: 70px;
         margin-top: 35px;
     }
+}
+.trust_w {
+    height: 1500px;
 }
