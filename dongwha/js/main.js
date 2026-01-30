@@ -17,6 +17,7 @@ $(document).ready(function(){
 
     });
 
+    // 타이포 글자 변수
     let slogan = $('.tit')
     let slogan_obj = $('.tit p span')
     let slogan_rate_s = 0.3
@@ -28,13 +29,15 @@ $(document).ready(function(){
     let slogan_end
     let slogan_w
     let scrolling
+
+    // 흰 배경 변환 변수
     let win_h
     let trust_w_top
 
     // 구급상자 애니메이션 변수
     let kit_img = $('.trust .photo img')
-    let kit_rate_s = 0.4 // 구급상자 애니메이션 시작 지점
-    let kit_rate_e = 0.9 // 구급상자 애니메이션 종료 지점
+    let kit_rate_s = 0.4
+    let kit_rate_e = 0.9 
     let kit_scroll
     let kit_scale
     let kit_translateY
@@ -122,4 +125,14 @@ $(document).ready(function(){
     $(window).resize(function(){ //브라우저가 리사이즈 될때마다
         scroll_chk()
     })
+
+    const since = document.querySelector('.since');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 2000) {
+            since.classList.add('on');
+            }
+        });
+
+
 })
