@@ -233,7 +233,7 @@ body.white_bg {
 /*research*/
 
 .research {
-    padding: 170px 0 135px 0;
+    padding: 250px 0 250px 0;
 }
 .research h2 {
     font-size: 0;
@@ -312,9 +312,16 @@ body.white_bg {
         display: none;
     }
 }
-
-/*research_tab*/
-
+.sub_cont .tab_container {
+    width:80%; 
+    margin:0 auto; 
+    transform: translateY(100px); 
+    opacity:0; 
+    transition:0.5s;
+}
+.sub_cont.dark .tab_container {
+    transform: translateY(0); opacity:1;
+}
 .research_tab {
     position: relative;
     z-index: 10;
@@ -322,4 +329,30 @@ body.white_bg {
 .research_tab h2 {
     font-size: 0;
     line-height: 0;
+}
+.research_tab .tab_container {
+    display: flex;
+    width: 100%;
+}
+.research_tab .tab_container .tap_cnt {
+    width: 50%;
+}
+.research_tab .tab_container .tap_cnt .photo {
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.research_tab .tab_container .tap_cnt .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.research_tab .tab_container .tap_btn {
+    width: 50%;
+}
+.research_tab .tab_container .tap_cnt div[role="tabpanel"] {
+    display: none; 
+}
+.research_tab .tab_container .tap_cnt div[role="tabpanel"].active {
+    display: block;
 }
