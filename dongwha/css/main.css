@@ -103,6 +103,10 @@
     padding: 360px 0 200px 0;
     background-color: #0E0E0E;
 }
+.trust h2 {
+    font-size: 0;
+    line-height: 0;
+}
 .trust .tit {
     display:flex; 
     flex-direction: column; 
@@ -149,10 +153,11 @@ body.white_bg {
 
 @media screen and (max-width: 1400px) {
     .trust {
-        padding: 30vh 0 30vh 0;
+        padding: 160px 0 170px 0;
     }
     .trust .tit p {
         font-size: 40px;
+        color: #fff;
     }
 }
 @media screen and (max-width: 768px) {
@@ -164,13 +169,19 @@ body.white_bg {
         margin-top: 35px;
     }
 }
+
 /*trust_w*/
+
 .trust_w {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 900px;
+}
+.trust_w h2 {
+    font-size: 0;
+    line-height: 0;
 }
 .trust_w .wrapper {
     height: 100%;
@@ -213,9 +224,20 @@ body.white_bg {
     bottom: -15%;
 }
 
+@media screen and (max-width: 1400px) {
+    .trust_w {
+        display: none;
+    }
+}
+
 /*research*/
+
 .research {
     padding: 170px 0 135px 0;
+}
+.research h2 {
+    font-size: 0;
+    line-height: 0;
 }
 .research .since {
     display: flex;
@@ -242,35 +264,62 @@ body.white_bg {
 }
 .research .since .r_p_b {
     position: relative;
-    width: 480px;
-    height: 700px;
 }
 .research .since.on .r_p_b {
     display: flex;
+    align-items: center;
     width: 100%;
     height: 100%;
 }
 .research .since .r_p_b .photo {
     font-size: 0;
     line-height: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.research .since.on .r_p_b .photo {
-    position: relative;
+    overflow: hidden;
 }
 .research .since .r_p_b .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.research .since .r_p_b .r_1 {
-    z-index: 10;
+.research .photo_wrap {
+    display:block; 
+    position:relative; 
+    width: 480px;
+    height: 700px;
+}
+.research .photo_wrap .photo_move {
+    position:absolute; 
+    left:0; 
+    top:0; 
+    overflow:hidden;
+}
+.research .photo_wrap .photo_move img {
+    width:100%; 
+    height:100%; 
+    object-fit:cover;
+}
+.research .photo_wrap .photo_move .photo_bg {
+    position:absolute; 
+    left:0; 
+    top:0; 
+    width:100%; 
+    height:100%; 
+    background-color:#fff;
 }
 
-.d {
-    height: 800px;
+@media screen and (max-width: 1400px) {
+    .research {
+        display: none;
+    }
+}
+
+/*research_tab*/
+
+.research_tab {
+    position: relative;
+    z-index: 10;
+}
+.research_tab h2 {
+    font-size: 0;
+    line-height: 0;
 }
