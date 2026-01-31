@@ -154,7 +154,17 @@ $(document).ready(function(){
     let obj_y
 
     function scale_img() {
-        if($(window).width() <= 1400) return;
+        if($(window).width() <= 1400) {
+            // 모바일에서는 기본 스타일로 복구
+            obj_name.css({
+                transform: 'none',
+                width: 'auto',
+                height: 'auto'
+            })
+            obj_bg.css('opacity', 1)
+            return;
+        }
+
         scrolling = $(window).scrollTop()
         win_h = $(window).height()
         win_w = $(window).width()
@@ -184,21 +194,18 @@ $(document).ready(function(){
         let end_y = (win_h - end_h) / 2 - obj_start_y
         
         if(ani_start > scrolling){
-            console.log('시작전')
             obj_w = obj_start_w
             obj_h = obj_start_h
             obj_x = 0
             obj_y = 0
             end_obj.removeClass(end_class)
         }else if(ani_end < scrolling){
-            console.log('종료')
             obj_w = win_w
             obj_h = win_h
             obj_x = end_x
             obj_y = end_y * ani_ratio + ani_end
             end_obj.addClass(end_class)
         }else{
-            console.log('진행중')
             obj_w = obj_start_w + (end_w - obj_start_w) * ani_ratio
             obj_h = obj_start_h + (end_h - obj_start_h) * ani_ratio
             obj_x = end_x * ani_ratio
@@ -206,10 +213,17 @@ $(document).ready(function(){
             end_obj.removeClass(end_class)
         }
         
+        // 소수점 제거
+        obj_w = Math.ceil(obj_w)
+        obj_h = Math.ceil(obj_h)
+        obj_x = Math.round(obj_x)
+        obj_y = Math.round(obj_y)
+        
         obj_name.css({
             transform: `translate(${obj_x}px, ${obj_y}px)`,
             width: obj_w + 'px',
-            height: obj_h + 'px'
+            height: obj_h + 'px',
+            willChange: 'transform'
         })
         obj_bg.css('opacity', ani_ratio)
     }
@@ -237,8 +251,11 @@ $(document).ready(function(){
             tab_name = $(this).attr('aria-controls')
             tab_name = '#'+ tab_name
             
-            tab_cnt.removeClass('active')
-            tab_cnt_prant.find(tab_name).addClass('active')
+            // 모든 탭 숨기기
+            tab_cnt.removeClass('active').hide()
+            
+            // 선택된 탭만 페이드인으로 보이기
+            tab_cnt_prant.find(tab_name).addClass('active').fadeIn(400)
         })
     }
     // 실행 (섹션마다 호출)
