@@ -260,4 +260,57 @@ $(document).ready(function(){
     }
     // 실행 (섹션마다 호출)
     initTabMenu('.research_tab')
+    initTabMenu('.m_category')
+
+
+    // 세로 탭 슬라이드 기능
+    let currentIndex = 0;
+    let tabItems, totalItems, visibleItems, itemHeight;
+
+    function initTabSlide() {
+        tabItems = $('.m_category .tap_box ul li');
+        totalItems = tabItems.length; // 10개
+        visibleItems = 6;
+        
+        // li가 완전히 렌더링될 때까지 대기
+        setTimeout(function(){
+            itemHeight = tabItems.first().outerHeight(true);
+            
+            // ul에 직접 높이와 overflow 설정
+            $('.m_category .tap_box ul').css({
+                'overflow': 'hidden',
+                'height': itemHeight * visibleItems + 'px',
+                'transition': 'transform 0.4s ease'
+            });
+        }, 100);
+    }
+
+    // 즉시 실행 + 로드 후 재실행
+    initTabSlide();
+    $(window).on('load', function(){
+        initTabSlide();
+    });
+
+    // 리사이즈 시에도 재계산
+    $(window).resize(function(){
+        currentIndex = 0; // 인덱스 초기화
+        $('.m_category .tap_box ul li').css('transform', 'translateY(0)');
+        initTabSlide();
+    });
+
+    // 다음 버튼 (아래로)
+    $('.m_category .tap_next').on('click', function(){
+        if(currentIndex < totalItems - visibleItems) {
+            currentIndex++;
+            $('.m_category .tap_box ul li').css('transform', `translateY(-${itemHeight * currentIndex}px)`);
+        }
+    });
+
+    // 이전 버튼 (위로)
+    $('.m_category .tap_prev').on('click', function(){
+        if(currentIndex > 0) {
+            currentIndex--;
+            $('.m_category .tap_box ul li').css('transform', `translateY(-${itemHeight * currentIndex}px)`);
+        }
+    });
 })

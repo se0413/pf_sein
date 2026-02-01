@@ -7,7 +7,7 @@
 
 .visual .swiper ul li {
     width: 100%;
-    height: 800px;
+    height: 100vh;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,7 +27,7 @@
     font-size: 70px;
     font-weight: 700;
     color: #fff;
-    margin-top: 270px;
+    margin-top: 40vh;
 }
 .visual .btn_wrap {
     position: absolute;
@@ -514,6 +514,145 @@ body.white_bg {
 /*m_category*/
 
 .m_category {
-    height: 1000px;
-    background-color: #0E0E0E;
+    padding: 150px 0 160px 0;
+    position: relative;
+    z-index: 50;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/main/m_category_bg.png);
+}
+.m_category h2 {
+    font-family: 'SpokaHanSansNeo';
+    font-size: 40px;
+    font-weight: 700;
+    color: #0E0E0E;
+    margin-bottom: 60px;
+}
+.m_category .tab_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.m_category .tab_container .tap_box .tap_prev,
+.m_category .tab_container .tap_box .tap_next {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+}
+.m_category .tab_container .tap_box .tap_prev::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_176_92' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect x='30' y='30' width='30' height='30' transform='rotate(-180 30 30)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_176_92)'%3E%3Cpath d='M15 11.9231L11.1538 15.7694L18.8463 15.7694L15 11.9231ZM14.9959 3.75C16.5516 3.75 18.0142 4.04521 19.3838 4.63562C20.7531 5.22604 21.9444 6.02729 22.9575 7.03938C23.9706 8.05146 24.7726 9.24167 25.3634 10.61C25.9545 11.9781 26.25 13.4401 26.25 14.9959C26.25 16.5516 25.9548 18.0142 25.3644 19.3838C24.774 20.7531 23.9727 21.9444 22.9606 22.9575C21.9485 23.9706 20.7583 24.7726 19.39 25.3634C18.0219 25.9545 16.5599 26.25 15.0041 26.25C13.4484 26.25 11.9858 25.9548 10.6162 25.3644C9.24687 24.774 8.05562 23.9727 7.0425 22.9606C6.02938 21.9485 5.2274 20.7583 4.63656 19.39C4.04552 18.0219 3.75 16.5599 3.75 15.0041C3.75 13.4484 4.04521 11.9858 4.63563 10.6163C5.22604 9.24688 6.02729 8.05562 7.03938 7.0425C8.05146 6.02938 9.24167 5.2274 10.61 4.63656C11.9781 4.04552 13.4401 3.75 14.9959 3.75ZM15 5C12.2083 5 9.84375 5.96875 7.90625 7.90625C5.96875 9.84375 5 12.2083 5 15C5 17.7917 5.96875 20.1563 7.90625 22.0938C9.84375 24.0313 12.2083 25 15 25C17.7917 25 20.1563 24.0313 22.0938 22.0938C24.0313 20.1563 25 17.7917 25 15C25 12.2083 24.0313 9.84375 22.0938 7.90625C20.1563 5.96875 17.7917 5 15 5Z' fill='%230E0E0E' fill-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.m_category .tab_container .tap_box .tap_next::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_176_89' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_176_89)'%3E%3Cpath d='M15 18.0769L18.8463 14.2306H11.1538L15 18.0769ZM15.0041 26.25C13.4484 26.25 11.9858 25.9548 10.6163 25.3644C9.24687 24.774 8.05562 23.9727 7.0425 22.9606C6.02938 21.9485 5.2274 20.7583 4.63656 19.39C4.04552 18.0219 3.75 16.5599 3.75 15.0041C3.75 13.4484 4.04521 11.9858 4.63562 10.6162C5.22604 9.24687 6.02729 8.05562 7.03938 7.0425C8.05146 6.02937 9.24167 5.2274 10.61 4.63656C11.9781 4.04552 13.4401 3.75 14.9959 3.75C16.5516 3.75 18.0142 4.04521 19.3838 4.63563C20.7531 5.22604 21.9444 6.02729 22.9575 7.03938C23.9706 8.05146 24.7726 9.24167 25.3634 10.61C25.9545 11.9781 26.25 13.4401 26.25 14.9959C26.25 16.5516 25.9548 18.0142 25.3644 19.3837C24.774 20.7531 23.9727 21.9444 22.9606 22.9575C21.9485 23.9706 20.7583 24.7726 19.39 25.3634C18.0219 25.9545 16.5599 26.25 15.0041 26.25ZM15 25C17.7917 25 20.1562 24.0312 22.0938 22.0938C24.0312 20.1562 25 17.7917 25 15C25 12.2083 24.0312 9.84375 22.0938 7.90625C20.1562 5.96875 17.7917 5 15 5C12.2083 5 9.84375 5.96875 7.90625 7.90625C5.96875 9.84375 5 12.2083 5 15C5 17.7917 5.96875 20.1562 7.90625 22.0938C9.84375 24.0312 12.2083 25 15 25Z' fill='%230E0E0E' fill-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.m_category .tab_container .tap_box > ul {
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    flex: 1;
+    max-height: none;
+}
+ .m_category .tab_container .tap_box > .all {
+    display: block;
+    margin-top: 10px;
+ }
+.m_category .tab_container .tap_box > ul > li > button > span,
+.m_category .tab_container .tap_box > .all > span {
+    display: block;
+    color: rgba(14, 14, 14, 0.4);
+    padding: 15px 170px 15px 45px;
+    font-size: 20px;
+    font-family: 'SpokaHanSansNeo';
+    font-weight: 700;
+    transition: 0.5s;
+}
+.m_category .tab_container .tap_box > ul > li.active > button > span,
+.m_category .tab_container .tap_box > .all:hover > span {
+    border-radius: 15px;
+    background-color: #F8F8F8;
+    color: #0E0E0E;
+    position: relative;
+}
+.m_category .tab_container .tap_box > ul > li.active > button > span::before,
+.m_category .tab_container .tap_box > .all.active > span::before {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #E60012;
+    content: "";
+}
+.m_category .tab_container .tap_cnt div[role="tabpanel"] {
+    display: none; 
+}
+.m_category .tab_container .tap_cnt div[role="tabpanel"].active {
+    display: block;
+}
+.m_category .tab_container .tap_cnt ul {
+    display: flex;
+    align-items: center;
+    width: 1400px;
+}
+.m_category .tab_container .tap_cnt ul li {
+    width: calc(100% - 33.3px);
+    height: 580px;
+    border-radius: 20px;
+    background-color: #F8F8F8;
+    text-align: center;
+}
+.m_category .tab_container .tap_cnt div[id="panel_05"] ul li:last-child {
+    opacity: 0;
+}
+.m_category .tab_container .tap_cnt ul li:nth-child(2) {
+    margin: 0 25px;
+}
+.m_category .tab_container .tap_cnt ul li a .photo {
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    margin-top: 90px;
+}
+.m_category .tab_container .tap_cnt ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 0.8;
+}
+.m_category .tab_container .tap_cnt ul li a strong {
+    display: block;
+    font-family: 'SpokaHanSansNeo';
+    font-size: 30px;
+    font-weight: 700;
+    color: #0E0E0E;
+    margin-bottom: 15px;
+}
+.m_category .tab_container .tap_cnt ul li a span {
+    display: block;
+    font-family: 'SpokaHanSansNeo';
+    font-size: 20px;
+    font-weight: 400;
+    color: #0E0E0E;
 }
