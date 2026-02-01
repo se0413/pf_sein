@@ -623,17 +623,30 @@ body.white_bg {
     background-color: #F8F8F8;
     text-align: center;
 }
+.m_category .tab_container .tap_cnt ul li:hover {
+    border: none; /* 기존 테두리는 제거 */
+    clip-path: url(#notch-corner);
+    background-color: #fff;
+    filter: drop-shadow(1.5px 0 0 #E60012) 
+          drop-shadow(-1.5px 0 0 #E60012) 
+          drop-shadow(0 1.5px 0 #E60012) 
+          drop-shadow(0 -1.5px 0 #E60012);
+}
 .m_category .tab_container .tap_cnt div[id="panel_05"] ul li:last-child {
     opacity: 0;
 }
 .m_category .tab_container .tap_cnt ul li:nth-child(2) {
     margin: 0 25px;
 }
+.m_category .tab_container .tap_cnt ul li a {
+    display: block;
+    height: 100%;
+}
 .m_category .tab_container .tap_cnt ul li a .photo {
     font-size: 0;
     line-height: 0;
     overflow: hidden;
-    margin-top: 90px;
+    padding-top: 90px;
 }
 .m_category .tab_container .tap_cnt ul li a .photo img {
     width: 100%;

@@ -313,4 +313,6 @@ $(document).ready(function(){
             $('.m_category .tap_box ul li').css('transform', `translateY(-${itemHeight * currentIndex}px)`);
         }
     });
+
+    
 })
