@@ -247,6 +247,7 @@ header .gnb .m_search {
         font-weight: 700;
     }
     header .gnb .gnb_wrap .depth1 > li > a {
+        width: 100%;
         height: auto;
         padding: 15px 20px;
         line-height: 20px;

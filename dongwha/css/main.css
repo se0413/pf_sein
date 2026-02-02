@@ -476,6 +476,9 @@ body.white_bg {
         padding-left: 10px;
         margin: 10px 0;
     }
+    .research_tab .tap_btn .tap_box > ul > li:last-child.active {
+        margin: 10px 0 20px 0;
+    }
     .research_tab .tap_btn .tap_box > ul > li.active {
         margin-bottom: 20px;
     }
@@ -625,6 +628,7 @@ body.white_bg {
     border-radius: 20px;
     text-align: center;
     position: relative;
+    cursor: pointer;
 }
 .m_category .tab_container .tap_cnt div[id="panel_05"] ul li:last-child {
     opacity: 0;
@@ -689,13 +693,8 @@ body.white_bg {
     color: #0E0E0E;
 }
 
-@media screen and (max-width: 1800px) {
-    .m_category .tab_container .tap_cnt ul li {
-        width: 450px;
-    }
-    .m_category .tab_container .tap_cnt ul li:nth-child(3) {
-        display: none;
-    }
+@media screen and (max-width: 1700px) {
+
 }
 @media screen and (max-width: 1400px) {
     .m_category {
@@ -733,11 +732,6 @@ body.white_bg {
         width: 5px;
         height: 5px;
     }
-
-
-    
-}
-@media screen and (max-width: 768px) {
     .m_category .tab_container .tap_cnt ul {
         width: auto;
     }
@@ -763,9 +757,139 @@ body.white_bg {
     .m_category .tab_container .tap_cnt ul li a span {
         font-size: 13px;
     }
+
+    
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .m_category .tab_container .tap_cnt ul li:nth-child(2) {
         display: none;
     }
+
+}
+@media screen and (max-width: 600px) {
+    .m_category .tab_container .tap_cnt ul li:nth-child(3) {
+        display: none;
+    }
+}
+
+/*Worldwide*/
+
+.Worldwide {
+    background-color: #fff;
+}
+.Worldwide h2 {
+    padding-top: 50px;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: 700;
+    color: #0E0E0E;
+    text-align: center;
+}
+.Worldwide p {
+    text-align: center;
+    font-family: 'SpokaHanSansNeo';
+    font-size: 20px;
+    color: rgba(14, 14, 14, 0.6);
+    margin-top: 15px;
+}
+.Worldwide .world-map {
+    text-align: center;
+    padding: 120px 0;
+}
+.Worldwide .map-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto 0;
+}
+.Worldwide .map {
+    width: 100%;
+    display: block;
+}
+
+/* 국가 포인트 */
+.Worldwide .map-wrap .point {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #E60012;
+    cursor: pointer;
+    font-size: 0;
+    line-height: 0;
+}
+.Worldwide .map-wrap .point:hover {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    width: auto;
+    border-radius: 15px;
+    padding: 0 15px;
+    color: #fff;
+    text-align: center;
+    background-color: #E60012;
+    font-size: 15px;
+    display: block;
+}
+.Worldwide .map-wrap .point::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #E60012;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    content: "";
+}
+.Worldwide .map-wrap .point:hover::before {
+    display: none;
+}
+/* 위치값  */
+.Worldwide .map-wrap .point.denmark { top: 58%; left: 49%; }
+.Worldwide .map-wrap .point.germany { top: 63%; left: 48%; }
+.Worldwide .map-wrap .point.italy { top: 68%; left: 50%; }
+.Worldwide .map-wrap .point.china { top: 73%; left: 70%; }
+.Worldwide .map-wrap .point.japan { top: 76%; left: 80%; }
+.Worldwide .map-wrap .point.usa { top: 72%; left: 23%; }
+
+/* 제품 미리보기 */
+.Worldwide .map-wrap .product-preview {
+    position: absolute;
+    top: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    padding: 30px 45px;
+    border: 1px solid #E60012;
+    border-radius: 30px;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.Worldwide .map-wrap .product-preview img {
+    width: auto;
+    height: auto;
+    max-width: none;
+    display: block;
+}
+
+/* 활성화 */
+.Worldwide .map-wrap .product-preview.on {
+    opacity: 1;
+}
+.Worldwide .map-wrap .connection-line {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+#connectLine {
+    opacity: 0;                     /* 처음엔 안 보이게 */
+    transition: opacity 0.3s ease;  /* 이동 X, 페이드만 */
 }

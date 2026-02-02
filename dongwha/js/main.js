@@ -327,5 +327,64 @@ $(document).ready(function(){
         }
     });
 
+
+    //Worldwide
+    const points = document.querySelectorAll('.point');
+    const preview = document.getElementById('productPreview');
+    const previewImg = preview.querySelector('img');
+    const line = document.getElementById('connectLine');
+
+    points.forEach(point => {
+    const imgSrc = point.dataset.img;
+
+    point.addEventListener('mouseenter', () => {
+
+        previewImg.src = imgSrc;
+        previewImg.onload = () => {
+
+        preview.classList.add('on');
+
+        const pointRect = point.getBoundingClientRect();
+        const wrapRect = point.offsetParent.getBoundingClientRect();
+
+        const left = pointRect.left - wrapRect.left + pointRect.width / 2;
+        const top = pointRect.top - wrapRect.top - 400;
+
+        preview.style.left = `${left}px`;
+        preview.style.top = `${top}px`;
+
+        preview.offsetHeight;
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                const previewRect = preview.getBoundingClientRect();
+
+                const x1 = left;
+                const y1 = pointRect.top - wrapRect.top;
+
+                const x2 =
+                    previewRect.left - wrapRect.left + previewRect.width / 2;
+                const y2 =
+                    previewRect.top - wrapRect.top + previewRect.height;
+
+                line.setAttribute('x1', x1);
+                line.setAttribute('y1', y1);
+                line.setAttribute('x2', x2);
+                line.setAttribute('y2', y2);
+
+                line.style.opacity = 1;
+                });
+            });
+        };
+    });
+
+        point.addEventListener('mouseleave', () => {
+            preview.classList.remove('on');
+            line.style.opacity = 0;
+        });
+    });
+
+
+
     
 })
