@@ -269,8 +269,14 @@ $(document).ready(function(){
 
     function initTabSlide() {
         tabItems = $('.m_category .tap_box ul li');
-        totalItems = tabItems.length; // 10개
-        visibleItems = 6;
+        totalItems = tabItems.length;
+        
+        // 화면 크기에 따라 보이는 개수 설정
+        if($(window).width() <= 1400) {
+            visibleItems = 2;
+        } else {
+            visibleItems = 6;
+        }
         
         // li가 완전히 렌더링될 때까지 대기
         setTimeout(function(){
@@ -284,6 +290,13 @@ $(document).ready(function(){
             });
         }, 100);
     }
+
+    // 리사이즈 시에도 재계산
+    $(window).resize(function(){
+        currentIndex = 0; // 인덱스 초기화
+        $('.m_category .tap_box ul li').css('transform', 'translateY(0)');
+        initTabSlide();
+    });
 
     // 즉시 실행 + 로드 후 재실행
     initTabSlide();
