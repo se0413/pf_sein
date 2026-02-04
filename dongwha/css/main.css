@@ -693,9 +693,6 @@ body.white_bg {
     color: #0E0E0E;
 }
 
-@media screen and (max-width: 1700px) {
-
-}
 @media screen and (max-width: 1400px) {
     .m_category {
         padding: 50px 0 70px 0;
@@ -778,7 +775,7 @@ body.white_bg {
     background-color: #fff;
 }
 .Worldwide h2 {
-    padding-top: 50px;
+    padding-top: 150px;
     font-family: 'Montserrat';
     font-size: 40px;
     font-weight: 700;
@@ -791,6 +788,9 @@ body.white_bg {
     font-size: 20px;
     color: rgba(14, 14, 14, 0.6);
     margin-top: 15px;
+}
+.Worldwide .more {
+    display: none;
 }
 .Worldwide .world-map {
     text-align: center;
@@ -892,4 +892,61 @@ body.white_bg {
 #connectLine {
     opacity: 0;                     /* 처음엔 안 보이게 */
     transition: opacity 0.3s ease;  /* 이동 X, 페이드만 */
+}
+
+@media screen and (max-width: 1400px) {
+    .Worldwide {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Worldwide h2 {
+        font-size: 25px;
+        padding-top: 50px;
+    }
+    .Worldwide p {
+        font-size: 13px;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+    .Worldwide .map-wrap {
+        margin: 0;
+    }
+    .Worldwide .more {
+        display: inline-block;
+        text-align: center;
+        font-family: 'SpokaHanSansNeo';
+        font-size: 13px;
+        font-weight: 400;
+        color: rgba(14, 14, 14, 0.6);
+        position: relative;
+        margin-top: 40px;
+        padding-bottom: 70px;
+        padding-right: 15px;
+    }
+    .Worldwide .more::before {
+        position: absolute;
+        right: 0;
+        top: 4px;
+        width: 10px;
+        height: 10px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6.5' cy='6.5' r='6.5' fill='%230E0E0E' fill-opacity='0.6'/%3E%3Cmask id='mask0_190_251' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='1' y='1' width='11' height='11'%3E%3Crect x='1.29932' y='1.30078' width='10.4' height='10.4' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_190_251)'%3E%3Cpath d='M8.64466 7.60884L8.20741 7.60532L8.20741 5.09978L4.50809 8.7991L4.20167 8.49269L7.901 4.79336L5.39546 4.79336L5.39193 4.35611L8.64466 4.35611L8.64466 7.60884Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+        content: "";
+    }
+    .Worldwide .map-wrap .point {
+        width: 10px;
+        height: 10px;
+    }
+    .Worldwide .map-wrap .point:hover {
+        display: none;
+    }
+    .Worldwide .map-wrap .point::before {
+        width: 4px;
+        height: 4px;
+    }
 }
