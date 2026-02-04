@@ -1086,7 +1086,6 @@ svg[width="0"][height="0"] {
 .news .mews_box .n_b_l ul li {
     border-radius: 20px;
     background-color: #F8F8F8;
-    padding: 30px;
     margin-bottom: 25px;
     transition: 0.5s;
     border: 1px solid transparent;
@@ -1102,6 +1101,7 @@ svg[width="0"][height="0"] {
     display: block;
     width: 100%;
     height: 100%;
+    padding: 30px;
 }
 .news .mews_box .n_b_l ul li a strong {
     display: block;
@@ -1173,8 +1173,10 @@ svg[width="0"][height="0"] {
     }
     .news .mews_box .n_b_l ul li {
         border-radius: 10px;
-        padding: 15px;
         margin-bottom: 10px;
+    }
+    .news .mews_box .n_b_l ul li a {
+        padding: 15px;
     }
     .news .mews_box .n_b_l ul li a strong {
         font-size: 15px;
