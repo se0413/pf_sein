@@ -16,6 +16,9 @@ html, body{
     width: 1750px;
     margin: 0px auto; 
 }
+section {
+    margin: 0;
+}
 
 @media screen and (max-width: 1500px){
     #wrap { 

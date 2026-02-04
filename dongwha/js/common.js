@@ -83,4 +83,16 @@ $(document).ready(function(){
         $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
     })
 
+    //famaiy_site
+
+    $('footer .f_top .famaiy_site button.f_btn_open').on('click', function(){
+        $('footer .f_top .famaiy_site ul').show()
+        $('footer .f_top .famaiy_site button.f_btn_open').hide()
+        $('footer .f_top .famaiy_site button.f_btn_close').show()
+        })
+    $('footer .f_top .famaiy_site button.f_btn_close').on('click', function(){
+        $('footer .f_top .famaiy_site ul').hide()
+        $('footer .f_top .famaiy_site button.f_btn_close').hide()
+        $('footer .f_top .famaiy_site button.f_btn_open').show()
+    })
 })
