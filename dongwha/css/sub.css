@@ -3,9 +3,6 @@
 @import url(common.css);
 @import url(layout.css);
 
-body {
-    /* color: #fff; */
-}
 .sub_menu .breadcrumb ol {
     display: flex;
     justify-content: center;
@@ -215,4 +212,60 @@ body {
     .sub_contents .cts_ceo .photo {
         border-radius: 10px;
     }
+}
+
+/*search*/
+
+.sub_contents .search fieldset {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+.sub_contents .search .search_box {
+    position: relative;
+    width: fit-content;
+}
+.sub_contents .search .search_box label {
+    display: none;
+}
+.sub_contents .search .search_box input[type="text"] {
+    width: 860px;
+    height: 100px;
+    padding-top: 20px;
+    border-radius: 50px;
+    background-color: transparent;
+    outline: 0;
+    border: 2px solid #0E0E0E;
+    font-size: 0;
+    line-height: 0;
+}
+.sub_contents .search .search_box input[type="text"]::placeholder{
+    display: block;
+    font-size: 30px;
+    line-height: 100px;
+    color: rgba(14, 14, 14, 0.6);
+    text-align: center;
+    opacity: 1;
+}
+.sub_contents .search .search_box input {
+    border: 1px solid #0E0E0E;
+}
+.sub_contents .search .search_box input[type="submit"] {
+    position: absolute;
+    right: 60px;
+    top: 30px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    font-size: 0;
+    line-height: 0;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.88889 16.6667C11.037 16.6667 12.8704 15.9085 14.3889 14.3922C15.9074 12.8757 16.6667 11.0413 16.6667 8.88889C16.6667 6.74074 15.9074 4.90741 14.3889 3.38889C12.8704 1.87037 11.037 1.11111 8.88889 1.11111C6.73648 1.11111 4.90204 1.87037 3.38556 3.38889C1.86926 4.90741 1.11111 6.74074 1.11111 8.88889C1.11111 11.0413 1.86926 12.8757 3.38556 14.3922C4.90204 15.9085 6.73648 16.6667 8.88889 16.6667ZM8.88889 17.7778C7.65667 17.7778 6.50176 17.5459 5.42417 17.0822C4.34657 16.6185 3.405 15.9839 2.59944 15.1783C1.79389 14.3728 1.15926 13.4312 0.695555 12.3536C0.231852 11.276 0 10.1211 0 8.88889C0 7.66093 0.231852 6.50815 0.695555 5.43056C1.15926 4.35296 1.79389 3.41028 2.59944 2.6025C3.405 1.79491 4.34657 1.15926 5.42417 0.695555C6.50176 0.231851 7.65667 0 8.88889 0C10.1169 0 11.2696 0.231851 12.3472 0.695555C13.4248 1.15926 14.3675 1.79491 15.1753 2.6025C15.9829 3.41028 16.6185 4.35296 17.0822 5.43056C17.5459 6.50815 17.7778 7.66093 17.7778 8.88889C17.7778 10.017 17.5798 11.0805 17.1839 12.0792C16.7878 13.0777 16.24 13.9765 15.5406 14.7756L20 19.235L19.2286 20L14.7692 15.5469C13.9701 16.2464 13.0713 16.7931 12.0728 17.1869C11.0741 17.5808 10.0128 17.7778 8.88889 17.7778Z' fill='white'/%3E%3C/svg%3E%0A");
+    cursor: pointer;
+}
+.sub_contents .search .search_box input[type="submit"] {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.88889 16.6667C11.037 16.6667 12.8704 15.9085 14.3889 14.3922C15.9074 12.8757 16.6667 11.0413 16.6667 8.88889C16.6667 6.74074 15.9074 4.90741 14.3889 3.38889C12.8704 1.87037 11.037 1.11111 8.88889 1.11111C6.73648 1.11111 4.90204 1.87037 3.38556 3.38889C1.86926 4.90741 1.11111 6.74074 1.11111 8.88889C1.11111 11.0413 1.86926 12.8757 3.38556 14.3922C4.90204 15.9085 6.73648 16.6667 8.88889 16.6667ZM8.88889 17.7778C7.65667 17.7778 6.50176 17.5459 5.42417 17.0822C4.34657 16.6185 3.405 15.9839 2.59944 15.1783C1.79389 14.3728 1.15926 13.4312 0.695555 12.3536C0.231852 11.276 0 10.1211 0 8.88889C0 7.66093 0.231852 6.50815 0.695555 5.43056C1.15926 4.35296 1.79389 3.41028 2.59944 2.6025C3.405 1.79491 4.34657 1.15926 5.42417 0.695555C6.50176 0.231851 7.65667 0 8.88889 0C10.1169 0 11.2696 0.231851 12.3472 0.695555C13.4248 1.15926 14.3675 1.79491 15.1753 2.6025C15.9829 3.41028 16.6185 4.35296 17.0822 5.43056C17.5459 6.50815 17.7778 7.66093 17.7778 8.88889C17.7778 10.017 17.5798 11.0805 17.1839 12.0792C16.7878 13.0777 16.24 13.9765 15.5406 14.7756L20 19.235L19.2286 20L14.7692 15.5469C13.9701 16.2464 13.0713 16.7931 12.0728 17.1869C11.0741 17.5808 10.0128 17.7778 8.88889 17.7778Z' fill='%230E0E0E'/%3E%3C/svg%3E%0A");
 }
