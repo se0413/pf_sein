@@ -65,6 +65,13 @@ $(document).ready(function(){
     let sub_contentse_w
 
     function scroll_chk(){
+        win_w = $(window).width() // 브라우저 너비
+        
+        // 1400px 이하에서는 실행 안함
+        if(win_w <= 1400){
+            return;
+        }
+        
         window_h = $(window).height() //브라우저높이
         scrolling = $(window).scrollTop() //스크롤된 값
         sub_contents_top =$('.sub_contents').offset().top
@@ -89,4 +96,16 @@ $(document).ready(function(){
         scroll_chk()
     })
     
+    //famaiy_site
+
+    $('footer .f_top .famaiy_site button.f_btn_open').on('click', function(){
+        $('footer .f_top .famaiy_site ul').show()
+        $('footer .f_top .famaiy_site button.f_btn_open').hide()
+        $('footer .f_top .famaiy_site button.f_btn_close').show()
+        })
+    $('footer .f_top .famaiy_site button.f_btn_close').on('click', function(){
+        $('footer .f_top .famaiy_site ul').hide()
+        $('footer .f_top .famaiy_site button.f_btn_close').hide()
+        $('footer .f_top .famaiy_site button.f_btn_open').show()
+    })
 })
