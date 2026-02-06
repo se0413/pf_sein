@@ -567,7 +567,6 @@
     }
     .sub_contents .keyword_search .type, 
     .sub_contents .keyword_search .initial {
-        width: 100%;
         overflow: hidden;
         position: relative;
     }
