@@ -593,19 +593,23 @@ body.white_bg {
  .m_category .tab_container .tap_box > .all {
     display: block;
     margin-top: 10px;
- }
-.m_category .tab_container .tap_box > ul > li > button > span,
-.m_category .tab_container .tap_box > .all > span {
-    display: block;
-    color: rgba(14, 14, 14, 0.4);
     padding: 15px 170px 15px 45px;
+    color: rgba(14, 14, 14, 0.4);
     font-size: 20px;
     font-family: 'SpokaHanSansNeo';
     font-weight: 700;
     transition: 0.5s;
-}
-.m_category .tab_container .tap_box > ul > li.active > button > span,
-.m_category .tab_container .tap_box > .all:hover > span {
+ }
+ .m_category .tab_container .tap_box > ul > li {
+    padding: 15px 170px 15px 45px;
+    color: rgba(14, 14, 14, 0.4);
+    font-size: 20px;
+    font-family: 'SpokaHanSansNeo';
+    font-weight: 700;
+    transition: 0.5s;
+ }
+.m_category .tab_container .tap_box > ul > li.active,
+.m_category .tab_container .tap_box > .all:hover {
     border-radius: 15px;
     background-color: #F8F8F8;
     color: #0E0E0E;
@@ -615,7 +619,7 @@ body.white_bg {
 .m_category .tab_container .tap_box > .all.active > span::before {
     position: absolute;
     left: 20px;
-    top: 20px;
+    top: 24px;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -725,8 +729,8 @@ body.white_bg {
         margin: 0;
     }
     
-    .m_category .tab_container .tap_box > ul > li > button > span, 
-    .m_category .tab_container .tap_box > .all > span {
+    .m_category .tab_container .tap_box > ul > li, 
+    .m_category .tab_container .tap_box > .all{
         padding: 5px 25px 5px 30px;
         font-size: 13px;
     }
