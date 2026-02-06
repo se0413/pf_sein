@@ -526,13 +526,18 @@ footer .f_bot .f_b_sns ul li a::before {
 @media screen and (max-width: 1400px) {
     footer .f_top {
         padding-top: 60px;
-        display: block;
-        justify-items: center;
+        flex-direction: column;
+        align-items: center;
     }
     footer .f_top .f_logo {
         width: 100px;
         height: 20px;
         margin-bottom: 30px;
+        display: block;
+    }
+    footer .f_top .famaiy_site {
+        display: flex;
+        justify-content: center;
     }
     footer .f_top .famaiy_site button {
         font-size: 15px;
