@@ -64,13 +64,16 @@
 .sub_contents .dongwha_slogun .photo_wrap {
     display: flex;
     justify-content: center;
+    height: 100vh;
+    overflow: hidden;
 }
 .sub_contents .dongwha_slogun .photo_wrap .photo {
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     border-radius: 30px;
-    scale: 0.3;
-    display: inline-block;
-    transition: 1s;
+    transform: scale(0.3);
+    transition: transform 0.5s ease-out;
 }
 .sub_contents .dongwha_slogun .photo_wrap .photo img {
     width: 100%;
@@ -81,7 +84,7 @@
     border-radius: 0;
     width: 100%;
     height: 100%;
-    scale: 1;
+    transform: scale(1);
 }
 .sub_contents .dongwha_slogun .slogun_txt {
     position: absolute;
