@@ -324,6 +324,9 @@
     background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10C0 4.47715 4.47715 0 10 0H40C45.5228 0 50 4.47715 50 10V40C50 45.5228 45.5228 50 40 50H10C4.47715 50 0 45.5228 0 40V10Z' fill='%23E60012'/%3E%3Cpath d='M24 34.5C26.9 34.5 29.375 33.4765 31.425 31.4295C33.475 29.3822 34.5 26.9058 34.5 24C34.5 21.1 33.475 18.625 31.425 16.575C29.375 14.525 26.9 13.5 24 13.5C21.0942 13.5 18.6178 14.525 16.5705 16.575C14.5235 18.625 13.5 21.1 13.5 24C13.5 26.9058 14.5235 29.3822 16.5705 31.4295C18.6178 33.4765 21.0942 34.5 24 34.5ZM24 36C22.3365 36 20.7774 35.687 19.3226 35.061C17.8679 34.435 16.5968 33.5783 15.5093 32.4908C14.4218 31.4033 13.565 30.1321 12.939 28.6774C12.313 27.2226 12 25.6635 12 24C12 22.3422 12.313 20.786 12.939 19.3313C13.565 17.8765 14.4218 16.6039 15.5093 15.5134C16.5968 14.4231 17.8679 13.565 19.3226 12.939C20.7774 12.313 22.3365 12 24 12C25.6578 12 27.214 12.313 28.6688 12.939C30.1235 13.565 31.3961 14.4231 32.4866 15.5134C33.5769 16.6039 34.435 17.8765 35.061 19.3313C35.687 20.786 36 22.3422 36 24C36 25.523 35.7327 26.9586 35.1982 28.3069C34.6635 29.6549 33.924 30.8683 32.9798 31.947L39 37.9673L37.9586 39L31.9384 32.9884C30.8596 33.9326 29.6462 34.6706 28.2983 35.2024C26.95 35.7341 25.5173 36 24 36Z' fill='white'/%3E%3C/svg%3E%0A");
     content: "";
 }
+.sub_contents .keyword_search button {
+    padding: 15px 30px;
+}
 .sub_contents .keyword_search .type ul,
 .sub_contents .keyword_search .initial ul {
     display: flex;
@@ -333,7 +336,6 @@
 .sub_contents .keyword_search .initial ul li {
     font-size: 20px;
     color: #0E0E0E;
-    padding: 15px 30px;
     border-radius: 30px;
     margin-right: 20px;
     background-color: #f8f8f8;
@@ -374,11 +376,13 @@
 .sub_contents .s_t ul li {
     font-size: 20px;
     color: #0E0E0E;
-    padding: 15px 30px;
     border-radius: 30px;
     margin-right: 20px;
     background-color: #f8f8f8;
     border: 1px solid transparent;
+}
+.sub_contents .s_t ul li button {
+    padding: 15px 30px;
 }
 .sub_contents .s_t ul li:hover {
     color: #E60012;
@@ -465,6 +469,18 @@
 .sub_contents .pagination {
     display: flex;
     justify-content: center;
+    position: relative;
+    background-color: #fff;
+}
+.sub_contents .pagination::before {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 100%;
+    height: 100%;
+    background-color: #0E0E0E;
+    z-index: -1;
+    content: "";
 }
 .sub_contents .pagination button {
     width: 30px;
@@ -503,4 +519,140 @@
 }
 .sub_contents .pagination button.btn_last::before {
     background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_109_918' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_109_918)'%3E%3Cpath d='M13.75 14.6347L8 8.88469L8.88469 8L15.5194 14.6347L8.88469 21.2694L8 20.3847L13.75 14.6347Z' fill='%231C1B1F'/%3E%3Cpath d='M19.75 14.6347L14 8.88469L14.8847 8L21.5194 14.6347L14.8847 21.2694L14 20.3847L19.75 14.6347Z' fill='%231C1B1F'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+@media screen and (max-width: 1400px) {
+    .sub_contents .search .search_box {
+        width: 100%;
+        padding: 0 16px; /* 좌우 여백 */
+        margin-bottom: 20px;
+    }
+    .sub_contents .search .search_box input[type="text"] {
+        display: block;
+        width: 100%;
+        height: 40px;
+        box-sizing: border-box;
+        padding-top: 10px;
+        border: 1px solid #0E0E0E;
+    }
+    .sub_contents .search .search_box input[type="text"]::placeholder {
+        font-size: 15px;
+    }
+    .sub_contents .search .search_box input[type="submit"] {
+        right: 40px;
+        top: 12px;
+        width: 16px;
+        height: 16px;
+    }
+    .sub_contents .keyword_search .type {
+        margin-bottom: 10px;
+    }
+    .sub_contents .keyword_search .initial {
+        padding-bottom: 20px;
+    }
+    .sub_contents .keyword_search .type strong, 
+    .sub_contents .keyword_search .initial strong {
+        font-size: 15px;
+        padding-left: 35px;
+        margin-right: 20px;
+        line-height: 25px;
+    }
+    .sub_contents .keyword_search .type strong::before,
+    .sub_contents .keyword_search .initial strong::before {
+        width: 24px;
+        height: 24px;
+    }
+    .sub_contents .keyword_search button {
+        padding: 5px 10px;
+    }
+    .sub_contents .keyword_search .type, 
+    .sub_contents .keyword_search .initial {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    .sub_contents .keyword_search .type ul, 
+    .sub_contents .keyword_search .initial ul {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;  /* Firefox 스크롤바 숨김 */
+        -ms-overflow-style: none;  /* IE, Edge 스크롤바 숨김 */
+    }
+    .sub_contents .keyword_search .type::after,
+    .sub_contents .keyword_search .initial::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 70px;
+        height: 100%;
+        background-image: linear-gradient(90deg, rgba(247, 247, 247, 0), rgba(247, 247, 247, 1));
+        content: "";
+    }
+    .sub_contents .keyword_search .type ul li, 
+    .sub_contents .keyword_search .initial ul li {
+        font-size: 13px;
+        margin-right: 10px;
+        white-space: nowrap;
+    }
+    .sub_contents .s_t {
+        margin-bottom: 30px;
+    }
+    .sub_contents .s_t .wrapper {
+        padding: 20px 0 0 0;
+    }
+    .sub_contents .s_t strong {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    .sub_contents .s_t ul li {
+        font-size: 13px;
+        margin-right: 10px;
+    }
+    .sub_contents .s_t ul li button {
+        padding: 5px 10px;
+    }
+    .sub_contents .medicine_cts ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    .sub_contents .medicine_cts ul li a .photo_wrap {
+        height: auto;
+        padding: 20px;
+    }
+    .sub_contents .medicine_cts ul li a .m_txt strong {
+        font-size: 10px;
+        padding: 5px 10px;
+        margin: 10px 0 5px 0;
+    }
+    .sub_contents .medicine_cts ul li a .m_txt span {
+        font-size: 13px;
+    }
+    .sub_contents .medicine_cts ul li:hover a .photo_wrap {
+        background-color: #fff;
+        border-bottom: 1px solid rgba(14, 14, 14, 0.4);
+    }
+    .sub_contents .medicine_cts ul li:hover a::before {
+        display: none;
+    }
+    .sub_contents .medicine_cts ul li a .m_txt {
+        margin-bottom: 30px;
+    }
+    .sub_contents .medicine_cts ul li:hover a .m_txt span {
+        color: #0E0E0E;
+    }
+    .sub_contents .pagination {
+        padding: 60px 0 100px 0;
+        border-radius: 0 0 50px 50px;
+    }
+    .sub_contents .pagination button {
+        width: 24px;
+        height: 24px;
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .sub_contents .s_t .wrapper {
+        display: block;
+    }
 }
