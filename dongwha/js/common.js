@@ -83,6 +83,38 @@ $(document).ready(function(){
         $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
     })
 
+    //quick
+    
+    $('.quick .top').on('click', function(){
+        $('html, body').animate({
+            scrollTop:0
+        },500)
+    })
+    
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        document.body.classList.add('touch-device');
+    }
+
+    window.addEventListener('scroll', function() {
+        const quickMenu = document.querySelector('.quick');
+        const footer = document.querySelector('footer'); // 또는 '#footer' 등 푸터의 선택자
+        const margin = 60; // 하단에서 유지하고 싶은 기본 여백
+
+        const footerRect = footer.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        // 푸터가 화면에 나타나기 시작했는지 확인
+        if (footerRect.top < viewportHeight) {
+            // 푸터가 화면을 가리는 만큼 퀵메뉴를 위로 밀어 올림
+            const overlap = viewportHeight - footerRect.top;
+            quickMenu.style.bottom = (overlap + margin) + 'px';
+        } else {
+            // 푸터가 보이지 않으면 기본 위치 유지
+            quickMenu.style.bottom = margin + 'px';
+        }
+    });
+
+
     //famaiy_site
 
     $('footer .f_top .famaiy_site button.f_btn_open').on('click', function(){
@@ -95,4 +127,5 @@ $(document).ready(function(){
         $('footer .f_top .famaiy_site button.f_btn_close').hide()
         $('footer .f_top .famaiy_site button.f_btn_open').show()
     })
+    
 })
