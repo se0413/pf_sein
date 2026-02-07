@@ -387,6 +387,12 @@ header .gnb .m_search {
     background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23E60012'/%3E%3Cmask id='mask0_347_2' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='15' y='15' width='50' height='50'%3E%3Crect x='15' y='15' width='50' height='50' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_347_2)'%3E%3Cpath d='M51.057 36.4732L49.5586 37.9477L41.0409 29.4299L41.0409 54.582L38.9576 54.582L38.9576 29.4299L30.4398 37.9477L28.9414 36.4732L39.9992 25.4154L51.057 36.4732Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 
+@media screen and (max-width: 1400px) {
+.quick {
+    display: none;
+}
+}
+
 /*footer*/
 
 footer {
