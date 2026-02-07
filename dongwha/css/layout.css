@@ -388,9 +388,9 @@ header .gnb .m_search {
 }
 
 @media screen and (max-width: 1400px) {
-.quick {
-    display: none;
-}
+    .quick {
+        display: none;
+    }
 }
 
 /*footer*/
