@@ -56,8 +56,8 @@ header .gnb ul > li,
     transition: 0.5s;
 }
 .p_header .gnb ul > li {
-    margin-right: 50px;
     padding: 5px 18px;
+    width: fit-content;
     background-color: #fff;
     border-radius: 30px;
     border: 1px solid #0c0c0c;
@@ -274,7 +274,9 @@ header .gnb ul > li.dongwha.active > a::before {
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_630_138' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_630_138)'%3E%3Cpath d='M6.1885 17.3002L5.5 16.6117L15.5807 6.51172H6.2885V5.51172H17.2885V16.5117H16.2885V7.21947L6.1885 17.3002Z' fill='%230C0C0C'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 .visual.pop .wrapper {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .visual.pop h2 {
     display: inline-flex;
