@@ -441,7 +441,7 @@ body.white_bg {
 .research_tab .tap_btn .tap_box > ul > li > a::before {
     position: absolute;
     right: 0;
-    top: 2px;
+    top: 0;
     width: 25px;
     height: 25px;
     background-position: center center;
@@ -1055,7 +1055,7 @@ body.white_bg {
 .news .mews_box .n_b_r .r_cnt .more::before {
     position: absolute;
     right: 0;
-    top: 2px;
+    top: 0;
     width: 25px;
     height: 25px;
     background-position: center center;

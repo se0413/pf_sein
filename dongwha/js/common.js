@@ -85,7 +85,7 @@ $(document).ready(function(){
 
     //quick
     
-    $('.quick .top').on('click', function(){
+    $('.quick').on('click', function(){
         $('html, body').animate({
             scrollTop:0
         },500)
