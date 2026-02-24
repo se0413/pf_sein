@@ -166,7 +166,7 @@ header .gnb ul > li.dongwha.active > a::before {
 .visual.pop_d .wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 .visual .t_box h1 {
@@ -283,6 +283,7 @@ header .gnb ul > li.dongwha.active > a::before {
     flex-wrap: wrap;
     justify-content: center;
 }
+.visual.pop_d h2,
 .visual.pop h2 {
     display: inline-flex;
     font-family: 'SDKukdetopokki';
@@ -294,6 +295,7 @@ header .gnb ul > li.dongwha.active > a::before {
     position: relative;
     margin-bottom: 40px;
 }
+.visual.pop_d h2::before,
 .visual.pop h2::before {
     position: absolute;
     left: 25px;
