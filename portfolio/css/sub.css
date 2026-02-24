@@ -163,6 +163,12 @@ header .gnb ul > li.dongwha.active > a::before {
     justify-content: space-between;
     align-items: center;
 }
+.visual.pop_d .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
 .visual .t_box h1 {
     font-size: 20px;
     font-weight: 700;
@@ -297,6 +303,10 @@ header .gnb ul > li.dongwha.active > a::before {
     border-radius: 50%;
     background-color: #fff;
     content: "";
+}
+.visual.pop_d ul {
+    display: flex;
+    gap: 24px;
 }
 .visual.pop ul {
     display: grid;
