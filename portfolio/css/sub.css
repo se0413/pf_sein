@@ -169,6 +169,12 @@ header .gnb ul > li.dongwha.active > a::before {
     justify-content: center;
     align-items: center;
 }
+.visual.pop_d p {
+    width: 100%;
+    color: #0C0C0C;
+    text-align: center;
+    margin-bottom: 50px;
+}
 .visual .t_box h1 {
     font-size: 20px;
     font-weight: 700;
