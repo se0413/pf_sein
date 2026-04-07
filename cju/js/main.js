@@ -143,9 +143,9 @@ $(document).ready(function(){
     })
 
     const sns_swiper = new Swiper('.sns .swiper', { 
-    centeredSlides: true,
-    slidesPerView: 1, 
-    initialSlide: 3,
+        centeredSlides: true,
+        slidesPerView: 1, 
+        initialSlide: 3,
         spaceBetween: 16,
         breakpoints: {
             1500: {
@@ -164,6 +164,30 @@ $(document).ready(function(){
             dragSize: 20,
         },
 
+    });
+
+    const main_popup_swiper = new Swiper('.main_popup .swiper', { 
+        slidesPerView: 1, 
+        initialSlide: 0,
+        spaceBetween: 16,
+        observer: true,           // DOM 변화 감지하여 리사이즈 대응
+        observeParents: true,     // 부모 요소 변화 감지
+        watchOverflow: true,      // 슬라이드가 1개일 때 버튼 자동 숨김
+        navigation: {
+            prevEl: '.main_popup .btn_prev',
+            nextEl: '.main_popup .btn_next',
+        },
+        breakpoints: {
+            // 작은 화면에서 큰 화면 순으로 작성 (Mobile First)
+            568: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            1900: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+        },
     });
 
 })

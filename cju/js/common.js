@@ -95,4 +95,13 @@ $(document).ready(function(){
         document.body.classList.add('touch-device');
     }
 
+    $('.main_popup .btn_close').on('click', function(){
+        $('.main_popup').hide();
+        $('body').removeClass('scroll_lock'); // 스크롤 해제
+    });
+    $('.main_popup .btn_all_close').on('click', function(){
+        $('.main_popup').hide();
+        $('body').removeClass('scroll_lock'); // 스크롤 해제
+    });
+
 })

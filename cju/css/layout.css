@@ -577,3 +577,148 @@ body.scroll_lock {
     overflow: hidden;
     height: 100%;
 }
+
+/*main_popup*/
+.main_popup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.main_popup .wrapper {
+    width: 100%;
+    max-width: 1200px; /* 팝업 전체의 최대 너비를 지정하여 무한 확장을 방지합니다 */
+    margin: 0 auto;
+    position: relative;
+}
+.main_popup .swiper {
+    width: 100%;
+    overflow: hidden; /* 슬라이더 범위를 벗어나는 부분 숨김 */
+}
+.main_popup ul {
+    display: flex;
+    align-items: center;
+}
+.main_popup ul li:last-child {
+    margin: 0;
+}
+.main_popup ul li a {
+    display: block;
+}
+.main_popup ul li a .photo {
+    object-fit: cover;
+    font-size: 0;
+    line-height: 0;
+}
+.main_popup ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.main_popup .main_popup_btn1 {
+    margin-top: 75px;
+}
+.main_popup .main_popup_btn1 .btn_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--txt-color-main);
+}
+.main_popup .main_popup_btn1 .btn_wrap .btn_all_close {
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 13px 28px;
+    font-size: 20px;
+    margin-right: 25px;
+}
+.main_popup .main_popup_btn1 .btn_wrap .btn_close {
+    font-size: 0;
+    line-height: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.main_popup .main_popup_btn1 .btn_wrap .btn_close::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1193_788' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='50' height='50'%3E%3Crect width='50' height='50' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1193_788)'%3E%3Cpath d='M17.1399 35.0785L14.9243 32.8629L22.7847 25.0025L14.9243 17.1941L17.1399 14.9785L25.0004 22.8389L32.8087 14.9785L35.0243 17.1941L27.1639 25.0025L35.0243 32.8629L32.8087 35.0785L25.0004 27.2181L17.1399 35.0785Z' fill='%2300479D'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.main_popup .main_popup_btn2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 120px); /* 콘텐츠 영역보다 120px 넓게 설정 (좌우 60px씩 여백) */
+    max-width: 1400px; /* 버튼이 너무 멀어지지 않도록 제한 */
+    pointer-events: none;
+}
+.main_popup .main_popup_btn2 .btn_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.main_popup .main_popup_btn2 .btn_wrap button {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 0;
+    pointer-events: auto;
+    cursor: pointer;
+    position: relative;
+}
+.main_popup .main_popup_btn2 .btn_wrap button::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+.main_popup .main_popup_btn2 .btn_wrap button.btn_prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25' cy='25' r='25' fill='white'/%3E%3Cmask id='mask0_1193_807' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='11' y='11' width='28' height='28'%3E%3Crect x='11' y='11' width='28' height='28' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1193_807)'%3E%3Cpath d='M29.6667 36.6673L18 25.0007L29.6667 13.334L31.7375 15.4048L22.1417 25.0007L31.7375 34.5965L29.6667 36.6673Z' fill='%2300479D'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.main_popup .main_popup_btn2 .btn_wrap button.btn_next::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25' cy='25' r='25' transform='rotate(-180 25 25)' fill='white'/%3E%3Cmask id='mask0_1193_808' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='11' y='11' width='28' height='28'%3E%3Crect x='39' y='39' width='28' height='28' transform='rotate(-180 39 39)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1193_808)'%3E%3Cpath d='M20.3333 13.3327L32 24.9994L20.3333 36.666L18.2625 34.5952L27.8583 24.9994L18.2625 15.4035L20.3333 13.3327Z' fill='%2300479D'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+@media screen and (max-width: 1400px) {
+    .main_popup .main_popup_btn1 {
+        margin-top: 40px;
+    }
+    .main_popup .main_popup_btn2 {
+        width: 100%; /* 화면 너비에 맞춤 */
+        padding: 0 10px; /* 좌우 10px 여백 */
+    }
+    .main_popup .main_popup_btn1 .btn_wrap .btn_all_close {
+        padding: 8px 15px;
+        font-size: 15px;
+        margin-right: 15px;
+    }
+    .main_popup .main_popup_btn1 .btn_wrap .btn_close {
+        width: 40px;
+        height: 40px;
+    }
+}
