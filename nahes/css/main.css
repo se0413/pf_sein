@@ -115,3 +115,62 @@
         width: 18px;
     }
 }
+
+/*aboutus*/
+
+.aboutus {
+    position: relative;
+    text-align: center;
+}
+.aboutus .sehan h2 {
+    font-size: var(--txt-size-main-tit1);
+    font-family: 'MADEOuterSans-Bold';
+    padding-top: 400px;
+}
+.aboutus .sehan p {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    line-height: 40px;
+    margin: 40px 0;
+}
+.aboutus .sehan .more {
+    padding-bottom: 350px;
+}
+.aboutus .sehan .more a {
+    display: inline-block;
+    font-size: var(--txt-size-main-cont2);
+    padding: 12px 95px 12px 30px;
+    position: relative;
+    border-radius: 50px;
+    border: 1px solid var(--txt-color-main);
+    background-color: #fff;
+}
+.aboutus .sehan .more a::before {
+    position: absolute;
+    right: 30px;
+    top: 12px;
+    width: 25px;
+    height: 25px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_64_306' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='25' height='25'%3E%3Crect width='25' height='25' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_64_306)'%3E%3Cpath d='M12.0794 18.6596L15.1161 13.281H2.34375V11.7185H15.1161L12.0794 6.33984L21.7648 12.4997L12.0794 18.6596Z' fill='%230D0D0D'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.aboutus .sh_bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutus .sh_bg .sh_bg_l strong {
+    display: block;
+    text-align: left;
+    font-family: 'MADEOuterSans-Outline-Bold';
+    font-size: 70px;
+}
