@@ -1,0 +1,117 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+
+/*visual*/
+
+.visual {
+    border-radius: 30px;
+    border: 1px solid var(--txt-color-main);
+    margin: 90px 20px 0 20px;
+}
+.visual ul li {
+    height: 100vh;
+}
+.visual ul li .photo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    border-radius: 500px;
+    z-index: 2;
+}
+.visual ul li .photo image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.visual .visual_txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+.visual .visual_txt h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200px;
+    font-family: 'MADEOuterSans-Outline-Bold';
+    color: var(--txt-color-point);
+}
+.visual .visual_txt p {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -25%);
+    font-size: 200px;
+    font-family: 'Miama';
+    white-space: nowrap;
+}
+.visual .swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: 50%;
+    bottom: 26%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+.visual .swiper-pagination-bullet {
+    width: 20px;
+    height: 8px;
+    border: 1px solid var(--txt-color-main);
+    border-radius: 0;
+    background-color: #fff;
+    font-size: 0;
+    line-height: 0;
+    margin-right: 10px;
+    opacity: 1;
+}
+.visual .swiper-pagination-bullet:last-child {
+    margin: 0;
+}
+.visual .swiper-pagination-bullet-active {
+    width: 50px;
+    background-color: var(--txt-color-main);
+}
+
+@media screen and (max-width: 1024px){
+    .visual {
+        border-radius: 15px;
+        margin-top: 60px;
+        margin: 55px 10px 0 10px;
+    }
+    .visual ul li {
+        height: 100vh;
+    }
+    .visual ul li .photo {
+        width: 110px;
+        height: 160px;
+    }
+    .visual ul li .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .visual .visual_txt h2 {
+        font-size: 50px;
+    }
+    .visual .visual_txt p {
+        font-size: 55px;
+    }
+    .visual .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 34%;
+    }
+    .visual .swiper-pagination-bullet {
+        width: 10px;
+        height: 3px;
+        margin-right: 5px;
+    }
+    .visual .swiper-pagination-bullet-active {
+        width: 18px;
+    }
+}

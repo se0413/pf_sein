@@ -1,0 +1,58 @@
+html, body{
+    font-family: 'Pretendard';
+    font-weight: 400; 
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: #0d0d0d;
+    word-break: keep-all; 
+    word-wrap: break-word; 
+}
+#wrap{ 
+    min-width: 1260px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 1750px;
+    margin: 0px auto; 
+}
+
+@media screen and (max-width: 1300px){
+    #wrap { 
+        min-width: 100%;
+    }
+    .wrapper {
+        margin: 0 20px; 
+        width: auto;
+    }
+}
+@media screen and (max-width: 1024px){
+    html, body{
+        font-size: 13px;
+    } 
+}
+@media screen and (max-width: 768px){
+    html, body{
+        font-size: 13px;
+    } 
+}
+
+:root {
+    --txt-size-main-tit1 : 40px;
+    --txt-size-main-tit2 : 30px;
+    --txt-size-main-cont1 : 25px;
+    --txt-size-main-cont2 : 20px;
+    --txt-size-main-cont3 : 15px;
+
+    --txt-size-sub-tit1 : 70px;
+    --txt-size-sub-tit2 : 40px;
+    --txt-size-sub-tit3 : 30px;
+    --txt-size-sub-cont1 : 25px;
+    --txt-size-sub-cont2 : 20px;
+
+    --txt-color-main : #0d0d0d;
+    --txt-color-point : #FF0000;
+    --txt-color-main-cont1 : rgba(13, 13, 13, 0.6);
+    --txt-color-footer-sub1 : rgba(255, 255, 255, 0.6);
+    --txt-color-footer-sub2 : rgba(255, 255, 255, 0.4);
+}
