@@ -43,6 +43,7 @@ html, body{
     --txt-size-main-cont1 : 25px;
     --txt-size-main-cont2 : 20px;
     --txt-size-main-cont3 : 15px;
+    --txt-size-main-cont4 : 13px;
 
     --txt-size-sub-tit1 : 70px;
     --txt-size-sub-tit2 : 40px;
@@ -53,6 +54,7 @@ html, body{
     --txt-color-main : #0d0d0d;
     --txt-color-point : #FF0000;
     --txt-color-main-cont1 : rgba(13, 13, 13, 0.6);
+    --txt-color-main-cont2 : rgba(13, 13, 13, 0.4);
     --txt-color-footer-sub1 : rgba(255, 255, 255, 0.6);
     --txt-color-footer-sub2 : rgba(255, 255, 255, 0.4);
 }

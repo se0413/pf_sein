@@ -5,6 +5,12 @@
     src: local('MADEOuterSans-Bold'), url(../fonts/MADE-Outer-Sans-Bold-PERSONAL-USE.woff2) format('woff2'), url(../fonts/MADE-Outer-Sans-Bold-PERSONAL-USE.woff) format('woff');
 }
 @font-face {
+    font-family: 'MADEOuterSans-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('MADEOuterSans-Regular'), url(../fonts/MADE-Outer-Sans-Regular-PERSONAL-USE.woff2) format('woff2'), url(../fonts/MADE-Outer-Sans-Regular-PERSONAL-USE.woff) format('woff');
+}
+@font-face {
     font-family: 'MADEOuterSans-Outline-Bold';
     font-style: normal;
     font-weight: normal;
