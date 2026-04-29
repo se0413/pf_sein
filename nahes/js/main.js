@@ -59,4 +59,25 @@ $(document).ready(function(){
         //centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
     });
 
+    const popup_swiper = new Swiper('.popup .swiper', {
+
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: true,
+        // },
+
+        //effect: "fade", /* fade 효과 */
+
+        loop: true,  
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+        },
+
+    });
+
 });
