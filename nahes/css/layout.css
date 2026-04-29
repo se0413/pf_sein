@@ -230,3 +230,107 @@ header .tnb ul li.cart a:hover::before {
     }
 }
 
+/*footer*/
+
+footer {
+    padding: 100px 0 460px 0;
+    background-color: var(--txt-color-main);
+    color: var(--txt-color-footer-sub1);
+    position: relative;
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+footer .f_info ul {
+    display: flex;
+}
+footer .f_info ul li {
+    margin-right: 40px;
+}
+footer .f_info ul li strong {
+    display: block;
+    font-family: 'MADEOuterSans-Bold';
+    font-size: var(--txt-size-main-cont2);
+    margin-bottom: 15px;
+}
+footer .f_info ul li span {
+    display: block;
+    margin-bottom: 5px;
+}
+footer .f_menu ul {
+    display: flex;
+}
+footer .f_menu ul li {
+    margin-left: 30px;
+}
+footer .f_menu ul li a {
+    display: block;
+    font-family: 'MADEOuterSans-Bold';
+    padding-left: 15px;
+    position: relative;
+}
+footer .f_menu ul li a::before {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 2px;
+    height: 15px;
+    background-color: var(--txt-color-footer-sub1);
+    content: "";
+}
+footer .f_txt {
+    position: absolute;
+    left: 50%;
+    bottom: -170px;
+    transform: translate(-50%, 0);
+    width: 100%;
+}
+footer .f_txt strong {
+    display: block;
+    font-family: 'MADEOuterSans-Outline-Bold';
+    color: var(--txt-color-footer-sub2);
+    font-size: 500px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 1024px){
+    footer {
+        padding: 30px 0 120px 0;
+    }
+    footer .wrapper {
+        flex-direction: column-reverse;
+    }
+    footer .f_info ul {
+        display: block;
+    }
+    footer .f_info ul li {
+        margin: 0 0 30px 0;
+    }
+    footer .f_info ul li strong {
+        font-size: var(--txt-size-main-cont3);
+        margin-bottom: 5px;
+    }
+    footer .f_menu ul {
+        display: block;
+        margin-bottom: 60px;
+    }
+    footer .f_menu ul li {
+        margin: 0 0 10px 0;
+    }
+    footer .f_menu ul li a {
+        padding-left: 10px;
+    }
+    footer .f_menu ul li a::before {
+        top: 3px;
+        width: 1px;
+        height: 10px;
+    }
+    footer .f_txt {
+        bottom: -30px;
+    }
+    footer .f_txt strong {
+        font-size: 90px;
+    }
+}

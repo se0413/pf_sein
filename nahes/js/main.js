@@ -47,4 +47,16 @@ $(document).ready(function(){
         })
     })
 
+    const places_swiper = new Swiper('.places .swiper', {
+        slidesPerView: 2,
+        spaceBetween: 16,
+        breakpoints: {
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+        },
+        //centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+    });
+
 });
