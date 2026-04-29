@@ -461,7 +461,7 @@
     }
     .collection .pf ul li {
         margin: 0;
-        min-width: 100%;
+        min-width: 0;
         padding: 0;
     }
     .collection .pf ul li:not(.more) {
@@ -498,6 +498,9 @@
 .gift {
     text-align: center;
     position: relative;
+}
+.gift .wrapper {
+    width: 100%;
 }
 .gift h1 {
     font-family: 'MADEOuterSans-Bold';
@@ -649,6 +652,9 @@
 }
 
 @media screen and (max-width: 1024px){
+    .gift .wrapper {
+        width: auto;
+    }
     .gift h1 {
         font-size: var(--txt-size-main-cont1);
         padding: 95px 0 0 0;
