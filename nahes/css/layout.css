@@ -14,7 +14,7 @@
     background-color: var(--txt-color-main);
     text-align: center;
     color: #fff;
-    line-height: 50px;
+    line-height: 70px;
 }
 .skip_nav a:focus {
     top: 100px;
@@ -27,7 +27,6 @@ header {
     width: 100%;
     height: 70px;
     z-index: 100;
-    background-color: #fff;
 }
 header .inner {
     display: flex;
@@ -37,6 +36,7 @@ header .inner {
     padding: 0 20px;
     margin: 10px 20px;
     border: 1px solid var(--txt-color-main);
+    background-color: #fff;
 }
 header .gnb .gnb_open,
 header .gnb .gnb_close {
