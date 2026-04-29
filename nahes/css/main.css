@@ -442,6 +442,7 @@
     }
     .collection .pf .wrapper {
         margin: 0 20px;
+        width: auto;
     }
     .collection .pf .wrapper h2 {
         margin-top: 70px;
