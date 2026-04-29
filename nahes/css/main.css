@@ -294,7 +294,6 @@
     font-family: 'MADEOuterSans-Bold';
     font-size: var(--txt-size-main-tit1);
     padding-bottom: 20px;
-    border-bottom: 1px solid var(--txt-color-main-cont2);
     position: relative;
 }
 .collection .pf .left-photo {
@@ -323,15 +322,18 @@
     display: flex;
     align-items: center;
     min-height: 450px;
-    padding-top: 20px;
+    width: max-content;
+}
+.collection .pf ul li:nth-child(7) {
+    padding: 20px 0 0 0;
 }
 .collection .pf ul li {
     display: block;
     min-width: 450px;
-    margin-right: 24px;
+    padding: 20px 24px 0 0;
 }
-.collection .pf ul li:last-child {
-    margin: 0;
+.collection .pf ul li:not(.more) {
+    border-top: 1px solid var(--txt-color-main-cont2);
 }
 .collection .pf ul li a {
     display: block;
@@ -445,6 +447,7 @@
         margin-top: 70px;
         font-size: var(--txt-size-main-cont1);
         padding-bottom: 10px;
+        border-bottom: 1px solid var(--txt-color-main-cont2);
     }
     .collection .pf ul {
         display: grid;
@@ -452,10 +455,16 @@
         gap: 16px;
         position: relative;
         padding-bottom: 125px;
+        width: auto;
+        margin-top: 10px;
     }
     .collection .pf ul li {
         margin: 0;
         min-width: 100%;
+        padding: 0;
+    }
+    .collection .pf ul li:not(.more) {
+        border: 0;
     }
     .collection .pf ul li strong {
         font-size: var(--txt-size-main-cont3);
@@ -487,13 +496,14 @@
 
 .gift {
     text-align: center;
+    position: relative;
 }
 .gift h1 {
     font-family: 'MADEOuterSans-Bold';
     font-size: var(--txt-size-main-tit1);
     padding: 250px 0 0 0;
 }
-.gift strong {
+.gift p {
     display: block;
     font-size: var(--txt-size-main-cont1);
     margin: 25px 0 45px 0;
@@ -502,12 +512,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 550px;
 }
 .gift ul li {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 1px solid var(--txt-color-main);
     margin-right: 40px;
 }
 .gift ul li:last-child {
@@ -515,11 +522,37 @@
 }
 .gift ul li a {
     display: block;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    border: 1px solid var(--txt-color-main);
+}
+.gift ul li.cm a:hover {
+    background-color: var(--txt-color-main);
+}
+.gift ul li.kakao a:hover {
+    background-color: #FFE000;
+    border-color: #FFE000;
+}
+.gift ul li.naver a:hover {
+    border-color: #32B44A;
+}
+.gift ul li.coupang a:hover {
+    border-color: #935229;
 }
 .gift ul li a span {
     display: block;
-    padding-top: 95px;
+    padding-top: 99px;
     position: relative;
+}
+.gift ul li.cm a:hover span {
+    color: #fff;
+}
+.gift ul li.naver a:hover span {
+    color: #32B44A;
+}
+.gift ul li.coupang a:hover span {
+    color: #935229;
 }
 .gift ul li.coupang a span {
     padding-top: 80px;
@@ -540,19 +573,31 @@
     background-image: url(../images/main/cm.png);
     top: 25px;
 }
+.gift ul li.cm a:hover span::before {
+    background-image: url(../images/main/cm_mo.png);
+}
 .gift ul li.kakao a span::before {
     background-image: url(../images/main/kakao.png);
+}
+.gift ul li.kakao a:hover span::before {
+    background-image: url(../images/main/kakao_mo.png);
 }
 .gift ul li.naver a span::before {
     background-image: url(../images/main/naver.png);
 }
+.gift ul li.naver a:hover span::before {
+    background-image: url(../images/main/naver_mo.png);
+}
 .gift ul li.coupang a span::before {
     background-image: url(../images/main/coupang.png);
+}
+.gift ul li.coupang a:hover span::before {
+    background-image: url(../images/main/coupang_mo.png);
 }
 .gift ul li a span::after {
     position: absolute;
     left: 50%;
-    bottom: -15px;
+    bottom: -18px;
     transform: translate(-50%, 0);
     width: 25px;
     height: 15px;
@@ -561,4 +606,108 @@
     background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg width='21' height='8' viewBox='0 0 21 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.4648 0.146445C16.6601 -0.048817 16.9766 -0.048817 17.1719 0.146445L20.3535 3.32809C20.5488 3.52335 20.5488 3.83985 20.3535 4.03512L17.1719 7.21676C16.9766 7.41202 16.6601 7.41202 16.4648 7.21676C16.2696 7.0215 16.2696 6.70499 16.4648 6.50973L18.793 4.1816L3.65567e-07 4.1816L2.78145e-07 3.1816L18.793 3.1816L16.4648 0.853476C16.2696 0.658214 16.2696 0.341707 16.4648 0.146445Z' fill='black'/%3E%3C/svg%3E%0A");
     content: "";
+}
+.gift ul li.coupang a span::after {
+    bottom: -34px;
+}
+.gift ul li.cm a:hover span::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='8' viewBox='0 0 21 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.4648 0.146445C16.6601 -0.048817 16.9766 -0.048817 17.1719 0.146445L20.3535 3.32809C20.5488 3.52335 20.5488 3.83985 20.3535 4.03512L17.1719 7.21676C16.9766 7.41202 16.6601 7.41202 16.4648 7.21676C16.2696 7.0215 16.2696 6.70499 16.4648 6.50973L18.793 4.1816L3.65567e-07 4.1816L2.78145e-07 3.1816L18.793 3.1816L16.4648 0.853476C16.2696 0.658214 16.2696 0.341707 16.4648 0.146445Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.gift ul li.naver a:hover span::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='8' viewBox='0 0 21 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.4648 0.146445C16.6601 -0.048817 16.9766 -0.048817 17.1719 0.146445L20.3535 3.32809C20.5488 3.52335 20.5488 3.83985 20.3535 4.03512L17.1719 7.21676C16.9766 7.41202 16.6601 7.41202 16.4648 7.21676C16.2696 7.0215 16.2696 6.70499 16.4648 6.50973L18.793 4.1816L3.65567e-07 4.1816L2.78145e-07 3.1816L18.793 3.1816L16.4648 0.853476C16.2696 0.658214 16.2696 0.341707 16.4648 0.146445Z' fill='%2332B44A'/%3E%3C/svg%3E%0A");
+}
+.gift ul li.coupang a:hover span::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='8' viewBox='0 0 21 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.4648 0.146445C16.6601 -0.048817 16.9766 -0.048817 17.1719 0.146445L20.3535 3.32809C20.5488 3.52335 20.5488 3.83985 20.3535 4.03512L17.1719 7.21676C16.9766 7.41202 16.6601 7.41202 16.4648 7.21676C16.2696 7.0215 16.2696 6.70499 16.4648 6.50973L18.793 4.1816L3.65567e-07 4.1816L2.78145e-07 3.1816L18.793 3.1816L16.4648 0.853476C16.2696 0.658214 16.2696 0.341707 16.4648 0.146445Z' fill='%23935229'/%3E%3C/svg%3E%0A");
+}
+.gift .move_txt {
+    position: absolute;
+    bottom: 38px;
+    left: 0;
+    width: 100%;
+    font-size: 270px;
+    color: rgba(13, 13, 13, 0.06);
+    font-family: 'Miama';
+    white-space: nowrap;
+}
+.gift .move_txt strong {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation-name: move_txt;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear
+}
+@keyframes move_txt {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-3660px, 0);}
+}
+
+@media screen and (max-width: 1024px){
+    .gift h1 {
+        font-size: var(--txt-size-main-cont1);
+        padding: 95px 0 0 0;
+    }
+    .gift p {
+        font-size: var(--txt-size-main-cont3);
+        margin: 10px 0 35px 0;
+    }
+    .gift ul {
+        padding-bottom: 250px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        justify-items: center;
+    }
+    .gift ul li {
+        margin-right: 0;
+    }
+    .gift ul li a {
+        width: 150px;
+        height: 150px;
+    }
+    .gift ul li a span {
+        padding-top: 85px;
+    }
+    .gift ul li a span::before {
+        top: 37px;
+    }
+    .gift ul li.coupang a span {
+        padding-top: 70px;
+    }
+    .gift ul li a span::before {
+        width: 50px;
+        height: 50px;
+    }
+    .gift ul li.cm a span::before {
+        top: 33px;
+    }
+    .gift ul li.coupang a span::before {
+        top: 37px;
+    }
+    .gift ul li a span::after {
+        bottom: -12px;
+        width: 20px;
+        height: 10px;
+    }
+    .gift ul li.coupang a span::after {
+        bottom: -28px;
+    }
+    .gift .move_txt {
+        bottom: 38px;
+        font-size: 120px;
+    }
+    .gift .move_txt strong {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        animation-name: move_txt_m;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function:linear
+    }
+}
+@keyframes move_txt_m {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-1630px, 0);}
 }
