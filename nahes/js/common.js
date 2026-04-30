@@ -2,6 +2,7 @@ $(document).ready(function(){
     let win_w 
     let pc_mobile
     let scrolling
+    let scrollTop = 0
 
     function resize_chk(){
         win_w = $(window).width()
@@ -43,12 +44,21 @@ $(document).ready(function(){
 
     //header .gnb .gnb_open, header .gnb .gnb_close
     $('header .gnb .gnb_open').on('click', function(e){
+        e.preventDefault()
+        scrollTop = $(window).scrollTop()
         $('header').addClass('menu_over')
-        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+        $("html, body").css({overflow: "hidden"})
     })
+
     $('header .gnb .gnb_close').on('click', function(){
         $('header').removeClass('menu_over')
-        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+        $("html, body").css({overflow: "visible"})
+        $(window).scrollTop(scrollTop)
+    })
+
+    //.popup
+    $('.popup .btn_close').on('click', function(){
+        $('.popup').hide()
     })
 
     //footer famillysite
