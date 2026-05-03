@@ -16,8 +16,9 @@
 .brand_visual h2 {
     font-family: 'Miama';
     font-size: 200px;
-    padding-top: 270px;
+    padding-top: 370px;
     white-space: nowrap;
+    line-height: 100px;
 }
 .brand_visual p {
     font-size: var(--txt-size-sub-cont2);
@@ -277,5 +278,247 @@
     .places ul li a span::before {
         width: 17px;
         height: 17px;
+    }
+}
+
+/*perfume*/
+
+.perfume h2 {
+    font-family: 'MADEOuterSans-Bold';
+    font-size: var(--txt-size-sub-tit1);
+    padding: 150px 0 100px 0;
+    text-align: center;
+}
+.perfume .toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    color: var(--txt-color-main-cont2);
+    border-top: 1px solid var(--txt-color-main-cont2);
+}
+.perfume .toolbar .count {
+    font-size: var(--txt-size-sub-cont1);
+}
+.perfume .toolbar .filter button {
+    font-size: 0;
+    line-height: 0;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.perfume .toolbar .filter button::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_108_271' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='50' height='50'%3E%3Crect width='50' height='50' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_108_271)'%3E%3Cpath d='M6.25 37.4224V35.3391H26.162V37.4224H6.25ZM6.25 27.4464V25.363H15.5448V27.4464H6.25ZM6.25 17.4703V15.387H15.5448V17.4703H6.25ZM42.2755 37.5026L34.1745 29.5219C33.4214 30.0854 32.6035 30.5214 31.7208 30.8297C30.8382 31.1384 29.9333 31.2927 29.0062 31.2927C26.6677 31.2927 24.6741 30.484 23.0255 28.8667C21.3773 27.2497 20.5531 25.2738 20.5531 22.9391C20.5531 20.6047 21.3781 18.629 23.0281 17.012C24.6785 15.3946 26.6745 14.5859 29.0161 14.5859C31.3575 14.5859 33.35 15.3946 34.9937 17.012C36.6378 18.629 37.4599 20.5981 37.4599 22.9193C37.4599 23.846 37.3057 24.7509 36.9974 25.6339C36.6887 26.5165 36.2392 27.321 35.649 28.0474L43.75 36.0281L42.2755 37.5026ZM29.0062 29.2094C30.7757 29.2094 32.2799 28.6017 33.5187 27.3865C34.7573 26.1712 35.3766 24.6887 35.3766 22.9391C35.3766 21.1898 34.7573 19.7075 33.5187 18.4922C32.2799 17.2769 30.7757 16.6693 29.0062 16.6693C27.2368 16.6693 25.7328 17.2769 24.4943 18.4922C23.2557 19.7075 22.6365 21.1898 22.6365 22.9391C22.6365 24.6887 23.2557 26.1712 24.4943 27.3865C25.7328 28.6017 27.2368 29.2094 29.0062 29.2094Z' fill='%230D0D0D' fill-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.perfume .p_list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 24px;
+}
+.perfume .p_list ul li {
+    margin-bottom: 36px;
+    position: relative;
+}
+.perfume .p_list ul li:nth-child(1):before {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 150px;
+    height: 150px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/contents/best.png);
+    content: "";
+    z-index: 2;
+}
+.perfume .p_list ul li a {
+    display: block;
+}
+.perfume .p_list ul li a .photo {
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    position: relative;
+}
+.perfume .p_list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.perfume .p_list ul li:nth-last-child a:hover > .photo img {
+    opacity: 0;
+}
+.perfume .p_list ul li a > .photo::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+.perfume .p_list ul li a:hover > .photo::after {
+    opacity: 1;
+    visibility: visible;
+}
+.perfume .p_list ul li:nth-child(1) a > .photo::after {
+    background-image: url(../images/main/perfume_mo_1.png);
+}
+.perfume .p_list ul li:nth-child(2) a > .photo::after {
+    background-image: url(../images/main/perfume_mo_2.png);
+}
+.perfume .p_list ul li:nth-child(3) a > .photo::after {
+    background-image: url(../images/main/perfume_mo_3.png);
+}
+.perfume .p_list ul li:nth-child(4) a > .photo::after {
+    background-image: url(../images/main/perfume_mo_4.png);
+}
+.perfume .p_list ul li:nth-child(5) a > .photo::after {
+    background-image: url(../images/main/perfume_mo_5.png);
+}
+.perfume .p_list ul li:nth-child(6) a > .photo::after {
+    background-image: url(../images/main/perfume_mo_6.png);
+}
+.perfume .p_list ul li:nth-child(7) a > .photo::after {
+    background-image: url(../images/main/perfume_mo_7.png);
+}
+.perfume .p_list ul li a strong {
+    display: block;
+    font-family: 'MADEOuterSans-Bold';
+    font-size: var(--txt-size-sub-tit3);
+    margin: 15px 0 5px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.perfume .p_list ul li a span {
+    display: block;
+    font-size: var(--txt-size-sub-cont1);
+    color: var(--txt-color-main-cont1);
+}
+.container > .wrapper > .banner {
+    display: flex;
+    margin: 40px 0 50px 0;
+}
+.container > .wrapper > .banner .banner_1 {
+    margin-right: 24px;
+}
+.container > .wrapper > .banner .banner_1 a,
+.container > .wrapper > .banner .banner_2 a {
+    display: block;
+    position: relative;
+}
+.container > .wrapper > .banner .photo {
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    position: relative;
+}
+.container > .wrapper > .banner .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.container > .wrapper > .banner a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.container > .wrapper > .banner .banner_1 strong,
+.container > .wrapper > .banner .banner_2 strong {
+    display: inline-block;
+    font-family: 'MADEOuterSans-Bold';
+    color: #fff;
+    font-size: var(--txt-size-sub-cont1);
+    padding-right: 50px;
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+}
+.container > .wrapper > .banner strong::before {
+    position: absolute;
+    right: 0;
+    top: -2px;
+    width: 35px;
+    height: 35px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_107_202' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='35' height='35'%3E%3Crect width='35' height='35' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_107_202)'%3E%3Cpath d='M16.9112 26.1227L21.1626 18.5926H3.28125V16.4051H21.1626L16.9112 8.875L30.4708 17.4989L16.9112 26.1227Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+@media screen and (max-width: 1024px){
+    .perfume h2 {
+        font-size: var(--txt-size-sub-tit3);
+        padding: 100px 0 50px 0;
+    }
+    .perfume .toolbar {
+        padding: 10px 0;
+    }
+    .perfume .toolbar .count {
+        font-size: var(--txt-size-sub-cont4);
+    }
+    .perfume .toolbar .filter button {
+        width: 24px;
+        height: 24px;
+    }
+    .perfume .p_list ul {
+        gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+        width: auto;
+    }
+    .perfume .p_list ul li {
+        min-width: 0;
+        margin-bottom: 30px;
+    }
+    .perfume .p_list ul li a strong {
+        display: block;
+        font-size: var(--txt-size-sub-cont3);
+        margin: 5px 0;
+    }
+    .perfume .p_list ul li a span {
+        font-size: var(--txt-size-sub-cont4);
+    }
+    .perfume .p_list ul li {
+        margin: 0;
+    }
+    .perfume .p_list ul li:nth-child(1):before {
+        width: 50px;
+        height: 50px;
+        left: 10px;
+        top: 10px;
+    }
+    .container > .wrapper > .banner {
+        display: block;
+        margin: 0 0 20px 0;
+    }
+    .container > .wrapper > .banner .banner_1 {
+        margin: 0 0 16px 0;
+    }
+    .container > .wrapper > .banner .banner_1 strong,
+    .container > .wrapper > .banner .banner_2 strong {
+        font-size: var(--txt-size-sub-cont3);
+        left: 15px;
+        bottom: 15px;
+        padding-right: 24px;
+    }
+    .container > .wrapper > .banner strong::before {
+        width: 17px;
+        height: 17px;
+        top: 0;
     }
 }
