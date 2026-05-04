@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/sub.js"></script>
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <title>nahes | CHILD OF THE 90S </title>
+</head>
+<body>
+    <div class="skip_nav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_nav">대메뉴 바로가기</a>
+    </div>
+    <div id="wrap">
+        <header class="">
+            <div class="inner">
+                <nav class="gnb" id="skip_nav">
+                    <button class="gnb_open">메뉴열기</button>
+                    <div class="gnb_wrap">
+                        <ul class="depth1">
+                            <li>
+                                <a href="brand.html">brand</a>
+                            </li>
+                            <li>
+                                <a href="perfume.html">perfume</a>
+                            </li>
+                            <li>
+                                <a href="#">event</a>
+                            </li>
+                            <li>
+                                <a href="#">review</a>
+                            </li>
+                            <li>
+                                <a href="#">sns</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="gnb_close">메뉴닫기</button>
+                </nav>
+                <h1 class="logo"><a href="../index.html">나흐 로고</a></h1>
+                <div class="tnb">
+                    <ul>
+                        <li class="search"><a href="#n">검색</a></li>
+                        <li class="lang"><a href="#n">언어</a></li>
+                        <li class="login"><a href="#n">로그인</a></li>
+                        <li class="cart"><a href="#n">장바구니</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <section class="pf_list">
+                <div class="wrapper">
+                    <div class="pf_top">
+                        <div class="top_l">
+                            <div class="main-image-wrap">
+                                <img id="mainImg" src="../images/contents/main_photo1.png" alt="상품 메인 이미지">
+                            </div>
+                            <div class="thumb-list" role="tablist" aria-label="상품 이미지 선택">
+                                <button class="thumb-btn active" role="tab" aria-selected="true" data-src="../images/contents/main_photo1.png" aria-label="이미지 1">
+                                    <img src="../images/contents/tab_1.png" alt="썸네일 1">
+                                </button>
+                                <button class="thumb-btn" role="tab" aria-selected="false" data-src="../images/contents/main_photo2.png" aria-label="이미지 2">
+                                    <img src="../images/contents/tab_2.png" alt="썸네일 2">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="top_r">
+                            <h2>CHILD OF THE 90S</h2>
+                            <p>50ml(1.7 fl oz)</p>
+                            <div class="pf_txt">
+                                90년대를 기억하는 이들을 위한 향으로<br> 거칠지만 솔직했던 그 시대의 자유로움과 감각을 담았습니다.<br><br> 파출리의 짙고 대지적인 향이 원초적인 감각을 일깨우고, <br>사이프리올의 스모키한 깊이가 자연스러운 거친 매력을 더해<br>통카빈의 부드럽고 달콤한 온기 위로 머스크와 캐시미어 우드가<br> 따뜻하게 감싸며 시간이 지나도 잔잔한 여운을 남깁니다.
+                            </div>
+                            <div class="options">
+                                <label for="packagingOption">옵션</label>
+                                <select id="packagingOption" name="packagingOption">
+                                    <option value="box">박스 포장 패키징 + 10,000원</option>
+                                    <option value="none">포장 없음</option>
+                                </select>
+                            </div>
+                            <div class="cart-item">
+                                <div class="cart-item-top">
+                                    <span class="item-name">child of the 90s 50ml(1.7 fl oz)</span>
+                                    <button class="item-remove" aria-label="삭제">&#x2715;</button>
+                                </div>
+                                <div class="cart-item-bottom">
+                                    <div class="quantity-wrap">
+                                    <button class="qty-btn minus" aria-label="수량 감소">&#x2212;</button>
+                                    <input class="qty-input" type="number" value="1" min="1" max="99" readonly>
+                                    <button class="qty-btn plus" aria-label="수량 증가">&#x2b;</button>
+                                    </div>
+                                    <span class="item-price">218,000원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pf_sub"></div>
+                </div>
+            </section>
+            <div class="wrapper">
+                <div class="pf_col">
+                    <strong>Collection</strong>
+                    <ul>
+                        <li>
+                            <a href="#n">
+                                <div class="photo">
+                                    <img src="../images/main/perfume_2.png" alt="Untitled(Red) 향수">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo">
+                                    <img src="../images/main/perfume_3.png" alt="Phoebe 향수">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo">
+                                    <img src="../images/main/perfume_4.png" alt="SO36 향수">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo">
+                                    <img src="../images/main/perfume_5.png" alt="POOR BUT SEXY 향수">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="banner">
+                    <div class="banner_1">
+                        <a href="#n">
+                            <div class="photo">
+                                <img src="../images/contents/banner_1.png" alt="배너 사진">
+                            </div>
+                            <strong>BEST SELLERS</strong>
+                        </a>
+                    </div>
+                    <div class="banner_2">
+                        <a href="#n">
+                            <div class="photo">
+                                <img src="../images/contents/banner_2.png" alt="배너 사진">
+                            </div>
+                            <strong>GIFT SET</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="wrapper">
+                <div class="f_info">
+                    <ul>
+                        <li>
+                            <strong>info</strong>
+                            <span>대표 : 이세한</span>
+                            <span>주소 : 04417 서울 용산구 한남대로42가길 11 1층</span>
+                            <span>사업자등록번호 : 3168603774 </span>
+                        </li>
+                        <li>
+                            <strong>contact</strong>
+                            <span>연락처 : 010-2621-9828</span>
+                            <span>이메일 : nahesofficial@gmail.com</span>
+                        </li>
+                        <li>
+                            <strong>sns</strong>
+                            <span>
+                                <a href="#n">인스타그램</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f_menu">
+                    <ul>
+                        <li>
+                            <a href="#n">terms&conditions</a>
+                        </li>
+                        <li>
+                            <a href="#n">shipping</a>
+                        </li>
+                        <li>
+                            <a href="#n">guide</a>
+                        </li>
+                        <li>
+                            <a href="#n">privacy policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="f_txt">
+                <div class="wrapper">
+                    <strong>nahes</strong>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

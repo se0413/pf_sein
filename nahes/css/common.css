@@ -57,6 +57,7 @@ html, body{
     --txt-color-point : #FF0000;
     --txt-color-main-cont1 : rgba(13, 13, 13, 0.6);
     --txt-color-main-cont2 : rgba(13, 13, 13, 0.4);
+    --txt-color-main-cont3 : rgba(13, 13, 13, 0.1);
     --txt-color-footer-sub1 : rgba(255, 255, 255, 0.6);
     --txt-color-footer-sub2 : rgba(255, 255, 255, 0.4);
 }
