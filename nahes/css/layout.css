@@ -297,6 +297,40 @@ header .tnb ul li.cart a:hover::before {
     }
 }
 
+/*top*/
+.quick .top {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    width: 100px;
+    height: 100px;
+    background-color: var(--txt-color-main);
+    border-radius: 50%;
+}
+.quick .top::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_265_53' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='40' height='40'%3E%3Crect x='1.74846e-06' y='40' width='40' height='40' transform='rotate(-90 1.74846e-06 40)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_265_53)'%3E%3Cpath d='M20.834 11.5357L20.834 31.667L19.1673 31.667L19.1673 11.5357L9.51357 21.1895L8.33399 20.0003L20.0007 8.33366L31.6673 20.0003L30.4877 21.1895L20.834 11.5357Z' fill='%23FF0000'/%3E%3C/g%3E%3C/svg%3E%0A");    content: "";
+    content: "";
+}
+@media screen and (max-width: 1024px){
+    .quick .top {
+        width: 50px;
+        height: 50px;
+    }
+    .quick .top::before {
+        width: 24px;
+        height: 24px;
+    }
+}
+
 /*footer*/
 
 footer {
