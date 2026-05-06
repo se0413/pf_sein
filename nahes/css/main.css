@@ -498,6 +498,7 @@
 .gift {
     text-align: center;
     position: relative;
+    background-color: rgba(222, 222, 222, 0.2);
 }
 .gift .wrapper {
     width: 100%;
