@@ -355,8 +355,11 @@
     height: 100%;
     object-fit: cover;
 }
-.perfume .p_list ul li:nth-last-child a:hover > .photo img {
+.perfume .p_list ul li a:hover > .photo img {
     opacity: 0;
+}
+.perfume .p_list ul li:last-child a:hover > .photo img {
+    opacity: 1;
 }
 .perfume .p_list ul li a > .photo::after {
     position: absolute;

@@ -502,7 +502,7 @@
 .gift .wrapper {
     width: 100%;
 }
-.gift h1 {
+.gift h2 {
     font-family: 'MADEOuterSans-Bold';
     font-size: var(--txt-size-main-tit1);
     padding: 250px 0 0 0;
@@ -655,7 +655,7 @@
     .gift .wrapper {
         width: auto;
     }
-    .gift h1 {
+    .gift h2 {
         font-size: var(--txt-size-main-cont1);
         padding: 95px 0 0 0;
     }
