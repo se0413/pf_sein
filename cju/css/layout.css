@@ -723,7 +723,7 @@ body.scroll_lock {
     }
 }
 @media screen and (max-width: 1024px) {
-    .main_popup .main_popup_btn2 {
+    .main_popup .main_popup_btn2 .btn_wrap {
         display: none;
     }
 }
